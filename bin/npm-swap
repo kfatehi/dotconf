@@ -1,0 +1,18 @@
+#!/bin/bash
+
+function strider() {
+  npm set registry "http://compute-01.critiqueapp.com:4873/"
+}
+
+function npmjs() {
+  npm set registry default
+}
+
+case "$1" in
+  strider | npmjs )
+    $1
+    ;;
+  * )
+    echo "valid commands: strider, npmjs" >&2
+    exit 1
+esac

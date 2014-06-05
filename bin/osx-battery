@@ -1,0 +1,16 @@
+#!/bin/bash
+info=$(pmset -g batt | tail -n1)
+
+percent=$(echo "$info" | awk '{ print $2 }' | cut -d ';' -f1)
+# direction=$(echo "$info" | awk '{ print $2 }' | cut -d ';' -f1)
+# ↑ ↓
+
+timeleft=$(echo "$info" | awk '{ print $4 }' | cut -d ';' -f1)
+
+if [[ $percent == *drawing* ]]; then
+  echo "AC"
+else
+  echo "$percent ($timeleft remaining)"
+fi
+
+

@@ -1,0 +1,208 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+" alternatively, pass a path where Vundle should install bundles
+"let path = '~/some/path/here'
+"call vundle#rc(path)
+
+" let Vundle manage Vundle, required
+Bundle 'gmarik/vundle'
+
+Bundle 'kien/ctrlp.vim'
+Bundle 'scrooloose/nerdtree'
+
+Bundle 'pangloss/vim-javascript'
+
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+
+" snippet engine
+Bundle "garbas/vim-snipmate"
+
+" default snippets for snipmate
+Bundle "honza/vim-snippets"
+
+Bundle 'ciaranm/detectindent'
+" Bundle 'Raimondi/delimitMate'
+Bundle 'tpope/vim-markdown'
+Bundle 'jtratner/vim-flavored-markdown'
+Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'mileszs/ack.vim'
+Bundle 'tpope/vim-eunuch'
+Bundle 'vim-ruby/vim-ruby'
+
+Bundle 'danro/rename.vim'
+Bundle 'jnwhiteh/vim-golang'
+
+Bundle "ervandew/supertab"
+
+
+
+Bundle 'kchmck/vim-coffee-script'
+
+filetype plugin indent on     " required
+"
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install (update) bundles
+" :BundleSearch(!) foo - search (or refresh cache first) for foo
+" :BundleClean(!)      - confirm (or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle commands are not allowed.
+
+" Disable swap files, they suck
+set nobackup      
+set nowritebackup 
+set noswapfile   
+
+set grepprg=ack
+
+" Resize vim splits with alt keys
+" map <silent> <A-h> <C-w>< 
+" map <silent> <A-j> <C-W>- 
+" map <silent> <A-k> <C-W>+ 
+" map <silent> <A-l> <C-w>> 
+
+" Fast window resizing with +/- keys (horizontal); / and * keys (vertical)
+" if bufwinnr(1)
+"   map <kPlus> <C-W>+
+"   map <kMinus> <C-W>-
+"   map <kDivide> <c-w><
+"   map <kMultiply> <c-w>>
+" endif
+
+" Enable golang support
+au BufRead,BufNewFile *.go set filetype=go 
+
+" Enable github flavored markdown
+augroup markdown
+    au!
+    au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
+augroup END
+
+" yank/paste across vim sessions
+vmap <silent> ,y y:new<CR>:call setline(1,getregtype())<CR>o<Esc>P:wq! ~/reg.txt<CR>
+nmap <silent> ,y :new<CR>:call setline(1,getregtype())<CR>o<Esc>P:wq! ~/reg.txt<CR>
+map <silent> ,p :sview ~/reg.txt<CR>"zdddG:q!<CR>:call setreg('"', @", @z)<CR>p
+map <silent> ,P :sview ~/reg.txt<CR>"zdddG:q!<CR>:call setreg('"', @", @z)<CR>P
+
+" Play nice in tmux
+if &term =~ '^screen'
+    " tmux will send xterm-style keys when xterm-keys is on
+    execute "set <xUp>=\e[1;*A"
+    execute "set <xDown>=\e[1;*B"
+    execute "set <xRight>=\e[1;*C"
+    execute "set <xLeft>=\e[1;*D"
+endif
+
+
+" Navigate window splits easily
+nnoremap <silent> <C-Right> <c-w>l
+nnoremap <silent> <C-Left> <c-w>h
+nnoremap <silent> <C-Up> <c-w>k
+nnoremap <silent> <C-Down> <c-w>j
+
+" Fix weird arrows in some terminals
+let g:NERDTreeDirArrows=0
+
+" Change dir to file dir on each file loaded
+" autocmd BufEnter * silent! lcd %:p:h
+
+" Set tab styles
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+set number
+set cursorline
+
+syntax enable
+
+set backspace=indent,eol,start " enable backspace
+set hlsearch " highlight searches
+
+""
+" Visual Studio stuff..
+" still need to figure out how to make the QTKit part 
+" dynamically set (e.g. File.basename(Dir.pwd))
+command! Msbuild execute "!msbuild"
+command! Msrun execute "!msbuild && cls && .\\Debug\\QTKit.exe"
+nmap <F5> :Msbuild<CR>
+nmap <F6> :Msrun<CR>
+
+" paste / nopaste
+nmap <Leader>[ :set paste<CR>
+nmap <Leader>] :set nopaste<CR>
+
+" edit my tmux config
+nmap <Leader>t :e ~/.tmux.conf
+
+" find in project
+nmap <Leader>f :vimgrep /
+
+" find next in project
+nmap <Leader>n :cnext<CR>
+
+" source $MYVIMRC reloads the saved $MYVIMRC
+nmap <Leader>s :source $MYVIMRC<CR>
+
+" opens $MYVIMRC for editing, or use :tabedit $MYVIMRC
+nmap <Leader>v :e $MYVIMRC<CR>
+
+colorscheme default
+set t_Co=256 " Make sure your terminal is 256 colors too!
+set background=dark
+
+"" Font
+" Platform dependent, see .gvimrc
+
+"" Folding
+set nofoldenable " not by default please
+set foldmethod=syntax
+highlight Folded guibg=black guifg=white
+
+"" Toggle fold with Spacebar
+nnoremap <Space> za
+
+"" NERDTree toggle to CTRL-D
+nmap <C-D> :NERDTreeToggle<CR>
+
+"" Quick rspec CTRL-B
+" map <C-A> :RunSpecs<cr>
+" map <C-G> :RunSpec<cr>
+" map <C-L> :RunSpecLine<cr>
+
+map <C-U> :CtrlPClearAllCaches<cr>
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
+
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|coverage|node_modules|public|vendor\/bundle)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+
+"" For all methods, see :help fold-methods
+" zi - toggle folding feature
+" zM - close all folds
+" zv - expand folds to reveal cursor
+""
+
+"" HJKL Training Wheels
+" inoremap  <Up>     <NOP>
+" inoremap  <Down>   <NOP>
+" inoremap  <Left>   <NOP>
+" inoremap  <Right>  <NOP>
+" noremap   <Up>     <NOP>
+" noremap   <Down>   <NOP>
+" noremap   <Left>   <NOP>
+" noremap   <Right>  <NOP>
+
+"" Disable bell
+autocmd GUIEnter * set vb t_vb= " in the Gui
+autocmd VimEnter * set vb t_vb=
