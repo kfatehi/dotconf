@@ -1,5 +1,3 @@
-require 'mkmf'
-
 def yesno str=nil
   begin
     puts str if str
