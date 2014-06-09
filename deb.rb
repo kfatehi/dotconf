@@ -1,12 +1,8 @@
 require ENV["COMMON"]
-require 'mkmf'
 
-run "Setup the home directory ?", <<-EOF
-#{home_setup}
-echo "export PATH=\"\\$PATH:\\$HOME/.rvm/bin\"" >> ~/.zshrc
-EOF
+run "Reconfigure zsh and the home directory ?", home_setup
 
-{
+checkinstall({
   tmux: "sudo apt-get install -y tmux",
  
   "redis-server" => "sudo apt-get -y install redis-server",
@@ -25,7 +21,4 @@ EOF
     sudo apt-get update
     sudo apt-get -y install mongodb-org
   }
-}.each{|name, script|
-  bin = name.to_s
-  run("Install #{bin} ?", script) unless find_executable(bin)
-}
+})

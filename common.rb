@@ -1,4 +1,5 @@
 require ENV["HELPERS"]
+require 'mkmf'
 
 def cleaning
   %W{
@@ -42,5 +43,15 @@ def home_setup
   git config --global user.name "Keyvan Fatehi"
 
   vim +BundleInstall +qall
+  #{find_executable("rvm") ? %{echo "export PATH=\"\\$PATH:\\$HOME/.rvm/bin\"" >> ~/.zshrc} : "" }
+  #{ENV['SHELL'] == '/bin/zsh' ? "" : "chsh -s /bin/zsh"}
   EOF
 end
+
+def checkinstall packages
+  packages.each do |bin, install_script|
+    bin = bin.to_s
+    run("Install #{bin} ?", script) unless find_executable(bin)
+  end
+end
+

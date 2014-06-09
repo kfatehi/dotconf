@@ -1,21 +1,15 @@
 require ENV["COMMON"]
 
-brewing = %W{
-  wget
-  nmap
-  node
-  tmux
-  reattach-to-user-namespace
-  mongodb
-  redis
-  postgres
-  phantomjs
-}.map{|app| "brew install #{app}"}.join("\n")
+run "Reconfigure zsh and the home directory ?", home_setup
 
-run "Proceed ?", <<EOF
-#{home_setup}
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-#{brewing}
-chsh -s /bin/zsh
-EOF
-
+checkinstall({
+  brew: %{ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"},
+  wget: "brew install wget",
+  nmap: "brew install nmap",
+  node: "brew install node",
+  tmux: "brew install tmux reattach-to-user-namespace",
+  mongo: "brew install mongodb",
+  "redis-server" => "brew install redis",
+  phantomjs: "brew install phantomjs",
+  postgres: "brew install postgres"
+})
