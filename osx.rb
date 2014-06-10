@@ -1,7 +1,6 @@
 require ENV["COMMON"]
 
-run "Reconfigure zsh and the home directory ?", home_setup
-
+home_setup
 checkinstall({
   brew: %{ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"},
   wget: "brew install wget",

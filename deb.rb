@@ -1,7 +1,6 @@
 require ENV["COMMON"]
 
-run "Reconfigure zsh and the home directory ?", home_setup
-
+home_setup
 checkinstall({
   tmux: "sudo apt-get install -y tmux",
   "redis-server" => "sudo apt-get -y install redis-server",

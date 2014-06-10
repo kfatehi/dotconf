@@ -13,9 +13,17 @@ def yesno str=nil
   end
 end
 
+def zsh script
+  Process.wait Process.spawn("/bin/zsh", "-c", script)
+end
+
+def bash script
+  Process.wait Process.spawn("/bin/bash", "-c", script)
+end
+
 def run message, script
   if yesno "#{message} (y/n)"
-    Process.wait Process.spawn("/bin/zsh", "-c", script)
+    zsh script
   end
 end
 

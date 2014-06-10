@@ -27,7 +27,9 @@ def linking
 end
 
 def home_setup
- <<-EOF
+  return unless yesno("Reconfigure zsh and the home directory ?")
+
+  zsh <<-EOF
   #{cleaning}
   #{linking}
   git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
@@ -44,8 +46,19 @@ def home_setup
   git config --global push.default matching
 
   vim +BundleInstall +qall
-  #{rvm_codes if find_executable("rvm")}
-  #{ENV['SHELL'] == '/bin/zsh' ? "" : "chsh -s /bin/zsh"}
+  EOF
+  enable_zsh_module('git')
+  bash("chsh -s /bin/zsh") if  ENV['SHELL'] != "/bin/zsh"
+  bash(rvm_codes) if  find_executable("rvm")
+end
+
+def enable_zsh_module name
+  bash <<-EOF
+  sed '/prezto:load..pmodule/a\\
+  \\ \\ '$"'#{name}'"$' \\\\\\
+  ' ~/.zpreztorc > /tmp/zpreztorc
+  cat /tmp/zpreztorc > ~/.zpreztorc
+  rm /tmp/zpreztorc
   EOF
 end
 
