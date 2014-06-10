@@ -44,8 +44,15 @@ def home_setup
   git config --global push.default matching
 
   vim +BundleInstall +qall
-  #{find_executable("rvm") ? %{echo "export PATH=\"\\$PATH:\\$HOME/.rvm/bin\"" >> ~/.zshrc} : "" }
+  #{rvm_codes if find_executable("rvm")}
   #{ENV['SHELL'] == '/bin/zsh' ? "" : "chsh -s /bin/zsh"}
+  EOF
+end
+
+def rvm_codes
+  <<-EOF
+    echo "source \\$HOME/.rvm/scripts/rvm" >> ~/.zshrc
+    echo "export PATH=\"\\$PATH:\\$HOME/.rvm/bin\"" >> ~/.zshrc
   EOF
 end
 
