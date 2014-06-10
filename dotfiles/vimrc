@@ -155,7 +155,7 @@ nmap <Leader>v :e $MYVIMRC<CR>
 
 colorscheme default
 set t_Co=256 " Make sure your terminal is 256 colors too!
-set background=dark
+set background=light
 
 "" Font
 " Platform dependent, see .gvimrc
