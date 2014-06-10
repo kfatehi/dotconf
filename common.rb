@@ -41,6 +41,7 @@ def home_setup
   git config --global color.diff true
   git config --global user.email "keyvanfatehi@gmail.com"
   git config --global user.name "Keyvan Fatehi"
+  git config --global push.default matching
 
   vim +BundleInstall +qall
   #{find_executable("rvm") ? %{echo "export PATH=\"\\$PATH:\\$HOME/.rvm/bin\"" >> ~/.zshrc} : "" }
