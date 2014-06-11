@@ -3,6 +3,7 @@ require 'mkmf'
 
 def cleaning
   %W{
+    ~/.gitignore
     ~/.vim
     ~/.vimrc
     ~/.tmux.conf
@@ -44,12 +45,19 @@ def home_setup
   git config --global user.email "keyvanfatehi@gmail.com"
   git config --global user.name "Keyvan Fatehi"
   git config --global push.default matching
+  git config --global core.excludesfile ~/.gitignore
+  touch ~/.gitignore
 
   vim +BundleInstall +qall
   EOF
   enable_zsh_module('git')
   bash("chsh -s /bin/zsh") if  ENV['SHELL'] != "/bin/zsh"
-  bash(rvm_codes) if  find_executable("rvm")
+  bash(rvm_codes) if find_executable("rvm")
+  yield if block_given?
+end
+
+def global_gitignore patt
+  bash %{echo #{patt} >> ~/.gitignore}
 end
 
 def enable_zsh_module name
