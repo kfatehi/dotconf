@@ -1,6 +1,9 @@
 require ENV["COMMON"]
 
-home_setup
+home_setup do
+  global_gitignore '.DS_Store'
+end
+
 checkinstall({
   brew: %{ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"},
   wget: "brew install wget",
