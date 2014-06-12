@@ -24,7 +24,7 @@ def linking
     dotfile("vimfiles")      => "~/.vim",
     dotfile("vimrc")         => "~/.vimrc",
     dotfile("tmux.conf")     => "~/.tmux.conf",
-    dotfile("tmux-osx.conf") => "~/.tmux-osx.conf"
+    dotfile("tmux-osx.conf") => "~/.tmux-osx.conf",
     dotfile("tmux-nested.conf") => "~/.tmux-nested.conf"
   }.map{|src,dst| "ln -s #{src} #{dst}"}.join("\n")
 end
