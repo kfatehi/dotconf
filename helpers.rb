@@ -34,3 +34,24 @@ end
 def dotfile name
   File.join(ENV['MY_DOTFILES'], name)
 end
+
+def checkinstall packages
+  packages.each do |bin, install_script|
+    bin = bin.to_s
+    run("Install #{bin} ?", script) unless find_executable(bin)
+  end
+end
+
+def global_gitignore patt
+  bash %{echo #{patt} >> ~/.gitignore}
+end
+
+def enable_zsh_module name
+  bash <<-EOF
+  sed '/prezto:load..pmodule/a\\
+  \\ \\ '$"'#{name}'"$' \\\\\\
+  ' ~/.zpreztorc > /tmp/zpreztorc
+  cat /tmp/zpreztorc > ~/.zpreztorc
+  rm /tmp/zpreztorc
+  EOF
+end

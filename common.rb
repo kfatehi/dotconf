@@ -57,31 +57,10 @@ def home_setup
   global_gitignore 'npm-debug.log'
 end
 
-def global_gitignore patt
-  bash %{echo #{patt} >> ~/.gitignore}
-end
-
-def enable_zsh_module name
-  bash <<-EOF
-  sed '/prezto:load..pmodule/a\\
-  \\ \\ '$"'#{name}'"$' \\\\\\
-  ' ~/.zpreztorc > /tmp/zpreztorc
-  cat /tmp/zpreztorc > ~/.zpreztorc
-  rm /tmp/zpreztorc
-  EOF
-end
-
 def rvm_codes
   <<-EOF
     echo "source \\$HOME/.rvm/scripts/rvm" >> ~/.zshrc
     echo "export PATH=\"\\$PATH:\\$HOME/.rvm/bin\"" >> ~/.zshrc
   EOF
-end
-
-def checkinstall packages
-  packages.each do |bin, install_script|
-    bin = bin.to_s
-    run("Install #{bin} ?", script) unless find_executable(bin)
-  end
 end
 
