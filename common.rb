@@ -55,6 +55,9 @@ def home_setup
   bash(rvm_codes) if find_executable("rvm")
   yield if block_given?
   global_gitignore 'npm-debug.log'
+  global_gitignore '.netrwhist'
+  global_gitignore '*.swo'
+  global_gitignore '*.swp'
 end
 
 def rvm_codes
