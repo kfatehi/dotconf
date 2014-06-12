@@ -3,6 +3,7 @@ require ENV["COMMON"]
 home_setup
 checkinstall({
   tmux: "sudo apt-get install -y tmux",
+  irssi: "sudo apt-get install -y irssi",
   "redis-server" => "sudo apt-get -y install redis-server",
   node: %{
     curl -o /tmp/node.tar.gz http://nodejs.org/dist/v0.10.28/node-v0.10.28-linux-x64.tar.gz
