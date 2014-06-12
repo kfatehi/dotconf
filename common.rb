@@ -54,6 +54,7 @@ def home_setup
   bash("chsh -s /bin/zsh") if  ENV['SHELL'] != "/bin/zsh"
   bash(rvm_codes) if find_executable("rvm")
   yield if block_given?
+  global_gitignore 'npm-debug.log'
 end
 
 def global_gitignore patt
