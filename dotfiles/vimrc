@@ -10,21 +10,15 @@ call vundle#rc()
 
 " let Vundle manage Vundle, required
 Bundle 'gmarik/vundle'
-
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdtree'
-
 Bundle 'pangloss/vim-javascript'
-
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
-
 " snippet engine
 Bundle "garbas/vim-snipmate"
-
 " default snippets for snipmate
 Bundle "honza/vim-snippets"
-
 Bundle 'ciaranm/detectindent'
 " Bundle 'Raimondi/delimitMate'
 Bundle 'tpope/vim-markdown'
@@ -33,14 +27,10 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'mileszs/ack.vim'
 Bundle 'tpope/vim-eunuch'
 Bundle 'vim-ruby/vim-ruby'
-
 Bundle 'danro/rename.vim'
 Bundle 'jnwhiteh/vim-golang'
-
 Bundle "ervandew/supertab"
-
 Bundle 'kchmck/vim-coffee-script'
-
 Bundle 'airblade/vim-gitgutter'
 
 filetype plugin indent on     " required
