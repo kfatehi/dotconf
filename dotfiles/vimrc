@@ -31,6 +31,7 @@ Bundle 'jnwhiteh/vim-golang'
 Bundle "ervandew/supertab"
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'tpope/vim-fugitive'
 
 filetype plugin indent on     " required
 "
