@@ -20,7 +20,6 @@ Bundle "garbas/vim-snipmate"
 " default snippets for snipmate
 Bundle "honza/vim-snippets"
 Bundle 'ciaranm/detectindent'
-" Bundle 'Raimondi/delimitMate'
 Bundle 'tpope/vim-markdown'
 Bundle 'jtratner/vim-flavored-markdown'
 Bundle 'nathanaelkane/vim-indent-guides'
