@@ -11,7 +11,7 @@ checkinstall({
   node: "brew install node",
   tmux: "brew install tmux reattach-to-user-namespace",
   irssi: "brew install irssi",
-  "terminal-notifier": "brew install terminal-notifier",
+  "terminal-notifier" => "brew install terminal-notifier",
   ack: "brew install ack",
   mongo: "brew install mongodb",
   "redis-server" => "brew install redis",
