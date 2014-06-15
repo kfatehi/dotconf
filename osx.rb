@@ -10,7 +10,7 @@ checkinstall({
   nmap: "brew install nmap",
   node: "brew install node",
   tmux: "brew install tmux reattach-to-user-namespace",
-  irssi: "brew install irssi",
+  weechat: "brew install weechat",
   "terminal-notifier" => "brew install terminal-notifier",
   ack: "brew install ack",
   mongo: "brew install mongodb",
