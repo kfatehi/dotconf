@@ -36,7 +36,7 @@ def dotfile name
 end
 
 def checkinstall packages
-  packages.each do |bin, install_script|
+  packages.each do |bin, script|
     bin = bin.to_s
     run("Install #{bin} ?", script) unless find_executable(bin)
   end
