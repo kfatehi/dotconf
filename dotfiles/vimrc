@@ -32,6 +32,7 @@ Bundle "ervandew/supertab"
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-fugitive'
+Bundle 'saltstack/salt-vim'
 
 filetype plugin indent on     " required
 "
