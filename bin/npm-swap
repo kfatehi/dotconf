@@ -5,7 +5,7 @@ function strider() {
 }
 
 function npmjs() {
-  npm set registry default
+  npm set registry "https://registry.npmjs.org"
 }
 
 case "$1" in
