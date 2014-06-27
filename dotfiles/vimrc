@@ -33,6 +33,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-fugitive'
 Bundle 'saltstack/salt-vim'
+Bundle 'hail2u/vim-css3-syntax'
 
 filetype plugin indent on     " required
 "
@@ -80,6 +81,11 @@ vmap <silent> ,y y:new<CR>:call setline(1,getregtype())<CR>o<Esc>P:wq! ~/reg.txt
 nmap <silent> ,y :new<CR>:call setline(1,getregtype())<CR>o<Esc>P:wq! ~/reg.txt<CR>
 map <silent> ,p :sview ~/reg.txt<CR>"zdddG:q!<CR>:call setreg('"', @", @z)<CR>p
 map <silent> ,P :sview ~/reg.txt<CR>"zdddG:q!<CR>:call setreg('"', @", @z)<CR>P
+
+" figitive shortcuts
+nmap <leader>g :Gcommit %<cr>   
+nmap <leader>gs :Gstatus<cr>    
+nmap <leader>gp :Git push<cr>
 
 " Play nice in tmux
 if &term =~ '^screen'
@@ -179,7 +185,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn)|coverage|node_modules|public|vendor\/bundle)$',
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|coverage|node_modules|vendor\/bundle)$',
   \ 'file': '\v\.(exe|so|dll)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
