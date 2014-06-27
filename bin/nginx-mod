@@ -1,0 +1,111 @@
+#!/bin/bash
+# NGINX CONTROL ON UBUNTU
+
+function enable() {
+  if [[ "$2" == "" ]]; then
+    echo "Usage: $(basename $0) enable <name>" >&2
+    exit 1
+  fi
+  local src="/etc/nginx/sites-available/$2"
+  local dest="/etc/nginx/sites-enabled/$2"
+  if [[ -L $dest ]]; then
+    sudo rm -f $dest
+  fi
+  sudo ln -s $src $dest
+  echo "Symlinked $src to $dest"
+  local output=$(sudo service nginx reload 2>&1)
+  echo "$output"
+  if [[ $output =~ fail ]]; then
+    # if failure, show me why
+    local logfile=/var/log/nginx/error.log
+    if [[ -f $logfile ]]; then
+      sudo tail -n 1 $logfile
+    fi
+  fi
+}
+
+function disable() {
+  if [[ "$2" == "" ]]; then
+    echo "Usage: $(basename $0) disable <name>" >&2
+    exit 1
+  fi
+  local src="/etc/nginx/sites-available/$2"
+  local dest="/etc/nginx/sites-enabled/$2"
+  if [[ -L $dest ]]; then
+    sudo rm -f $dest
+    echo "Removed $dest"
+    sudo service nginx reload
+  else
+    echo "Symlink not found $dest"
+  fi
+}
+
+function list-available() {
+  echo "Sites Available:"
+  for name in $(ls /etc/nginx/sites-available); do
+    echo "  $name"
+  done
+}
+
+function list-enabled() {
+  echo "Sites Enabled:"
+  for name in $(ls /etc/nginx/sites-enabled); do
+    echo "  $name"
+  done
+}
+
+function list() {
+  if [[ ${2:0:1} == "e" ]]; then
+    list-enabled
+  elif [[ ${2:0:1} == "a" ]]; then
+    list-available
+  else
+    list-available
+    list-enabled
+  fi
+}
+
+function edit() {
+  if [[ "$2" == "" ]]; then
+    echo "Usage: $(basename $0) edit <name>" >&2
+    exit 1
+  fi
+  local src="/etc/nginx/sites-available/$2"
+  if [[ -f $src ]]; then
+    sudo vim $src
+  else
+    cat <<EOF | sudo tee $src
+heres a template for you
+EOF
+    sudo vim $src
+  fi
+}
+
+function delete() {
+  if [[ "$2" == "" ]]; then
+    echo "Usage: $(basename $0) edit <name>" >&2
+    exit 1
+  fi
+  local src="/etc/nginx/sites-available/$2"
+  local dest="/etc/nginx/sites-enabled/$2"
+  if [[ -L $dest ]]; then
+    disable $2
+  fi
+  if [[ -f $src ]]; then
+    sudo rm $dest
+  fi
+}
+
+case "$1" in
+  list | enable | disable | edit | delete )
+    $1 $@
+    ;;
+  * )
+    echo "Usage examples: " >&2
+    echo "  $(basename $0) list [available|enabled]" >&2
+    echo "  $(basename $0) enable <name>" >&2
+    echo "  $(basename $0) disable <name>" >&2
+    echo "  $(basename $0) edit <name>" >&2
+    echo "  $(basename $0) delete <name>" >&2
+    exit 1
+esac
