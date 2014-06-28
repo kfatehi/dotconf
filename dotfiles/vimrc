@@ -34,6 +34,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'tpope/vim-fugitive'
 Bundle 'saltstack/salt-vim'
 Bundle 'hail2u/vim-css3-syntax'
+Bundle 'chrisgillis/vim-bootstrap3-snippets'
 
 filetype plugin indent on     " required
 "
@@ -209,3 +210,4 @@ let g:ctrlp_custom_ignore = {
 "" Disable bell
 autocmd GUIEnter * set vb t_vb= " in the Gui
 autocmd VimEnter * set vb t_vb=
+
