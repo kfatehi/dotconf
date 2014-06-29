@@ -86,7 +86,7 @@ map <silent> ,P :sview ~/reg.txt<CR>"zdddG:q!<CR>:call setreg('"', @", @z)<CR>P
 " figitive shortcuts
 nmap <leader>g :Gcommit %<cr>   
 nmap <leader>gs :Gstatus<cr>    
-nmap <leader>gp :Git push<cr>
+nmap <leader>gp :Git push origin HEAD<cr>
 
 " Play nice in tmux
 if &term =~ '^screen'
