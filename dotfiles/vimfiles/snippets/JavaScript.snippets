@@ -22,3 +22,10 @@ snippet expect
 	expect(${1}).to
 snippet log
 	console.log(${1});
+snippet dlkt
+	'${1}': function (test) {
+	  test
+	  .open(${2})
+	  .assert${3}
+	  .done();
+	},
