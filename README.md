@@ -1,15 +1,10 @@
 # .conf
 
-## Mac OS X
+bootstrap my dev environment and related tools. Supported on:
+
+* Debian-based Linux
+* Mac OS X
+
+## Install
 
 `git clone https://github.com/keyvanfatehi/.conf && .conf/bootstrap`
-
-## Debian-based Distros
-
-```
-sudo apt-get update
-sudo apt-get -y install git curl zsh vim
-curl -sSL https://get.rvm.io | bash -s stable --ruby=2.1.2
-source ~/.rvm/scripts/rvm
-git clone https://github.com/keyvanfatehi/.conf && .conf/bootstrap
-```
