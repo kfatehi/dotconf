@@ -1,26 +1,16 @@
-#!/usr/bin/env ruby
-here = File.expand_path File.dirname __FILE__
+DOTCONF=$(dirname $(readlink -f $0))
+MY_DOTFILES=$DOTCONF/dotfiles
+MY_BINS=$DOTCONF/bin
 
-@env = {
-  "MY_DOTFILES" => File.join(here, "dotfiles"),
-  "MY_BINS" => File.join(here, "bin"),
-  "HELPERS" => File.join(here, "helpers.rb"),
-  "COMMON" => File.join(here, "common.rb"),
-  "MAC_MANIFEST" => File.join(here, "osx.rb"),
-  "DEB_MANIFEST" => File.join(here, "deb.rb")
+function manifest() {
+  source $DOTCONF/$1.sh
 }
 
-def manifest symbol
-  name = symbol.to_s.upcase+"_MANIFEST"
-  Process.wait Process.spawn(@env, "/bin/zsh", "-c", "ruby $#{name}")
-end
-
-case RbConfig::CONFIG['host_os']
-when /darwin|mac os/
-  manifest :mac
-when /linux/
-  case `uname -a`.downcase
-  when /ubuntu|debian/
-    manifest :deb
-  end
-end
+case `uname` in
+  Linux)
+    manifest "deb"
+    ;;
+  darwin)
+    manifest "osx"
+    ;;
+esac
