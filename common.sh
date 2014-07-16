@@ -60,8 +60,3 @@ npm-debug.log
 EOF
 
 vim +BundleInstall +qall
-
-hash rvm >/dev/null 2>&1 || {
-  echo "source \\$HOME/.rvm/scripts/rvm" >> ~/.zshrc
-  echo "export PATH=\"\\$PATH:\\$HOME/.rvm/bin\"" >> ~/.zshrc
-}
