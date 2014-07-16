@@ -10,7 +10,8 @@ timeleft=$(echo "$info" | awk '{ print $4 }' | cut -d ';' -f1)
 if [[ $percent == *drawing* ]]; then
   echo "AC"
 else
-  echo "$percent ($timeleft remaining)"
+  #echo "$percent ($timeleft remaining)"
+  echo "$percent"
 fi
 
 
