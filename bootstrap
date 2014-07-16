@@ -1,3 +1,4 @@
+#!/bin/bash
 DOTCONF=$(dirname $(readlink -f $0))
 MY_DOTFILES=$DOTCONF/dotfiles
 MY_BINS=$DOTCONF/bin

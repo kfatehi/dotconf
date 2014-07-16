@@ -16,7 +16,7 @@ function EnableZmodule() {
   rm /tmp/zpreztorc
 }
 
-test -f /bin/zsh && test "$SHELL" -eq "/bin/zsh" || chsh -s /bin/zsh
+test -f /bin/zsh && test "$SHELL" = "/bin/zsh" || chsh -s /bin/zsh
 
 test -f /bin/zsh && test -f $HOME/.zpreztorc || {
   echo "Install zprezto?"
