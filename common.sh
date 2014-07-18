@@ -18,15 +18,21 @@ function EnableZmodule() {
 
 test -f /bin/zsh && test "$SHELL" = "/bin/zsh" || chsh -s /bin/zsh
 
-test -f /bin/zsh && test -f $HOME/.zpreztorc || {
-  echo "Install zprezto?"
-  YesOrNo || {
-    # Installing zprezto
-    $DOTCONF/install_zprezto.zsh
-    echo "PATH=\\$PATH:$MY_BINS" >> ~/.zshrc
-    EnableZmodule "git"
-  }
-}
+if [[ -f /bin/zsh ]]; then
+  if [[ ! -f $HOME/.zpreztorc ]]; then
+    echo "Install zprezto?"
+    YesOrNo || {
+      # Installing zprezto
+      $DOTCONF/install_zprezto.zsh
+      echo "PATH=\\$PATH:$MY_BINS" >> ~/.zshrc
+      EnableZmodule "git"
+    }
+  fi
+  # Customize the prompt
+  cat $MY_DOTFILES/prompt_sorin_setup > ~/.zprezto/modules/prompt/functions/prompt_sorin_setup
+else
+  echo "zshell not found, skipping zprezto install" >&2
+fi
 
 
 # Cleaning dotfiles
