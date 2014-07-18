@@ -1,0 +1,4 @@
+#!/bin/bash
+sock=/tmp/iPad
+cmd="tmux -S $sock"
+$cmd attach || $cmd
