@@ -87,6 +87,7 @@ map <silent> ,P :sview ~/reg.txt<CR>"zdddG:q!<CR>:call setreg('"', @", @z)<CR>P
 nmap <leader>g :Gcommit %<cr>   
 nmap <leader>gs :Gstatus<cr>    
 nmap <leader>gp :Git push origin HEAD<cr>
+vmap <leader>c :w !pbcopy<cr><cr>
 
 " Play nice in tmux
 if &term =~ '^screen'
