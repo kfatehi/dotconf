@@ -165,12 +165,15 @@ highlight LineNr ctermfg=darkblue
 " Platform dependent, see .gvimrc
 
 "" Folding
-set nofoldenable " not by default please
-set foldmethod=syntax
-highlight Folded guibg=black guifg=white
+" set nofoldenable " not by default please
+" set foldmethod=syntax
+" highlight Folded guibg=black guifg=white
 
 "" Toggle fold with Spacebar
-nnoremap <Space> za
+" nnoremap <Space> za
+
+" can you tell i really dislike folding ?
+let g:vim_markdown_folding_disabled=1
 
 "" NERDTree toggle to CTRL-D
 nmap <C-D> :NERDTreeToggle<CR>
