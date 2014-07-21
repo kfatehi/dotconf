@@ -12,8 +12,12 @@ function CheckInstall() {
 
 function EnableZmodule() {
   sed "/prezto:load..pmodule/a\\ \ \'$1\' \\\\" ~/.zpreztorc > /tmp/zpreztorc
-  cat /tmp/zpreztorc > ~/.zpreztorc
-  rm /tmp/zpreztorc
+  if [[ "$?" -eq 0 ]]; then
+    cat /tmp/zpreztorc > ~/.zpreztorc
+    rm /tmp/zpreztorc
+  else
+    echo "Failed to enable zmodule $1"
+  fi
 }
 
 test -f /bin/zsh && test "$SHELL" = "/bin/zsh" || chsh -s /bin/zsh
