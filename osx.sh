@@ -12,5 +12,9 @@ CheckInstall "redis-server" || brew install redis
 CheckInstall "phantomjs" || brew install phantomjs
 CheckInstall "postgres" || brew install postgres
 CheckInstall "boot2docker" || brew install boot2docker
+CheckInstall "lolcommits" || {
+  brew install imagemagick
+  sudo gem install lolcommits
+}
 
 
