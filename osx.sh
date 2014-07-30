@@ -16,5 +16,4 @@ CheckInstall "lolcommits" || {
   brew install imagemagick
   sudo gem install lolcommits
 }
-
-
+CheckInstall "mosh" || brew install mobile-shell
