@@ -75,23 +75,28 @@ function edit() {
     sudo vim $src
   else
     cat <<EOF | sudo tee $src
-upstream app {
+upstream $2 {
   server 127.0.0.1:3000 fail_timeout=0;
 }
 
 server {
-  listen 443;
-  server_name myapp.example.com;
-  ssl on;
-  ssl_certificate /var/ssl/star_critiqueapp_com.pem;
-  ssl_certificate_key /var/ssl/server.key;
+  listen              80;
+  return              301 https://\$http_host:443\$request_uri;
+}
+
+server {
+  listen              443;
+  server_name         $2;
+  ssl                 on;
+  ssl_certificate     /var/ssl/star_X_com.pem;
+  ssl_certificate_key /var/ssl/star_X_com.key;
 
   location / {
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header Host $http_host;
-    proxy_set_header X-Forwarded-Proto https;
-    proxy_redirect off;
-    proxy_pass http://app;
+    proxy_set_header  X-Forwarded-For \$proxy_add_x_forwarded_for;
+    proxy_set_header  Host \$http_host;
+    proxy_set_header  X-Forwarded-Proto https;
+    proxy_redirect    off;
+    proxy_pass        http://$2;
   }
 }
 EOF
@@ -111,6 +116,7 @@ function delete() {
     disable $2
   fi
   if [[ -f $src ]]; then
+    sudo rm $src
     sudo rm $dest
   fi
 }
