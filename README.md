@@ -7,4 +7,4 @@ bootstrap my dev environment and related tools. Supported on:
 
 ## Install
 
-`\curl -sSL http://j.mp/keyvanfatehi_conf | bash`
+`\curl -fsSL http://j.mp/keyvanfatehi_conf | bash -e`
