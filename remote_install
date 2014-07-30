@@ -30,11 +30,13 @@ function RequirePackage() {
   }
 }
 
+function GetRequirements() {
+  RequirePackage "curl" && RequirePackage "git" && RequirePackage "zsh" && {
+    git clone https://github.com/keyvanfatehi/.conf
+}
+
 cd $HOME
-UpdatePackageManagers && {
-  RequirePackage "curl" && RequirePackage "git" && RequirePackage "zsh"
-  git clone https://github.com/keyvanfatehi/.conf
-} && echo <<EOF
-Ready to bootstrap ... execute
-  .conf/bootstrap
+UpdatePackageManagers && GetRequirements && cat <<-EOF
+  Ready! Enter the following to bootstrap this machine:
+    .conf/bootstrap
 EOF
