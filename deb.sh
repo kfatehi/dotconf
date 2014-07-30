@@ -12,7 +12,12 @@ function AptUpdatedToday() {
   fi
 }
 
-AptUpdatedToday || sudo apt-get update
+function UpdateAptRepositories() {
+  echo "Updating apt repositories ... "
+  sudo apt-get update -qq
+}
+
+AptUpdatedToday || UpdateAptRepositories
 
 sudo apt-get install -y git curl zsh vim
 
@@ -34,4 +39,11 @@ CheckInstall "mongo" || {
   echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
   sudo apt-get update
   sudo apt-get -y install mongodb-org
+}
+
+CheckInstall "mosh" || {
+  sudo apt-get install -y python-software-properties
+  sudo add-apt-repository -y ppa:keithw/mosh
+  UpdateAptRepositories
+  sudo apt-get install -y mosh
 }
