@@ -1,0 +1,19 @@
+#!/bin/bash
+
+##
+# example:
+# open $(latest_modified_in ~/.lolcommits)
+
+if [[ -d $1 ]]; then
+  case `uname` in
+    Linux)
+      find $1 -type f -printf '%T@ %p\n' | sort -n | tail -1 | cut -f2- -d" "
+      ;;
+    Darwin)
+      find $1 -type f -print0 | xargs -0 stat -f "%m %N" | sort -rn | head -1 | cut -f2- -d" "
+      ;;
+  esac
+else
+  echo "usage: $0 path/to/directory" 1>&2
+fi
+
