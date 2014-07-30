@@ -36,7 +36,6 @@ function GetRequirements() {
 }
 
 cd $HOME
-UpdatePackageManagers && GetRequirements && cat <<-EOF
+UpdatePackageManagers && GetRequirements && cat '\
   Ready! Enter the following to bootstrap this machine:
-    .conf/bootstrap
-EOF
+    .conf/bootstrap'
