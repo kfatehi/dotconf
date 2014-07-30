@@ -23,7 +23,11 @@ sudo apt-get install -y git curl zsh vim
 
 source $DOTCONF/common.sh
 
-CheckInstall "tmux" || sudo apt-get install -y tmux
+CheckInstall "tmux" || {
+  # installs tmux 1.9a
+  sudo apt-get install -y build-essential wget
+  curl -fsSL https://gist.github.com/keyvanfatehi/03f10711b8dd8fd1e14e/raw/install.sh | sudo bash -e
+}
 
 CheckInstall "node" || {
   curl -o /tmp/node.tar.gz http://nodejs.org/dist/v0.10.29/node-v0.10.29-linux-x64.tar.gz
