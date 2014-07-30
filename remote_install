@@ -4,12 +4,12 @@ UpdatePackageManagers() {
   case `uname` in
     Linux)
       echo "Updating apt packages ..."
-      apt-get update
+      DEBIAN_FRONTEND=noninteractive apt-get -qq update
       return $?
       ;;
     Darwin)
       echo "Updating brew packages ..."
-      brew install -y $1
+      brew update
       return $?
       ;;
   esac
@@ -19,7 +19,7 @@ function RequirePackage() {
   hash $1 >/dev/null 2>&1 || {
     case `uname` in
       Linux)
-        apt-get install -y $1
+        DEBIAN_FRONTEND=noninteractive apt-get install -y $1
         return $?
         ;;
       Darwin)
@@ -33,5 +33,8 @@ function RequirePackage() {
 cd $HOME
 UpdatePackageManagers && {
   RequirePackage "curl" && RequirePackage "git" && RequirePackage "zsh"
-  git clone https://github.com/keyvanfatehi/.conf && .conf/bootstrap
-}
+  git clone https://github.com/keyvanfatehi/.conf
+} && echo <<EOF
+Ready to bootstrap ... execute
+  .conf/bootstrap
+EOF
