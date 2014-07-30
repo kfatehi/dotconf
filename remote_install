@@ -1,0 +1,37 @@
+#!/bin/bash
+
+UpdatePackageManagers() {
+  case `uname` in
+    Linux)
+      echo "Updating apt packages ..."
+      apt-get update
+      return $?
+      ;;
+    Darwin)
+      echo "Updating brew packages ..."
+      brew install -y $1
+      return $?
+      ;;
+  esac
+}
+
+function RequirePackage() {
+  hash $1 >/dev/null 2>&1 || {
+    case `uname` in
+      Linux)
+        apt-get install -y $1
+        return $?
+        ;;
+      Darwin)
+        brew install -y $1
+        return $?
+        ;;
+    esac
+  }
+}
+
+cd $HOME
+UpdatePackageManagers && {
+  RequirePackage "curl" && RequirePackage "git" && RequirePackage "zsh"
+  git clone https://github.com/keyvanfatehi/.conf && .conf/bootstrap
+}

@@ -7,4 +7,4 @@ bootstrap my dev environment and related tools. Supported on:
 
 ## Install
 
-`git clone https://github.com/keyvanfatehi/.conf && .conf/bootstrap`
+`curl -sSL https://github.com/keyvanfatehi/.conf/blob/master/remote_install | bash`
