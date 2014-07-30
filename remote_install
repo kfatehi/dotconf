@@ -4,7 +4,7 @@ UpdatePackageManagers() {
   case `uname` in
     Linux)
       echo "Updating apt packages ..."
-      DEBIAN_FRONTEND=noninteractive apt-get -qq update
+      DEBIAN_FRONTEND=noninteractive sudo apt-get -qq update
       return $?
       ;;
     Darwin)
@@ -19,7 +19,7 @@ function RequirePackage() {
   hash $1 >/dev/null 2>&1 || {
     case `uname` in
       Linux)
-        DEBIAN_FRONTEND=noninteractive apt-get install -y $1
+        DEBIAN_FRONTEND=noninteractive sudo apt-get install -y $1
         return $?
         ;;
       Darwin)
