@@ -31,6 +31,9 @@ if [[ -f /bin/zsh ]]; then
       echo "PATH=\\$PATH:$MY_BINS" >> ~/.zshrc
       EnableZmodule "git"
     }
+    mkdir $HOME/go
+    echo "export GOPATH=\$HOME/go" >> ~/.zshenv
+    echo "export PATH=\$GOPATH/bin:\$PATH" >> ~/.zshenv
   fi
   # Customize the prompt
   cat $MY_DOTFILES/prompt_sorin_setup > ~/.zprezto/modules/prompt/functions/prompt_sorin_setup
