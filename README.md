@@ -8,3 +8,9 @@ bootstrap my dev environment and related tools. Supported on:
 ## Install
 
 `\curl -fsSL http://j.mp/keyvanfatehi_conf | bash -e`
+
+## Todo
+
+for next time we redo the machine...
+
+* use http://caskroom.io/
