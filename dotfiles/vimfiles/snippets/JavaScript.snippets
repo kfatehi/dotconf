@@ -31,3 +31,5 @@ snippet dlkt
 	},
 snippet tofixture
 	require('fs').writeFileSync("/tmp/fixture.json", JSON.stringify(${1}, null, 2));
+snippet throw
+	throw new Error(${1});
