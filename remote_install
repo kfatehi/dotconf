@@ -8,8 +8,13 @@ UpdatePackageManagers() {
       return $?
       ;;
     Darwin)
-      echo "Updating brew packages ..."
-      brew update
+      if hash brew > /dev/null 2>&1; then
+        echo "Updating brew packages ..."
+        brew update
+      else
+        echo "Installing brew"
+        ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+      fi
       return $?
       ;;
   esac
