@@ -18,7 +18,13 @@ CheckInstall "lolcommits" || {
 }
 CheckInstall "mosh" || brew install mobile-shell
 
-if [[ -f /usr/local/bin/brew-cask.rb ]]; then
+if [[ ! -f /usr/local/bin/brew-cask.rb ]]; then
+  YesOrNo "brew cask?" || {
+    brew install caskroom/cask/brew-cask
+    brew cask
+    echo "Rerun the bootstrap to install all casks"
+  }
+else
   DropboxDotfileSymlink "ssh"
   DropboxDotfileSymlink "weechat"
   DropboxDotfileSymlink "lolcommits"
@@ -34,11 +40,6 @@ if [[ -f /usr/local/bin/brew-cask.rb ]]; then
   brew cask install robomongo
   brew cask install google-hangouts
   brew cask install skype
+  brew cask install cloudapp
   brew cask install virtualbox
-else
-  YesOrNo "brew cask?" || {
-    brew install caskroom/cask/brew-cask
-    brew cask
-    echo "Rerun the bootstrap to install all casks"
-  }
 fi
