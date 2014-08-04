@@ -31,6 +31,7 @@ if [[ -f /usr/local/bin/brew-cask.rb ]]; then
   brew cask install slack
   brew cask install mailplane
   brew cask install onepassword
+  brew cask install robomongo
 else
   YesOrNo "brew cask?" || {
     brew install caskroom/cask/brew-cask
