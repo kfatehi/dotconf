@@ -29,8 +29,9 @@ else
   DropboxDotfileSymlink "weechat"
   DropboxDotfileSymlink "lolcommits"
 
-  brew cask install iterm2
   brew cask install alfred && brew cask alfred link
+  brew cask install iterm2
+  brew cask install gitx-rowanj
   brew cask install google-chrome
   brew cask install dropbox
   brew cask install spotify
