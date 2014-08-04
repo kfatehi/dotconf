@@ -6,6 +6,13 @@ function YesOrNo() {
   esac
 }
 
+function DropboxDotfileSymlink() {
+  if [[ ! -L $HOME/.$1 ]]; then
+    echo "symlinking .$1 to dropbox"
+    ln -s $HOME/Dropbox/dotfiles_private/$1 $HOME/.$1
+  fi
+}
+
 function CheckInstall() {
   hash $1 >/dev/null 2>&1 || YesOrNo $1
 }
