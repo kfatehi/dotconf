@@ -1,0 +1,43 @@
+#!/bin/bash
+
+UpdatePackageManagers() {
+  case `uname` in
+    Linux)
+      echo "Updating apt packages ..."
+      DEBIAN_FRONTEND=noninteractive sudo apt-get -qq update
+      return $?
+      ;;
+    Darwin)
+      if hash brew > /dev/null 2>&1; then
+        echo "Updating brew packages ..."
+        brew update
+      else
+        echo "Installing brew"
+        ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+      fi
+      return $?
+      ;;
+  esac
+}
+
+function RequirePackage() {
+  hash $1 >/dev/null 2>&1 || {
+    case `uname` in
+      Linux)
+        DEBIAN_FRONTEND=noninteractive sudo apt-get install -y $1
+        return $?
+        ;;
+      Darwin)
+        brew install -y $1
+        return $?
+        ;;
+    esac
+  }
+}
+
+function GetRequirements() {
+  RequirePackage "git" && RequirePackage "zsh" && git clone https://github.com/keyvanfatehi/.conf
+}
+
+cd $HOME
+UpdatePackageManagers && GetRequirements && echo $'\tReady! Enter the following to bootstrap this machine:\n\t\t.conf/bootstrap'

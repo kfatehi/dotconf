@@ -12,13 +12,22 @@ function AptUpdatedToday() {
   fi
 }
 
-AptUpdatedToday || sudo apt-get update
+function UpdateAptRepositories() {
+  echo "Updating apt repositories ... "
+  sudo apt-get update -qq
+}
+
+AptUpdatedToday || UpdateAptRepositories
 
 sudo apt-get install -y git curl zsh vim
 
 source $DOTCONF/common.sh
 
-CheckInstall "tmux" || sudo apt-get install -y tmux
+CheckInstall "tmux" || {
+  # installs tmux 1.9a
+  sudo apt-get install -y build-essential wget
+  curl -fsSL https://gist.github.com/keyvanfatehi/03f10711b8dd8fd1e14e/raw/install.sh | sudo bash -e
+}
 
 CheckInstall "node" || {
   curl -o /tmp/node.tar.gz http://nodejs.org/dist/v0.10.29/node-v0.10.29-linux-x64.tar.gz
@@ -34,4 +43,11 @@ CheckInstall "mongo" || {
   echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/mongodb.list
   sudo apt-get update
   sudo apt-get -y install mongodb-org
+}
+
+CheckInstall "mosh" || {
+  sudo apt-get install -y python-software-properties
+  sudo add-apt-repository -y ppa:keithw/mosh
+  UpdateAptRepositories
+  sudo apt-get install -y mosh
 }

@@ -7,4 +7,4 @@ bootstrap my dev environment and related tools. Supported on:
 
 ## Install
 
-`git clone https://github.com/keyvanfatehi/.conf && .conf/bootstrap`
+`\curl -fsSL http://j.mp/keyvanfatehi_conf | bash -e`

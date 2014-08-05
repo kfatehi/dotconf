@@ -6,14 +6,25 @@ function YesOrNo() {
   esac
 }
 
+function DropboxDotfileSymlink() {
+  if [[ ! -L $HOME/.$1 ]]; then
+    echo "symlinking .$1 to dropbox"
+    ln -s $HOME/Dropbox/dotfiles_private/$1 $HOME/.$1
+  fi
+}
+
 function CheckInstall() {
   hash $1 >/dev/null 2>&1 || YesOrNo $1
 }
 
 function EnableZmodule() {
   sed "/prezto:load..pmodule/a\\ \ \'$1\' \\\\" ~/.zpreztorc > /tmp/zpreztorc
-  cat /tmp/zpreztorc > ~/.zpreztorc
-  rm /tmp/zpreztorc
+  if [[ "$?" -eq 0 ]]; then
+    cat /tmp/zpreztorc > ~/.zpreztorc
+    rm /tmp/zpreztorc
+  else
+    echo "Failed to enable zmodule $1"
+  fi
 }
 
 test -f /bin/zsh && test "$SHELL" = "/bin/zsh" || chsh -s /bin/zsh
@@ -27,6 +38,9 @@ if [[ -f /bin/zsh ]]; then
       echo "PATH=\\$PATH:$MY_BINS" >> ~/.zshrc
       EnableZmodule "git"
     }
+    mkdir $HOME/go
+    echo "export GOPATH=\$HOME/go" >> ~/.zshenv
+    echo "export PATH=\$GOPATH/bin:\$PATH" >> ~/.zshenv
   fi
   # Customize the prompt
   cat $MY_DOTFILES/prompt_sorin_setup > ~/.zprezto/modules/prompt/functions/prompt_sorin_setup
