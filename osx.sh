@@ -42,5 +42,6 @@ else
   brew cask install google-hangouts
   brew cask install skype
   brew cask install cloudapp
+  brew cask install airdisplay
   brew cask install virtualbox
 fi
