@@ -30,6 +30,7 @@ else
   DropboxDotfileSymlink "lolcommits"
 
   brew cask install alfred && brew cask alfred link
+  brew cask install launchrocket
   brew cask install iterm2
   brew cask install gitx-rowanj
   brew cask install google-chrome
