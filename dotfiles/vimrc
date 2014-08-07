@@ -18,6 +18,8 @@ Bundle 'scrooloose/nerdtree'
 " replace with polyglot?
 Bundle 'pangloss/vim-javascript'
 
+Bundle 'Shutnik/jshint2.vim'
+
 Bundle "MarcWeber/vim-addon-mw-utils"
 
 Bundle "tomtom/tlib_vim"
@@ -173,6 +175,9 @@ nmap <Leader>t :e ~/.tmux.conf
 
 " find in project
 nmap <Leader>f :vimgrep /
+
+" jshint
+nmap <Leader>jsh :JSHint<cr>
 
 " find next in project
 nmap <Leader>n :cnext<CR>
