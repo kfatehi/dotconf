@@ -1,6 +1,7 @@
 source $DOTCONF/common.sh
 CheckInstall "brew" || ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 CheckInstall "wget" || brew install wget
+CheckInstall "http" || brew install httpie
 CheckInstall "nmap" || brew install nmap
 CheckInstall "node" || brew install node
 CheckInstall "tmux" || brew install tmux reattach-to-user-namespace
