@@ -8,7 +8,7 @@ CheckInstall "tmux" || brew install tmux reattach-to-user-namespace
 CheckInstall "ack" || brew install ack
 CheckInstall "mongo" || brew install mongodb
 CheckInstall "terminal-notifier" || brew install terminal-notifier
-CheckInstall "weechat" || brew install weechat --with-python --with-ruby
+CheckInstall "weechat" || brew install weechat --with-python --with-ruby --with-perl
 CheckInstall "redis-server" || brew install redis
 # CheckInstall "phantomjs" || brew install phantomjs
 # CheckInstall "postgres" || brew install postgres
