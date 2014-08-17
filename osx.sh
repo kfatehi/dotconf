@@ -34,6 +34,7 @@ else
   brew cask install alfred && brew cask alfred link
   brew cask install launchrocket
   brew cask install iterm2
+  brew cask install xquartz
   brew cask install gitx-rowanj
   brew cask install google-chrome
   brew cask install dropbox
