@@ -8,11 +8,15 @@ function npmjs() {
   npm set registry "https://registry.npmjs.org"
 }
 
+function knban() {
+  npm set registry "http://sinopia.knban.com"
+}
+
 case "$1" in
-  strider | npmjs )
+  strider | npmjs | knban)
     $1
     ;;
   * )
-    echo "valid commands: strider, npmjs" >&2
+    echo "valid commands: strider, npmjs, knban" >&2
     exit 1
 esac
