@@ -1,22 +1,50 @@
 #!/bin/bash
 
-function strider() {
-  npm set registry "http://compute-01.critiqueapp.com:4873/"
+function NpmSwap() {
+  local current="$(npm get registry)"
+  if [[ "$current" != "$1" ]]; then
+    echo "Saving $current into $2"
+    echo "$current" > $2
+  fi
+  npm set registry "$1"
+  echo "Switched to $(npm get registry)"
 }
 
-function npmjs() {
-  npm set registry "https://registry.npmjs.org"
+function GetUrl() {
+  if [[ "$1" = "strider" ]]; then
+    echo "http://compute-01.critiqueapp.com:4873/"
+  elif [[ "$1" = "npmjs" ]]; then
+    echo "https://registry.npmjs.org/"
+  elif [[ "$1" = "knban" ]]; then
+    echo "http://sinopia.knban.com/"
+  fi
 }
 
-function knban() {
-  npm set registry "http://sinopia.knban.com"
+function HelpQuit() {
+  echo "valid commands: strider, npmjs, knban" >&2
+  exit 1
 }
 
-case "$1" in
-  strider | npmjs | knban)
-    $1
-    ;;
-  * )
-    echo "valid commands: strider, npmjs, knban" >&2
-    exit 1
-esac
+function DoIt() {
+  local previous="$HOME/.npm-swap.last"
+  if [[ "$1" = "help" ]]; then
+    HelpQuit
+  else
+    case "$1" in
+      strider | npmjs | knban)
+        url=$(GetUrl $1)
+        NpmSwap $url $previous
+        ;;
+      * )
+        if [[ "$1" = "" && -f $previous ]]; then
+          local prev=$(cat $previous)
+          echo "Going back to $prev"
+          NpmSwap $prev $previous
+        else
+          HelpQuit
+        fi
+    esac
+  fi
+}
+
+DoIt $@
