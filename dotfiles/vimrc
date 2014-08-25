@@ -188,7 +188,9 @@ nmap <Leader>s :source $MYVIMRC<CR>
 " opens $MYVIMRC for editing, or use :tabedit $MYVIMRC
 nmap <Leader>v :e $MYVIMRC<CR>
 
-colorscheme monokai
+"colorscheme monokai
+colorscheme Tomorrow-Night-Bright
+
 set t_Co=256 " Make sure your terminal is 256 colors too!
 
 "" On a white terminal
