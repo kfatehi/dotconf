@@ -18,6 +18,8 @@ Bundle 'scrooloose/nerdtree'
 " replace with polyglot?
 Bundle 'pangloss/vim-javascript'
 
+Bundle 'mxw/vim-jsx'
+
 Bundle 'Shutnik/jshint2.vim'
 
 Bundle "MarcWeber/vim-addon-mw-utils"
