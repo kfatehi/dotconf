@@ -1,2 +1,3 @@
 .DS_Store
-dotfiles/vimfiles/bundle/*
+/dotfiles/vimfiles/bundle/*
+/node_modules
