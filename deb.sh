@@ -34,6 +34,7 @@ CheckInstall "node" || {
   cd /usr/local
   sudo tar --strip-components 1 -zxf /tmp/node.tar.gz
   rm /tmp/node.tar.gz
+  cd ~/.conf && npm install
 }
 
 CheckInstall "redis-server" || sudo apt-get -y install redis-server

@@ -3,7 +3,7 @@ CheckInstall "brew" || ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/hom
 CheckInstall "wget" || brew install wget
 CheckInstall "http" || brew install httpie
 CheckInstall "nmap" || brew install nmap
-CheckInstall "node" || brew install node
+CheckInstall "node" || brew install node && cd ~/.conf && npm install
 CheckInstall "tmux" || brew install tmux reattach-to-user-namespace
 CheckInstall "ack" || brew install ack
 CheckInstall "mongo" || brew install mongodb
