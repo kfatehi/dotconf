@@ -1,14 +1,14 @@
 #!/usr/bin/env coffee
 
 help = """
-Help switch into hacking contexts on various projects
-by providing a convenient CLI into their dev modes
+  Help switch into hacking contexts on various projects
+  by providing a convenient CLI into their dev modes
 
-Usage: 
-  Define the project below using the repo name as the key
-  `cd` into the repo, ensuring the dir name matches the key
-  
+  Usage: 
+    Define the project below using the repo name as the key
+    `cd` into the repo, ensuring the dir name matches the key
 """
+
 Projects =
   strider:
     env_options:
