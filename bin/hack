@@ -1,0 +1,49 @@
+#!/usr/bin/env coffee
+
+help = """
+Help switch into hacking contexts on various projects
+by providing a convenient CLI into their dev modes
+
+Usage: 
+  Define the project below using the repo name as the key
+  `cd` into the repo, ensuring the dir name matches the key
+  
+"""
+Projects =
+  strider:
+    env_options:
+      SERVER_NAME: 'url'
+      PLUGIN_GITHUB_APP_ID: "ghid"
+      PLUGIN_GITHUB_APP_SECRET: "ghsecret"
+    default: "node-dev --no-deps bin/strider"
+    hack_cmd: -> HackCommand(@)
+
+echo = console.log
+echo2 = (str) -> process.stderr.write "#{str}\n"
+argv = require('minimist')(process.argv.slice(2))
+path = require 'path'
+
+HackCommand = (cmd) ->
+  lines = []
+  if cmd.env_options?
+    for name, arg of cmd.env_options
+      value = argv[arg]
+      if value?
+        lines.push "#{name}=\"#{value}\""
+      else
+        echo2 "To set #{name} pass in --#{arg}"
+  echo2 "The following is sent to STDOUT for piping out to bash!\n"
+  lines.push cmd.default
+  echo lines.join(" \\\n")
+
+
+if argv.help or argv.h or argv._[0] is "help"
+  echo help
+else
+  projectName = argv.project or path.basename(process.cwd())
+  project = Projects[projectName]
+  if !project?
+    console.error "no dev command defined for '#{projectName}'"
+    process.exit(1)
+    
+  project.hack_cmd()
