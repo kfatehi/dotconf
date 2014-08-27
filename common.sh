@@ -35,7 +35,7 @@ if [[ -f /bin/zsh ]]; then
     YesOrNo || {
       # Installing zprezto
       $DOTCONF/install_zprezto.zsh
-      echo "PATH=\\$PATH:$MY_BINS" >> ~/.zshrc
+      echo "PATH=\\$PATH:$MY_BINS:$MY_NODE_BINS" >> ~/.zshrc
       EnableZmodule "git"
     }
     mkdir $HOME/go
