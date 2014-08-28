@@ -1,3 +1,12 @@
+function AfterInstall() {
+  local script=$DOTCONF/after/$1
+  if [[ -f $script ]]; then
+    pushd $DOTCONF > /dev/null
+    source $script
+    popd > /dev/null
+  fi
+}
+
 function YesOrNo() {
   read -p "Install $1 (y/n)?" choice
   case "$choice" in 

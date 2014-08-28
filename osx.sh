@@ -6,7 +6,7 @@ CheckInstall "brew" || {
   brew install httpie
   brew install ngrok
   brew install nmap
-  brew install node && cd ~/.conf && npm install
+  brew install node && AfterInstall 'node'
   brew install tmux reattach-to-user-namespace
   brew install ack
   brew install mongodb
