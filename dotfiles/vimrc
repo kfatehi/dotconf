@@ -71,6 +71,8 @@ Bundle 'hail2u/vim-css3-syntax'
 
 Bundle 'chrisgillis/vim-bootstrap3-snippets'
 
+Bundle 'groenewege/vim-less'
+
 filetype plugin indent on     " required
 "
 " Brief help
