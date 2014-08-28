@@ -1,32 +1,24 @@
 source $DOTCONF/common.sh
-CheckInstall "brew" || ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-CheckInstall "wget" || brew install wget
-CheckInstall "http" || brew install httpie
-CheckInstall "nmap" || brew install nmap
-CheckInstall "node" || brew install node && cd ~/.conf && npm install
-CheckInstall "tmux" || brew install tmux reattach-to-user-namespace
-CheckInstall "ack" || brew install ack
-CheckInstall "mongo" || brew install mongodb
-CheckInstall "terminal-notifier" || brew install terminal-notifier
-CheckInstall "weechat" || brew install weechat --with-python --with-ruby --with-perl
-CheckInstall "redis-server" || brew install redis
-# CheckInstall "phantomjs" || brew install phantomjs
-# CheckInstall "postgres" || brew install postgres
-CheckInstall "boot2docker" || brew install boot2docker
-CheckInstall "chromedriver" || brew install chromedriver
-CheckInstall "lolcommits" || {
-  brew install imagemagick
-  sudo gem install lolcommits
+CheckInstall "brew" || {
+  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+  brew install wget
+  brew install mobile-shell
+  brew install httpie
+  brew install ngrok
+  brew install nmap
+  brew install node && cd ~/.conf && npm install
+  brew install tmux reattach-to-user-namespace
+  brew install ack
+  brew install mongodb
+  brew install terminal-notifier
+  brew install weechat --with-python --with-ruby --with-perl
+  brew install redis
 }
-CheckInstall "mosh" || brew install mobile-shell
 
 if [[ ! -f /usr/local/bin/brew-cask.rb ]]; then
-  YesOrNo "brew cask?" || {
-    brew install caskroom/cask/brew-cask
-    brew cask
-    echo "Rerun the bootstrap to install all casks"
-  }
-else
+  brew install caskroom/cask/brew-cask
+  brew cask
+
   DropboxDotfileSymlink "ssh"
   DropboxDotfileSymlink "weechat"
   DropboxDotfileSymlink "lolcommits"
@@ -51,5 +43,4 @@ else
   brew cask install xquartz
   brew cask install virtualbox
   brew cask install firefox
-  ~/.misc/setup_dewdrop.sh
 fi
