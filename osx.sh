@@ -41,3 +41,10 @@ if [[ ! -f /usr/local/bin/brew-cask.rb ]]; then
     brew cask install firefox
   }
 fi
+
+if [[ ! -f ~/.iterm2/monokai_soda.itermcolors ]]; then
+  mkdir -p ~/.iterm2
+  MONOKAI_URL="https://raw.githubusercontent.com/mbadolato/iTerm2-Color-Schemes/master/schemes/Monokai%20Soda.itermcolors"
+  curl -fsSL $MONOKAI_URL > ~/.iterm2/monokai_soda.itermcolors
+  open ~/.iterm2/monokai_soda.itermcolors
+fi
