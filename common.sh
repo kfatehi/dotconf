@@ -65,6 +65,12 @@ ln -s $MY_DOTFILES/tmux.conf        ~/.tmux.conf
 ln -s $MY_DOTFILES/tmux-osx.conf    ~/.tmux-osx.conf
 ln -s $MY_DOTFILES/tmux-nested.conf ~/.tmux-nested.conf
 
+# Private Dotfiles
+DropboxDotfileSymlink "ssh"
+DropboxDotfileSymlink "weechat"
+DropboxDotfileSymlink "lolcommits"
+DropboxDotfileSymlink "misc"
+
 git config --global core.editor "vim"
 git config --global color.diff true
 git config --global user.email "keyvanfatehi@gmail.com"

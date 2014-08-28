@@ -16,31 +16,28 @@ CheckInstall "brew" || {
 }
 
 if [[ ! -f /usr/local/bin/brew-cask.rb ]]; then
-  brew install caskroom/cask/brew-cask
-  brew cask
+  YesOrNo "brew cask?" || {
+    brew install caskroom/cask/brew-cask
+    brew cask
 
-  DropboxDotfileSymlink "ssh"
-  DropboxDotfileSymlink "weechat"
-  DropboxDotfileSymlink "lolcommits"
-  DropboxDotfileSymlink "misc"
-
-  brew cask install alfred && brew cask alfred link
-  brew cask install dropbox
-  brew cask install teleport
-  brew cask install iterm2
-  brew cask install launchrocket
-  brew cask install gitx-rowanj
-  brew cask install google-chrome
-  brew cask install spotify
-  brew cask install slack
-  brew cask install mailplane
-  brew cask install onepassword
-  brew cask install robomongo
-  brew cask install google-hangouts
-  brew cask install skype
-  brew cask install dewdrop
-  brew cask install airdisplay
-  brew cask install xquartz
-  brew cask install virtualbox
-  brew cask install firefox
+    brew cask install alfred && brew cask alfred link
+    brew cask install dropbox
+    brew cask install teleport
+    brew cask install iterm2
+    brew cask install launchrocket
+    brew cask install gitx-rowanj
+    brew cask install google-chrome
+    brew cask install spotify
+    brew cask install slack
+    brew cask install mailplane
+    brew cask install onepassword
+    brew cask install robomongo
+    brew cask install google-hangouts
+    brew cask install skype
+    brew cask install dewdrop
+    brew cask install airdisplay
+    brew cask install xquartz
+    brew cask install virtualbox
+    brew cask install firefox
+  }
 fi
