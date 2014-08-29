@@ -1,2 +1,2 @@
 npm install
-sudo npm install -g bower grunt-cli mocha
+sudo npm install -g bower grunt-cli mocha node-dev
