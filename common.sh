@@ -44,12 +44,12 @@ if [[ -f /bin/zsh ]]; then
     YesOrNo || {
       # Installing zprezto
       $DOTCONF/install_zprezto.zsh
-      echo "PATH=\\$PATH:$MY_BINS:$MY_NODE_BINS" >> ~/.zshrc
+      echo 'PATH="$PATH:'$MY_BINS':'$MY_NODE_BINS'"' >> ~/.zshrc
       EnableZmodule "git"
     }
     mkdir $HOME/go
-    echo "export GOPATH=\$HOME/go" >> ~/.zshenv
-    echo "export PATH=\$GOPATH/bin:\$PATH" >> ~/.zshenv
+    echo 'export GOPATH="$HOME/go"' >> ~/.zshenv
+    echo 'export PATH="$PATH:$GOPATH/bin"' >> ~/.zshenv
   fi
   # Customize the prompt
   cat $MY_DOTFILES/prompt_sorin_setup > ~/.zprezto/modules/prompt/functions/prompt_sorin_setup
