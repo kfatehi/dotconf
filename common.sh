@@ -47,8 +47,8 @@ if [[ -f /bin/zsh ]]; then
       echo 'PATH="$PATH:'$MY_BINS':'$MY_NODE_BINS'"' >> ~/.zshrc
       EnableZmodule "git"
     }
-    mkdir $HOME/go
-    echo 'export GOPATH="$HOME/go"' >> ~/.zshenv
+    mkdir $HOME/.gopath
+    echo 'export GOPATH="$HOME/.gopath"' >> ~/.zshenv
     echo 'export PATH="$PATH:$GOPATH/bin"' >> ~/.zshenv
   fi
   # Customize the prompt
