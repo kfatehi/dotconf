@@ -55,6 +55,10 @@ class HackCommand
     @args = profile.args
     @env = {}
     env_args = profile.env_args
+    env_defaults = profile.env_defaults
+    if env_defaults?
+      for name, value of env_defaults
+        @env[name] = value
     if env_args?
       for name, arg of env_args
         value = argv[arg]
