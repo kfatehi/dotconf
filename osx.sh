@@ -46,10 +46,10 @@ else
   brew cask install robomongo
   brew cask install google-hangouts
   brew cask install skype
-  brew cask install dewdrop
+#  brew cask install dewdrop
   brew cask install airdisplay
   brew cask install xquartz
   brew cask install virtualbox
   brew cask install firefox
-  ~/.misc/setup_dewdrop.sh
+#  ~/.misc/setup_dewdrop.sh
 fi
