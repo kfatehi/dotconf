@@ -1,3 +1,12 @@
+function AfterInstall() {
+  local script=$DOTCONF/after/$1
+  if [[ -f $script ]]; then
+    pushd $DOTCONF > /dev/null
+    source $script
+    popd > /dev/null
+  fi
+}
+
 function YesOrNo() {
   read -p "Install $1 (y/n)?" choice
   case "$choice" in 
@@ -35,12 +44,12 @@ if [[ -f /bin/zsh ]]; then
     YesOrNo || {
       # Installing zprezto
       $DOTCONF/install_zprezto.zsh
-      echo "PATH=\\$PATH:$MY_BINS:$MY_NODE_BINS" >> ~/.zshrc
+      echo 'PATH="$PATH:'$MY_BINS':'$MY_NODE_BINS'"' >> ~/.zshrc
       EnableZmodule "git"
     }
-    mkdir $HOME/go
-    echo "export GOPATH=\$HOME/go" >> ~/.zshenv
-    echo "export PATH=\$GOPATH/bin:\$PATH" >> ~/.zshenv
+    mkdir $HOME/.gopath
+    echo 'export GOPATH="$HOME/.gopath"' >> ~/.zshenv
+    echo 'export PATH="$PATH:$GOPATH/bin"' >> ~/.zshenv
   fi
   # Customize the prompt
   cat $MY_DOTFILES/prompt_sorin_setup > ~/.zprezto/modules/prompt/functions/prompt_sorin_setup
@@ -64,6 +73,12 @@ ln -s $MY_DOTFILES/vimrc            ~/.vimrc
 ln -s $MY_DOTFILES/tmux.conf        ~/.tmux.conf
 ln -s $MY_DOTFILES/tmux-osx.conf    ~/.tmux-osx.conf
 ln -s $MY_DOTFILES/tmux-nested.conf ~/.tmux-nested.conf
+
+# Private Dotfiles
+DropboxDotfileSymlink "ssh"
+DropboxDotfileSymlink "weechat"
+DropboxDotfileSymlink "lolcommits"
+DropboxDotfileSymlink "misc"
 
 git config --global core.editor "vim"
 git config --global color.diff true

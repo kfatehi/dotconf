@@ -1,6 +1,9 @@
 #!/bin/bash
 
 function manifest() {
+  pushd $DOTCONF > /dev/null
+  git remote set-url origin git@github.com:keyvanfatehi/.conf.git
+  popd > /dev/null
   MY_DOTFILES=$DOTCONF/dotfiles
   MY_BINS=$DOTCONF/bin
   MY_NODE_BINS=$DOTCONF/node_modules/.bin
