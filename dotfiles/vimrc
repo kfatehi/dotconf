@@ -30,7 +30,7 @@ Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 
 " default snippets for snipmate
-Bundle "honza/vim-snippets"
+" Bundle "honza/vim-snippets"
 
 Bundle 'ciaranm/detectindent'
 
