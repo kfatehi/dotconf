@@ -34,7 +34,8 @@ if [[ ! -f /usr/local/bin/brew-cask.rb ]]; then
     brew cask install robomongo
     brew cask install google-hangouts
     brew cask install skype
-    brew cask install dewdrop
+    # brew cask install dewdrop
+    # ~/.misc/setup_dewdrop.sh
     brew cask install airdisplay
     brew cask install xquartz
     brew cask install virtualbox
