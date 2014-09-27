@@ -6,7 +6,7 @@ snippet ae
 	afterEach(function() {
 	  ${1}
 	});
-snippet fn function
+snippet f fn function
 	function() {
 	  ${1}
 	}
@@ -33,3 +33,9 @@ snippet tofixture
 	require('fs').writeFileSync("/tmp/fixture.json", JSON.stringify(${1}, null, 2));
 snippet throw
 	throw new Error(${1});
+snippet bluebird
+	var Promise = require('bluebird')
+snippet promise
+	return new Promise(function(resolve, reject) {
+	  ${2}
+	});
