@@ -8,7 +8,7 @@ function AfterInstall() {
 }
 
 function YesOrNo() {
-  read -p "Install $1 (y/n)?" choice
+  read -p "Install $1 (y/N)?" choice
   case "$choice" in 
     y|Y ) return 1;;
     n|N|* ) return 0;;
@@ -36,9 +36,14 @@ function EnableZmodule() {
   fi
 }
 
-test -f /bin/zsh && test "$SHELL" = "/bin/zsh" || chsh -s /bin/zsh
 
 if [[ -f /bin/zsh ]]; then
+  test -f /bin/zsh && test "$SHELL" = "/bin/zsh" || {
+    echo "Change shell to zsh?"
+    YesOrNo || {
+       chsh -s /bin/zsh
+    }
+  }
   if [[ ! -f $HOME/.zpreztorc ]]; then
     echo "Install zprezto?"
     YesOrNo || {
