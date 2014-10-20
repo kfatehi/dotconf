@@ -15,13 +15,13 @@ function GetUrl() {
     echo "http://compute-01.critiqueapp.com:4873/"
   elif [[ "$1" = "npmjs" ]]; then
     echo "https://registry.npmjs.org/"
-  elif [[ "$1" = "knban" ]]; then
-    echo "http://sinopia.knban.com/"
+  elif [[ "$1" = "upstreamapp" ]]; then
+    echo "http://box.upstreamapp.com:4873/"
   fi
 }
 
 function HelpQuit() {
-  echo "valid commands: strider, npmjs, knban" >&2
+  echo "valid commands: strider, npmjs, upstreamapp" >&2
   exit 1
 }
 
@@ -31,7 +31,7 @@ function DoIt() {
     HelpQuit
   else
     case "$1" in
-      strider | npmjs | knban)
+      strider | npmjs | upstreamapp)
         url=$(GetUrl $1)
         NpmSwap $url $previous
         ;;
