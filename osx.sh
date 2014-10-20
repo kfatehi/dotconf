@@ -3,7 +3,7 @@ CheckInstall "brew" || {
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
   brew install wget
   brew install mobile-shell
-  brew install httpie
+  # brew install httpie
   brew install ngrok
   brew install nmap
   brew install node && AfterInstall 'node'
@@ -11,7 +11,7 @@ CheckInstall "brew" || {
   brew install ack
   brew install mongodb
   brew install terminal-notifier
-  brew install weechat --with-python --with-ruby --with-perl
+  # brew install weechat --with-python --with-ruby --with-perl
   brew install redis
 }
 
@@ -20,9 +20,9 @@ if [[ ! -f /usr/local/bin/brew-cask.rb ]]; then
     brew install caskroom/cask/brew-cask
     brew cask
 
-    brew cask install alfred && brew cask alfred link
+    # brew cask install alfred && brew cask alfred link
     brew cask install dropbox
-    brew cask install teleport
+    # brew cask install teleport
     brew cask install iterm2
     brew cask install launchrocket
     brew cask install gitx-rowanj
@@ -36,7 +36,7 @@ if [[ ! -f /usr/local/bin/brew-cask.rb ]]; then
     brew cask install skype
     # brew cask install dewdrop
     # ~/.misc/setup_dewdrop.sh
-    brew cask install airdisplay
+    # brew cask install airdisplay
     brew cask install xquartz
     brew cask install virtualbox
     brew cask install firefox
