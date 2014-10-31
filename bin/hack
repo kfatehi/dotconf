@@ -6,7 +6,7 @@ Profiles =
       PLUGIN_GITHUB_APP_ID: "ghid"
       PLUGIN_GITHUB_APP_SECRET: "ghsecret"
     command: "node-dev"
-    args: ['--no-deps', 'bin/strider']
+    args: ['bin/strider']
 
 echo = console.log
 echo2 = (str) -> process.stderr.write "#{str}\n"
