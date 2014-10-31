@@ -59,6 +59,8 @@ Bundle 'chrisgillis/vim-bootstrap3-snippets'
 
 Bundle 'groenewege/vim-less'
 
+Bundle 'fatih/vim-go'
+
 filetype plugin indent on     " required
 "
 " Brief help
