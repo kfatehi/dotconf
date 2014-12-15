@@ -61,6 +61,8 @@ Bundle 'groenewege/vim-less'
 
 Bundle 'fatih/vim-go'
 
+Bundle 'mustache/vim-mustache-handlebars'
+
 filetype plugin indent on     " required
 "
 " Brief help
