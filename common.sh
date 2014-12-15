@@ -65,7 +65,6 @@ fi
 
 # Cleaning dotfiles
 rm -rf \
-    ~/.gitignore \
     ~/.vim \
     ~/.vimrc \
     ~/.tmux.conf \
@@ -90,13 +89,6 @@ git config --global color.diff true
 git config --global user.email "keyvanfatehi@gmail.com"
 git config --global user.name "Keyvan Fatehi"
 git config --global push.default matching
-git config --global core.excludesfile ~/.gitignore
-cat <<-EOF >  ~/.gitignore
-.DS_Store
-npm-debug.log
-.netrwhist
-*.swo
-*.swp
-EOF
+git config --global core.excludesfile $DOTCONF/gitignore_global
 
 vim +BundleInstall +qall
