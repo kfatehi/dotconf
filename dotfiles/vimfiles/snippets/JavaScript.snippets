@@ -51,3 +51,9 @@ snippet for
 	for (var i=0; i<${1}.length; i++) {
 	  ${2}
 	}
+snippet taildebug
+	function debug() {
+	  require('fs').appendFileSync('/Users/keyvan/tmpfile', require('util').format.apply(this, arguments) + '\n')
+	}
+snippet debug
+	debug(${1})
