@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+var spotify = require('spotify-node-applescript');
+
+spotify.getTrack(function(err, track){
+  console.log(track);
+})
