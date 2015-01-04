@@ -72,11 +72,13 @@ rm -rf \
     ~/.tmux-nested.conf \
 
 # Linking dotfiles
-ln -s $MY_DOTFILES/vimfiles         ~/.vim
-ln -s $MY_DOTFILES/vimrc            ~/.vimrc
+ln -s $MY_DOTFILES/vim/vimfiles     ~/.vim
+ln -s $MY_DOTFILES/vim/vimrc        ~/.vimrc
 ln -s $MY_DOTFILES/tmux.conf        ~/.tmux.conf
 ln -s $MY_DOTFILES/tmux-osx.conf    ~/.tmux-osx.conf
 ln -s $MY_DOTFILES/tmux-nested.conf ~/.tmux-nested.conf
+echo "vim files symlinked"
+echo "tmux files symlinked"
 
 # Private Dotfiles
 DropboxDotfileSymlink "ssh"
@@ -84,11 +86,6 @@ DropboxDotfileSymlink "weechat"
 DropboxDotfileSymlink "lolcommits"
 DropboxDotfileSymlink "misc"
 
-git config --global core.editor "vim"
-git config --global color.diff true
-git config --global user.email "keyvanfatehi@gmail.com"
-git config --global user.name "Keyvan Fatehi"
-git config --global push.default matching
-git config --global core.excludesfile $DOTCONF/gitignore_global
+source $DOTCONF/gitconfig.sh
 
 vim +BundleInstall +qall

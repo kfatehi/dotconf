@@ -1,3 +1,4 @@
 .DS_Store
 /dotfiles/vimfiles/bundle/*
 /node_modules
+*.swp

@@ -36,8 +36,8 @@ function RequirePackage() {
 }
 
 function GetRequirements() {
-  RequirePackage "git" && RequirePackage "zsh" && git clone https://github.com/keyvanfatehi/.conf
+  RequirePackage "git" && RequirePackage "zsh" && test -d .conf || git clone https://github.com/keyvanfatehi/.conf
 }
 
 cd $HOME
-UpdatePackageManagers && GetRequirements && echo $'\tReady! Enter the following to bootstrap this machine:\n\t\t.conf/bootstrap'
+UpdatePackageManagers && GetRequirements && echo $'  Ready! Run this:\n\tbash .conf/bootstrap'
