@@ -2,3 +2,4 @@
 /dotfiles/vimfiles/bundle/*
 /node_modules
 *.swp
+~*
