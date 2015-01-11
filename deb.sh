@@ -24,9 +24,13 @@ sudo apt-get install -y git curl zsh vim
 source $DOTCONF/common.sh
 
 CheckInstall "tmux" || {
-  # installs tmux 1.9a
-  sudo apt-get install -y build-essential wget
-  curl -fsSL https://gist.github.com/keyvanfatehi/03f10711b8dd8fd1e14e/raw/install.sh | sudo bash -e
+  sudo add-apt-repository ppa:pi-rho/dev
+  sudo apt-get update
+  sudo apt-get install tmux
+}
+
+CheckInstall "ack-grep" || {
+  sudo apt-get install ack-grep
 }
 
 CheckInstall "node" || {
