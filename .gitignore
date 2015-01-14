@@ -1,4 +1,5 @@
 .DS_Store
+.netrwhist
 /dotfiles/vim/vimfiles/bundle/*
 /node_modules
 *.swp
