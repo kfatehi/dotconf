@@ -15,7 +15,7 @@ pmodload 'helper'
 
 function prompt_sorin_pwd {
   local pwd="${PWD/#$HOME/~}"
-  local prefix="${USER}:"
+  local prefix=""
 
   if [[ "$pwd" == (#m)[/~] ]]; then
     _prompt_sorin_pwd="${prefix}$MATCH"
