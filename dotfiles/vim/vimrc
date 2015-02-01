@@ -64,7 +64,7 @@ Bundle 'groenewege/vim-less'
 
 Bundle 'fatih/vim-go'
 
-Bundle 'mustache/vim-mustache-handlebars'
+Bundle 'Slava/vim-spacebars'
 
 call vundle#end()
 filetype plugin indent on     " required
