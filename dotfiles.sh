@@ -20,7 +20,7 @@ ln -s $MY_DOTFILES/tmux.conf        ~/.tmux.conf
 ln -s $MY_DOTFILES/tmux-osx.conf    ~/.tmux-osx.conf
 ln -s $MY_DOTFILES/tmux-nested.conf ~/.tmux-nested.conf
 ln -s $MY_DOTFILES/tmux-1.9.conf    ~/.tmux-1.9.conf
-ln -s $MY_DOTFILES/ackrc.conf       ~/.ackrc
+ln -s $MY_DOTFILES/ackrc            ~/.ackrc
 echo "vim symlinked"
 echo "tmux symlinked"
 echo "ackrc symlinked"
