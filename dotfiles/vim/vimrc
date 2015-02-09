@@ -254,3 +254,5 @@ let g:ctrlp_custom_ignore = {
 autocmd GUIEnter * set vb t_vb= " in the Gui
 autocmd VimEnter * set vb t_vb=
 
+"" Leave Ex mode for good
+nnoremap Q <nop>
