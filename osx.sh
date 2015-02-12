@@ -1,6 +1,7 @@
 source $DOTCONF/common.sh
 CheckInstall "brew" || {
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+  brew install tree
   brew install wget
   brew install mobile-shell
   # brew install httpie
