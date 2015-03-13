@@ -1,0 +1,14 @@
+#!/bin/bash
+battery=/sys/class/power_supply/BAT0
+if [[ -d $battery ]]; then
+  state=$(cat $battery/status)
+  percent=$(cat /sys/class/power_supply/BAT0/capacity)
+
+  if [[ $state = "Discharging" ]]; then
+    echo "$percent"
+  else
+    echo "AC"
+  fi
+else
+  echo "AC"
+fi
