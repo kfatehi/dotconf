@@ -9,6 +9,7 @@ rm -rf \
     ~/.vimrc \
     ~/.tmux.conf \
     ~/.tmux-osx.conf \
+    ~/.tmux-linux.conf \
     ~/.tmux-nested.conf \
     ~/.tmux-1.9.conf \
     ~/.ackrc
@@ -18,6 +19,7 @@ ln -s $MY_DOTFILES/vim/vimfiles     ~/.vim
 ln -s $MY_DOTFILES/vim/vimrc        ~/.vimrc
 ln -s $MY_DOTFILES/tmux.conf        ~/.tmux.conf
 ln -s $MY_DOTFILES/tmux-osx.conf    ~/.tmux-osx.conf
+ln -s $MY_DOTFILES/tmux-linux.conf  ~/.tmux-linux.conf
 ln -s $MY_DOTFILES/tmux-nested.conf ~/.tmux-nested.conf
 ln -s $MY_DOTFILES/tmux-1.9.conf    ~/.tmux-1.9.conf
 ln -s $MY_DOTFILES/ackrc            ~/.ackrc
