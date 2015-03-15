@@ -66,6 +66,8 @@ Bundle 'fatih/vim-go'
 
 Bundle 'Slava/vim-spacebars'
 
+Bundle 'hdima/python-syntax'
+
 call vundle#end()
 filetype plugin indent on     " required
 "
