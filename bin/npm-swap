@@ -11,17 +11,15 @@ function NpmSwap() {
 }
 
 function GetUrl() {
-  if [[ "$1" = "strider" ]]; then
-    echo "http://compute-01.critiqueapp.com:4873/"
+  if [[ "$1" = "localhost" ]]; then
+    echo "http://localhost:4873/"
   elif [[ "$1" = "npmjs" ]]; then
     echo "https://registry.npmjs.org/"
-  elif [[ "$1" = "upstreamapp" ]]; then
-    echo "http://box.upstreamapp.com:4873/"
   fi
 }
 
 function HelpQuit() {
-  echo "valid commands: strider, npmjs, upstreamapp" >&2
+  echo "valid commands: npmjs, localhost" >&2
   exit 1
 }
 
@@ -31,7 +29,7 @@ function DoIt() {
     HelpQuit
   else
     case "$1" in
-      strider | npmjs | upstreamapp)
+      npmjs | localhost)
         url=$(GetUrl $1)
         NpmSwap $url $previous
         ;;
