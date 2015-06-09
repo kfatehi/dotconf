@@ -19,7 +19,7 @@ function UpdateAptRepositories() {
 
 AptUpdatedToday || UpdateAptRepositories
 
-sudo apt-get install -y git curl zsh vim
+sudo apt-get install -y git curl zsh vim python-software-properties
 
 source $DOTCONF/common.sh
 
