@@ -14,6 +14,8 @@ endif
 " let Vundle manage Vundle, required
 Bundle 'gmarik/vundle'
 
+Bundle 'pbrisbin/vim-mkdir'
+
 Bundle 'kien/ctrlp.vim'
 
 Bundle 'scrooloose/nerdtree'
@@ -231,7 +233,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn)|coverage|bower_components|dist|node_modules|vendor\/bundle|platforms|plugins|resources)$',
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|coverage|bower_components|dist|node_modules)$',
   \ 'file': '\v\.(exe|so|dll|pyc)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
@@ -258,3 +260,14 @@ autocmd VimEnter * set vb t_vb=
 
 "" Leave Ex mode for good
 nnoremap Q <nop>
+
+"" Enable per-project vimrc
+set exrc
+set secure
+
+" e.g. for cordova
+"let g:ctrlp_custom_ignore = {
+"  \ 'dir':  '\v[\/](\.(git|hg|svn)|lib|node_modules|platforms|plugins|resources)$',
+"  \ 'file': '\v\.(exe|so|dll|pyc)$',
+"  \ 'link': 'some_bad_symbolic_links',
+"  \ }
