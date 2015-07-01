@@ -112,17 +112,40 @@ augroup markdown
     au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
 augroup END
 
-" yank/paste across vim sessions
-vmap <silent> ,y y:new<CR>:call setline(1,getregtype())<CR>o<Esc>P:wq! ~/reg.txt<CR>
-nmap <silent> ,y :new<CR>:call setline(1,getregtype())<CR>o<Esc>P:wq! ~/reg.txt<CR>
-map <silent> ,p :sview ~/reg.txt<CR>"zdddG:q!<CR>:call setreg('"', @", @z)<CR>p
-map <silent> ,P :sview ~/reg.txt<CR>"zdddG:q!<CR>:call setreg('"', @", @z)<CR>P
-
-" figitive shortcuts
+" fugitive shortcuts
 nmap <leader>g :Gcommit %<cr>   
 nmap <leader>gs :Gstatus<cr>    
 nmap <leader>gp :Git push origin HEAD<cr>
-vmap <leader>c :w !pbcopy<cr><cr>
+
+"""
+" Copy Paste Powers
+"
+" Add ability to yank/paste across vim sessions
+" 
+" Leader-key (Backslash) y while in visual mode (SHIFT-V or CTRL-V)
+vmap <leader>y y:new<CR>:call setline(1,getregtype())<CR>o<Esc>P:wq! ~/vim-clipboard.txt<CR>
+" Leader-key (Backslash) p in normal mode (ESC to get out of visual mode)
+map <leader>p :sview ~/vim-clipboard.txt<CR>"zdddG:q!<CR>:call setreg('"', @", @z)<CR>p
+"
+"
+" Detect platform and provide os-level copy paste too ;)
+if has("unix")
+  let s:uname = substitute(system("uname -s"), '\n', '', '')
+  if s:uname == "Darwin"
+    " Mac Native Copy Paste
+    vmap <leader>c :w !pbcopy<cr><cr>
+    nmap <leader>v :read !pbpaste<cr><cr>
+  elseif s:uname == "Linux"
+    " Linux Native Copy Paste
+    " Requires xclip ... sudo apt-get install xclip
+    " If trying to use it on a headless box, you will need to achieve X11 forwarding
+    " In such cases it is probably appropriate to just use the vim-only solution above
+    " If using ssh, you need to ssh -X (enable X11 forwarding)
+    vmap <leader>c :w !DISPLAY=:0 xclip -selection clipboard<cr><cr>
+    nmap <leader>v :read !DISPLAY=:0 xclip -selection clipboard -o<cr><cr>
+  endif
+endif
+"""
 
 " Play nice in tmux
 if &term =~ '^screen'
@@ -188,12 +211,12 @@ nmap <Leader>n :cnext<CR>
 nmap <Leader>s :source $MYVIMRC<CR>
 
 " opens $MYVIMRC for editing, or use :tabedit $MYVIMRC
-nmap <Leader>v :e $MYVIMRC<CR>
+nmap <Leader>e :e $MYVIMRC<CR>
 
 "colorscheme monokai
 colorscheme Tomorrow-Night-Bright
 
-" set t_Co=256 " Make sure your terminal is 256 colors too!
+set t_Co=256 " Make sure your terminal is 256 colors too!
 
 "" On a white terminal
 " set background=light
@@ -218,11 +241,6 @@ let g:vim_markdown_folding_disabled=1
 
 "" NERDTree toggle to CTRL-D
 nmap <C-D> :NERDTreeToggle<CR>
-
-"" Quick rspec CTRL-B
-" map <C-A> :RunSpecs<cr>
-" map <C-G> :RunSpec<cr>
-" map <C-L> :RunSpecLine<cr>
 
 map <C-U> :CtrlPClearAllCaches<cr>
 
