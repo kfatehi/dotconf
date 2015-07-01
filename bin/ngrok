@@ -1,0 +1,8 @@
+case `uname` in
+  Linux)
+    ngrok-linux $@
+    ;;
+  Darwin)
+    ngrok-mac $@
+    ;;
+esac
