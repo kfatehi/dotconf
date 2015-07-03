@@ -1,0 +1,9 @@
+#!/bin/bash
+case `uname` in
+  Linux)
+    gitg $@ > /dev/null 2>&1  &
+    ;;
+  Darwin)
+    gitx $@
+    ;;
+esac
