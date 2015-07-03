@@ -1,0 +1,10 @@
+echo $DISPLAY
+
+case `uname` in
+  Linux)
+     DISPLAY=:0 xclip -selection clipboard $@
+    ;;
+  Darwin)
+    pbcopy $@
+    ;;
+esac

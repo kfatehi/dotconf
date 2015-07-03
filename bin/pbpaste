@@ -1,0 +1,8 @@
+case `uname` in
+  Linux)
+    DISPLAY=:0 xclip -selection clipboard -o $@
+    ;;
+  Darwin)
+    pbpaste $@
+    ;;
+esac
