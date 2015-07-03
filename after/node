@@ -2,6 +2,11 @@ npm install
 sudo npm install -g \
   bower \
   grunt-cli \
+  gulp-cli \
+  cordova \
+  ionic \
+  lab \
+  fsmonitor \
   mocha \
   node-dev \
   watchy \
