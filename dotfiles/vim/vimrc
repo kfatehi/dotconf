@@ -214,7 +214,7 @@ nmap <Leader>s :source $MYVIMRC<CR>
 nmap <Leader>e :e $MYVIMRC<CR>
 
 "colorscheme monokai
-colorscheme Tomorrow-Night-Bright
+"colorscheme Tomorrow-Night-Bright
 
 set t_Co=256 " Make sure your terminal is 256 colors too!
 
