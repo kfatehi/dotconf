@@ -1,8 +1,3 @@
-if [[ ! -d "$MY_DOTFILES" ]]; then
-  echo "Please set MY_DOTFILES to the dotfiles path, currently $MY_DOTFILES"
-  exit -1
-fi
-
 function AfterInstall() {
   local script=$DOTCONF/after/$1
   if [[ -f $script ]]; then
