@@ -37,5 +37,4 @@ DotconfSymlink "tmux-1.9.conf"
 DotconfSymlink "ackrc"
 
 source $DOTCONF/gitconfig.sh
-
-vim +BundleInstall +qall
+source $DOTCONF/vim-setup.sh
