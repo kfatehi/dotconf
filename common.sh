@@ -24,6 +24,7 @@ else
 fi
 
 DropboxDotfileSymlink "ssh"
+chmod 400 ~/.ssh/id_rsa
 DotconfSymlink "zshenv"
 DotconfSymlink "zpreztorc"
 DotconfSymlink "vim"
