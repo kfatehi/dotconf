@@ -1,6 +1,8 @@
 source $DOTCONF/common.sh
 
-brew install tree wget nmap ack tmux reattach-to-user-namespace node && AfterInstall 'node'
+brew install tree wget nmap ack tmux reattach-to-user-namespace node
+
+YesOrNo "Install some global npm modules?" || AfterInstall 'node'
 
 if [[ ! -f ~/.iterm2/monokai_soda.itermcolors ]]; then
   mkdir -p ~/.iterm2
