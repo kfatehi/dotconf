@@ -9,5 +9,4 @@ sudo npm install -g \
   fsmonitor \
   mocha \
   node-dev \
-  watchy \
-  simple-stacktrace
+  watchy
