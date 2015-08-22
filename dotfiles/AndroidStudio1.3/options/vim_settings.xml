@@ -1,0 +1,478 @@
+<application>
+  <component name="VimSettings">
+    <state version="4" enabled="true" />
+    <globalmarks />
+    <filemarks>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/lockdown/KioskService.java" timestamp="1440220647235">
+        <mark key="'" line="64" column="11" />
+        <mark key="]" line="93" column="79" />
+        <mark key="^" line="93" column="79" />
+        <mark key="." line="93" column="79" />
+        <mark key="[" line="93" column="77" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/diont/src/main/java/com/keyvanfatehi/DiontMessageHandlerInterface.java" timestamp="1440207569917">
+        <mark key="]" line="0" column="23" />
+        <mark key="^" line="0" column="23" />
+        <mark key="." line="0" column="23" />
+        <mark key="[" line="0" column="25" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/PluginResult.java" timestamp="1440100846293">
+        <mark key="[" line="6" column="33" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/terminal/Terminal.java" timestamp="1440214673731">
+        <mark key="]" line="8" column="2" />
+        <mark key="^" line="8" column="2" />
+        <mark key="." line="8" column="2" />
+        <mark key="[" line="19" column="0" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/CallbackContext.java" timestamp="1440101257321">
+        <mark key="[" line="8" column="5" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalScannerInterface.java" timestamp="1440213910340">
+        <mark key="]" line="8" column="68" />
+        <mark key="^" line="8" column="68" />
+        <mark key="." line="8" column="68" />
+        <mark key="[" line="8" column="34" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/org/chromium/ChromeSystemNetwork.java" timestamp="1440102250494">
+        <mark key="]" line="16" column="0" />
+        <mark key="^" line="16" column="0" />
+        <mark key="." line="16" column="0" />
+        <mark key="[" line="15" column="40" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/org/apache/cordova/CallbackContext.java" timestamp="1440105242046">
+        <mark key="'" line="38" column="0" />
+        <mark key="]" line="39" column="7" />
+        <mark key="^" line="39" column="7" />
+        <mark key="." line="39" column="7" />
+        <mark key="[" line="32" column="12" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/res/layout/activity_terminal_select.xml" timestamp="1440228915533">
+        <mark key="]" line="3" column="33" />
+        <mark key="^" line="3" column="33" />
+        <mark key="." line="3" column="33" />
+        <mark key="[" line="3" column="30" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/res/layout/simple_list_item1.xml" timestamp="1440183431539">
+        <mark key="]" line="10" column="33" />
+        <mark key="^" line="10" column="33" />
+        <mark key="." line="10" column="33" />
+        <mark key="[" line="10" column="35" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/diont/src/main/java/com/keyvanfatehi/Diont/Diont.java" timestamp="1440207668514">
+        <mark key="]" line="0" column="30" />
+        <mark key="^" line="0" column="30" />
+        <mark key="." line="0" column="30" />
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/settings.gradle" timestamp="1440207842464">
+        <mark key="]" line="0" column="13" />
+        <mark key="^" line="0" column="13" />
+        <mark key="." line="0" column="13" />
+        <mark key="[" line="0" column="24" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/FullscreenActivity.java" timestamp="1440215661481">
+        <mark key="'" line="112" column="129" />
+        <mark key="]" line="32" column="44" />
+        <mark key="^" line="32" column="44" />
+        <mark key="." line="32" column="44" />
+        <mark key="[" line="32" column="44" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/Callback.java" timestamp="1440191782114">
+        <mark key="]" line="19" column="29" />
+        <mark key="^" line="19" column="29" />
+        <mark key="." line="19" column="29" />
+        <mark key="[" line="19" column="29" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/diont/build.gradle" timestamp="1440207759164">
+        <mark key="]" line="1" column="0" />
+        <mark key="^" line="1" column="0" />
+        <mark key="." line="1" column="0" />
+        <mark key="[" line="0" column="39" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/diont/src/main/java/com/keyvanfatehi/Diont.java" timestamp="1440207597416">
+        <mark key="]" line="7" column="30" />
+        <mark key="^" line="7" column="30" />
+        <mark key="." line="7" column="30" />
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalScanner.java" timestamp="1440213715714">
+        <mark key="'" line="87" column="43" />
+        <mark key="]" line="83" column="24" />
+        <mark key="^" line="87" column="106" />
+        <mark key="." line="87" column="106" />
+        <mark key="[" line="82" column="0" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/KioskService.java" timestamp="1440215106153">
+        <mark key="'" line="79" column="0" />
+        <mark key="]" line="94" column="62" />
+        <mark key="^" line="94" column="62" />
+        <mark key="." line="94" column="62" />
+        <mark key="[" line="92" column="64" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/ConnectActivity.java" timestamp="1440214952572">
+        <mark key="]" line="18" column="0" />
+        <mark key="." line="18" column="0" />
+        <mark key="[" line="18" column="0" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/lockdown/AppContext.java" timestamp="1440220573776">
+        <mark key="]" line="40" column="37" />
+        <mark key="^" line="40" column="37" />
+        <mark key="." line="40" column="37" />
+        <mark key="[" line="40" column="38" />
+      </file>
+      <file name="$USER_HOME$/Library/Android/sdk/platforms/android-22/android.jar!/android/app/Activity.class" timestamp="1440221996068" />
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalScannerCallback.java" timestamp="1440197939993">
+        <mark key="]" line="14" column="0" />
+        <mark key="^" line="21" column="23" />
+        <mark key="." line="14" column="0" />
+        <mark key="[" line="14" column="0" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/lockdown/KioskActivity.java" timestamp="1440224869957">
+        <mark key="'" line="7" column="0" />
+        <mark key="]" line="31" column="0" />
+        <mark key="." line="31" column="0" />
+        <mark key="[" line="31" column="0" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/lockdown/FullscreenActivity.java" timestamp="1440220679598">
+        <mark key="]" line="35" column="36" />
+        <mark key="^" line="35" column="36" />
+        <mark key="." line="35" column="36" />
+        <mark key="[" line="35" column="28" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/diont/src/main/java/com/keyvanfatehi/Diont/DiontMessageHandlerInterface.java" timestamp="1440207673089">
+        <mark key="]" line="0" column="0" />
+        <mark key="." line="0" column="0" />
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/res/layout/activity_fullscreen.xml" timestamp="1440204359000">
+        <mark key="[" line="12" column="13" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/activities/ConnectActivity.java" timestamp="1440229247384">
+        <mark key="'" line="14" column="11" />
+        <mark key="]" line="28" column="0" />
+        <mark key="^" line="15" column="17" />
+        <mark key="." line="28" column="0" />
+        <mark key="[" line="28" column="0" />
+      </file>
+      <file name="/a.dummy" timestamp="1440212288041">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/Lockdown.java" timestamp="1440215574151">
+        <mark key="]" line="25" column="0" />
+        <mark key="^" line="24" column="55" />
+        <mark key="." line="25" column="0" />
+        <mark key="[" line="25" column="0" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/terminal/TerminalScanner.java" timestamp="1440214108836">
+        <mark key="]" line="95" column="39" />
+        <mark key="^" line="95" column="39" />
+        <mark key="." line="95" column="39" />
+        <mark key="[" line="95" column="40" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/PrefUtils.java" timestamp="1440214836633">
+        <mark key="[" line="7" column="24" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/terminal/TerminalSelectActivity.java" timestamp="1440215039661">
+        <mark key="'" line="55" column="81" />
+        <mark key="]" line="29" column="19" />
+        <mark key="^" line="29" column="19" />
+        <mark key="." line="29" column="19" />
+        <mark key="[" line="28" column="8" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/AppContext.java" timestamp="1440215118295">
+        <mark key="]" line="41" column="68" />
+        <mark key="^" line="41" column="68" />
+        <mark key="." line="41" column="68" />
+        <mark key="[" line="41" column="44" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/activities/TerminalSelectActivity.java" timestamp="1440229059406">
+        <mark key="]" line="43" column="75" />
+        <mark key="." line="27" column="0" />
+        <mark key="[" line="43" column="0" />
+      </file>
+      <file name="/fragment.java" timestamp="1440215835205">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/Terminal.java" timestamp="1440213817660">
+        <mark key="]" line="2" column="0" />
+        <mark key="^" line="16" column="24" />
+        <mark key="." line="2" column="0" />
+        <mark key="[" line="2" column="0" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/DiontCordovaPlugin.java" timestamp="1440107531140">
+        <mark key="'" line="29" column="81" />
+        <mark key="]" line="69" column="45" />
+        <mark key="^" line="54" column="52" />
+        <mark key="." line="69" column="0" />
+        <mark key="[" line="69" column="0" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/res/layout/activity_connect.xml" timestamp="1440228376762">
+        <mark key="]" line="4" column="0" />
+        <mark key="^" line="4" column="0" />
+        <mark key="." line="4" column="0" />
+        <mark key="[" line="0" column="1" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" timestamp="1440206349684">
+        <mark key="'" line="2" column="20" />
+        <mark key="]" line="7" column="0" />
+        <mark key="^" line="129" column="55" />
+        <mark key="." line="7" column="0" />
+        <mark key="[" line="7" column="0" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/DiontService.java" timestamp="1440116363093">
+        <mark key="]" line="15" column="0" />
+        <mark key="." line="15" column="0" />
+        <mark key="[" line="15" column="0" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/DiontInterface.java" timestamp="1440197809988">
+        <mark key="]" line="6" column="44" />
+        <mark key="^" line="6" column="44" />
+        <mark key="." line="6" column="44" />
+        <mark key="[" line="5" column="33" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/Diont.java" timestamp="1440107571110">
+        <mark key="]" line="23" column="36" />
+        <mark key="^" line="20" column="30" />
+        <mark key="." line="20" column="30" />
+        <mark key="[" line="21" column="0" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/OnScreenOffReceiver.java" timestamp="1440215149890">
+        <mark key="]" line="18" column="27" />
+        <mark key="^" line="18" column="27" />
+        <mark key="." line="18" column="27" />
+        <mark key="[" line="18" column="15" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/res/layout/activity_crumple_app.xml" timestamp="1440204824906">
+        <mark key="]" line="3" column="18" />
+        <mark key="^" line="3" column="18" />
+        <mark key="." line="3" column="18" />
+        <mark key="[" line="3" column="50" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/README.md" timestamp="1440082350464">
+        <mark key="]" line="4" column="62" />
+        <mark key="^" line="4" column="62" />
+        <mark key="." line="4" column="62" />
+        <mark key="[" line="2" column="72" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/Fullscreen.java" timestamp="1440184082698">
+        <mark key="[" line="5" column="13" />
+      </file>
+      <file name="$USER_HOME$/Code/tablet2/app/src/main/res/layout/activity_after_payload.xml" timestamp="1440204501887">
+        <mark key="[" line="3" column="25" />
+      </file>
+    </filemarks>
+    <jumps>
+      <jump line="66" column="28" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="20" column="0" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="24" column="16" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="69" column="30" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="108" column="8" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="110" column="59" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="131" column="41" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="109" column="59" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="130" column="41" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="4" column="33" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="31" column="24" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="59" column="28" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="107" column="13" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="60" column="23" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/DiontService.java" />
+      <jump line="21" column="29" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/AppContext.java" />
+      <jump line="30" column="0" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/FullscreenActivity.java" />
+      <jump line="38" column="30" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/FullscreenActivity.java" />
+      <jump line="29" column="20" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/FullscreenActivity.java" />
+      <jump line="32" column="0" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/FullscreenActivity.java" />
+      <jump line="63" column="0" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/DiontService.java" />
+      <jump line="21" column="20" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/DiontService.java" />
+      <jump line="25" column="8" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/DiontService.java" />
+      <jump line="44" column="24" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/DiontService.java" />
+      <jump line="23" column="0" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/DiontService.java" />
+      <jump line="98" column="0" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/FullscreenActivity.java" />
+      <jump line="16" column="13" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="22" column="36" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="125" column="31" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="30" column="16" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="26" column="30" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="27" column="8" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="47" column="91" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="107" column="16" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/FullscreenActivity.java" />
+      <jump line="43" column="0" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/FullscreenActivity.java" />
+      <jump line="93" column="18" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/FullscreenActivity.java" />
+      <jump line="96" column="129" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/FullscreenActivity.java" />
+      <jump line="19" column="6" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/ConnectActivity.java" />
+      <jump line="34" column="8" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalSelectActivity.java" />
+      <jump line="57" column="36" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalSelectActivity.java" />
+      <jump line="26" column="28" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalScanner.java" />
+      <jump line="7" column="17" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalScanner.java" />
+      <jump line="41" column="44" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalSelectActivity.java" />
+      <jump line="44" column="19" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalSelectActivity.java" />
+      <jump line="12" column="24" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalSelectActivity.java" />
+      <jump line="27" column="56" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalScanner.java" />
+      <jump line="14" column="31" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalScannerCallback.java" />
+      <jump line="54" column="73" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalSelectActivity.java" />
+      <jump line="58" column="57" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="56" column="22" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalScanner.java" />
+      <jump line="86" column="17" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalScanner.java" />
+      <jump line="81" column="25" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalScanner.java" />
+      <jump line="93" column="34" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="52" column="49" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="56" column="16" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="71" column="31" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="3" column="20" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="82" column="12" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="18" column="41" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="76" column="12" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="2" column="20" filename="$USER_HOME$/Code/tablet2/app/src/main/java/net/willemmulder/diont/cordova/Diont.java" />
+      <jump line="54" column="37" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalScanner.java" />
+      <jump line="21" column="0" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalScanner.java" />
+      <jump line="53" column="37" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalScanner.java" />
+      <jump line="38" column="8" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalScanner.java" />
+      <jump line="39" column="37" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalScanner.java" />
+      <jump line="24" column="44" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalScanner.java" />
+      <jump line="40" column="8" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalScanner.java" />
+      <jump line="4" column="39" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalScanner.java" />
+      <jump line="44" column="20" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalScanner.java" />
+      <jump line="43" column="0" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalScanner.java" />
+      <jump line="87" column="43" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalScanner.java" />
+      <jump line="71" column="56" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalSelectActivity.java" />
+      <jump line="73" column="51" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalSelectActivity.java" />
+      <jump line="74" column="51" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalSelectActivity.java" />
+      <jump line="76" column="43" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalSelectActivity.java" />
+      <jump line="72" column="20" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalSelectActivity.java" />
+      <jump line="23" column="22" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalSelectActivity.java" />
+      <jump line="60" column="10" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalSelectActivity.java" />
+      <jump line="63" column="121" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalSelectActivity.java" />
+      <jump line="65" column="28" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalSelectActivity.java" />
+      <jump line="55" column="36" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalSelectActivity.java" />
+      <jump line="53" column="61" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalSelectActivity.java" />
+      <jump line="52" column="24" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/TerminalSelectActivity.java" />
+      <jump line="23" column="27" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/terminal/TerminalSelectActivity.java" />
+      <jump line="59" column="81" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/terminal/TerminalSelectActivity.java" />
+      <jump line="86" column="0" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/KioskService.java" />
+      <jump line="23" column="4" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/KioskService.java" />
+      <jump line="60" column="4" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/KioskService.java" />
+      <jump line="79" column="0" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/KioskService.java" />
+      <jump line="20" column="13" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/lockdown/KioskService.java" />
+      <jump line="93" column="7" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/lockdown/KioskService.java" />
+      <jump line="87" column="26" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/lockdown/KioskService.java" />
+      <jump line="64" column="11" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/lockdown/KioskService.java" />
+      <jump line="38" column="27" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/lockdown/KioskActivity.java" />
+      <jump line="7" column="0" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/lockdown/KioskActivity.java" />
+      <jump line="33" column="0" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/activities/ConnectActivity.java" />
+      <jump line="35" column="24" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/activities/ConnectActivity.java" />
+      <jump line="7" column="25" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/activities/ConnectActivity.java" />
+      <jump line="8" column="25" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/activities/ConnectActivity.java" />
+      <jump line="14" column="11" filename="$USER_HOME$/Code/tablet2/app/src/main/java/com/crumpleup/tablet/activities/ConnectActivity.java" />
+    </jumps>
+    <registers>
+      <register name="&quot;" type="2">
+        <text encoding="base64">Cg==</text>
+      </register>
+      <register name="/" type="4">
+        <text>socket</text>
+      </register>
+      <register name="-" type="4">
+        <text>;</text>
+      </register>
+      <register name="3" type="4">
+        <text>;</text>
+      </register>
+      <register name="2" type="2">
+        <text encoding="base64">ICAgICAgICBnZXRJbnRlbnQoKS5nZXRFeHRyYXMoKS5nZXRTdHJpbmcoImhvc3QiKTsK</text>
+      </register>
+      <register name="1" type="2">
+        <text encoding="base64">Cg==</text>
+      </register>
+      <register name="0" type="2">
+        <text encoding="base64">ICAgICAgICAgICAgICAgIExpc3RWaWV3IGxpc3RWaWV3ID0gKExpc3RWaWV3KSBmaW5kVmlld0J5SWQoUi5pZC5saXN0X3ZpZXcpOwo=</text>
+      </register>
+      <register name="7" type="4">
+        <text>i</text>
+      </register>
+      <register name="6" type="4">
+        <text>e</text>
+      </register>
+      <register name="5" type="4">
+        <text>w</text>
+      </register>
+      <register name="4" type="4">
+        <text encoding="base64">IA==</text>
+      </register>
+      <register name=":" type="4">
+        <text>w</text>
+      </register>
+      <register name="9" type="4">
+        <text>t</text>
+      </register>
+      <register name="8" type="4">
+        <text>V</text>
+      </register>
+    </registers>
+    <search>
+      <last-search>socket</last-search>
+      <last-offset />
+      <last-pattern>socket</last-pattern>
+      <last-replace>diontRunning</last-replace>
+      <last-substitute>running</last-substitute>
+      <last-dir>1</last-dir>
+      <show-last>false</show-last>
+    </search>
+    <history>
+      <history-search>
+        <entry>listn</entry>
+        <entry>listen</entry>
+        <entry>Arr</entry>
+        <entry>diont</entry>
+        <entry>Running</entry>
+        <entry>runn</entry>
+        <entry>callback</entry>
+        <entry>TAG</entry>
+        <entry>updateTerm</entry>
+        <entry>handleMes</entry>
+        <entry>log</entry>
+        <entry>Log</entry>
+        <entry>INTERVA</entry>
+        <entry>iface</entry>
+        <entry encoding="base64">XDwuXD4=</entry>
+        <entry>terminal</entry>
+        <entry>terms</entry>
+        <entry>self</entry>
+        <entry>isKi</entry>
+        <entry>socket</entry>
+      </history-search>
+      <history-cmd>
+        <entry>Remove</entry>
+        <entry>Spl</entry>
+        <entry>W</entry>
+        <entry>%s/running/diontRunning/g</entry>
+        <entry>x</entry>
+        <entry>q</entry>
+        <entry>wa</entry>
+        <entry>vspl</entry>
+        <entry>qa</entry>
+        <entry>spl</entry>
+        <entry>noh</entry>
+        <entry>w</entry>
+      </history-cmd>
+      <history-expr />
+      <history-input />
+    </history>
+    <shortcut-conflicts>
+      <shortcut-conflict owner="vim">
+        <text>ctrl pressed R</text>
+      </shortcut-conflict>
+      <shortcut-conflict owner="vim">
+        <text>ctrl pressed V</text>
+      </shortcut-conflict>
+      <shortcut-conflict owner="vim">
+        <text>ctrl pressed P</text>
+      </shortcut-conflict>
+      <shortcut-conflict owner="vim">
+        <text>ctrl pressed O</text>
+      </shortcut-conflict>
+      <shortcut-conflict owner="vim">
+        <text>ctrl pressed D</text>
+      </shortcut-conflict>
+    </shortcut-conflicts>
+  </component>
+</application>

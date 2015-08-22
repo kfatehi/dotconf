@@ -16,3 +16,4 @@ if [[ ! -d ~/.gopath ]]; then
 fi
 export GOPATH="$HOME/.gopath"
 export PATH="$PATH:$GOPATH/bin"
+export ANDROID_HOME="$HOME/Library/Android/sdk"

@@ -1,0 +1,3 @@
+<application>
+  <component name="MultiMarkdownSettings" parsingTimeout="10000" smarts="false" quotes="false" abbreviations="false" hardWraps="false" headerSpace="false" taskLists="false" autoLinks="false" anchorLinks="false" wikiLinks="false" tables="false" definitions="false" fencedCodeBlocks="false" suppressHTMLBlocks="false" suppressInlineHTML="false" strikethrough="false" showHtmlTextAsModified="false" updateDelay="1000" maxImgWidth="900" customCss="" />
+</application>

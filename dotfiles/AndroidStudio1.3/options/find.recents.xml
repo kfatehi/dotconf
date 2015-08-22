@@ -1,0 +1,17 @@
+<application>
+  <component name="FindRecents">
+    <findStrings>
+      <find>sdk</find>
+      <find>appView</find>
+      <find>input</find>
+      <find>init</find>
+      <find>touch</find>
+      <find>createViews</find>
+      <find>request</find>
+      <find>serviceInfos</find>
+      <find>INT</find>
+      <find>INTERVAL</find>
+      <find>term scan result</find>
+    </findStrings>
+  </component>
+</application>
