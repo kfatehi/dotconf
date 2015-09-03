@@ -2,5 +2,6 @@
 .netrwhist
 /dotfiles/vim/bundle/*
 /node_modules
+/dotfiles/AndroidStudio1.3/tasks/*.zip
 *.swp
 ~*

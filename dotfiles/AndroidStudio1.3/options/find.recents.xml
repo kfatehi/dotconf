@@ -12,6 +12,10 @@
       <find>INT</find>
       <find>INTERVAL</find>
       <find>term scan result</find>
+      <find>orientat</find>
+      <find>forceNew</find>
+      <find>orientation</find>
+      <find>termid</find>
     </findStrings>
   </component>
 </application>

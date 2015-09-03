@@ -5,7 +5,7 @@
         <option name="ID" value="Android Logcat" />
         <option name="minimizedInGrid" value="false" />
         <option name="placeInGrid" value="center" />
-        <option name="tabIndex" value="0" />
+        <option name="tabIndex" value="1" />
         <option name="window" value="0" />
       </ViewImpl>
       <ViewImpl>
@@ -19,28 +19,20 @@
         <option name="ID" value="Memory" />
         <option name="minimizedInGrid" value="false" />
         <option name="placeInGrid" value="center" />
-        <option name="tabIndex" value="2" />
+        <option name="tabIndex" value="1" />
         <option name="window" value="0" />
       </ViewImpl>
       <ViewImpl>
         <option name="ID" value="CPU" />
         <option name="minimizedInGrid" value="false" />
         <option name="placeInGrid" value="center" />
-        <option name="tabIndex" value="3" />
+        <option name="tabIndex" value="0" />
         <option name="window" value="0" />
       </ViewImpl>
       <TabImpl />
       <TabImpl>
-        <option name="defaultIndex" value="1" />
-        <option name="index" value="1" />
-      </TabImpl>
-      <TabImpl>
-        <option name="defaultIndex" value="2" />
-        <option name="index" value="2" />
-      </TabImpl>
-      <TabImpl>
         <option name="defaultIndex" value="3" />
-        <option name="index" value="3" />
+        <option name="index" value="1" />
       </TabImpl>
       <General />
     </runner>

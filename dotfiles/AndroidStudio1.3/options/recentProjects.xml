@@ -2,17 +2,12 @@
   <component name="RecentProjectsManager">
     <option name="recentPaths">
       <list>
+        <option value="$USER_HOME$/Code/tablet" />
         <option value="$USER_HOME$/Code/tablet2" />
         <option value="$USER_HOME$/Code/tablet/native/android" />
         <option value="$USER_HOME$/Code/android-tablet" />
       </list>
     </option>
-    <option name="openPaths">
-      <list>
-        <option value="$USER_HOME$/Code/tablet2" />
-      </list>
-    </option>
-    <option name="lastPath" value="$USER_HOME$/Code/tablet2" />
     <option name="lastProjectLocation" value="$USER_HOME$/Code" />
   </component>
 </application>

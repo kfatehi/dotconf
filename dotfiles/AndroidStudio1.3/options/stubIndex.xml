@@ -2,7 +2,6 @@
   <component name="FileBasedIndex">
     <option name="registeredIndices">
       <list>
-        <option value="gr.anonymous.class" />
         <option value="gr.class.super" />
         <option value="gr.script.class" />
         <option value="gr.annot.members" />
@@ -23,6 +22,7 @@
         <option value="java.field.name" />
         <option value="java.class.extlist" />
         <option value="java.annotations" />
+        <option value="gr.anonymous.class" />
       </list>
     </option>
   </component>

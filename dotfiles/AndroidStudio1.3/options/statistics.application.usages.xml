@@ -1,32 +1,38 @@
 <application>
   <component name="StatisticsApplicationUsages">
     <group name="vcs">
-      <project id="tablet" values="Git" collectionTime="1440215909019" />
+      <project id="tablet" values="Git" collectionTime="1440991276953" />
+      <project id="tablet2" values="Git" collectionTime="1441218894610" />
       <project id="android-tablet" values="Git" collectionTime="1439910247416" />
     </group>
     <group name="file-type">
-      <project id="tablet" values="Markdown,IDEA_MODULE,ARCHIVE,AIDL,UNKNOWN,JAVA,Properties,Groovy,ProGuard File,XML,Images,PLAIN_TEXT" collectionTime="1440215909168" />
-      <project id="tablet-cordova" values="XML,ARCHIVE,CSS,PLAIN_TEXT,IDEA_MODULE,Properties,HTML,JAVA,JSON,UNKNOWN,Images,JavaScript,Groovy" collectionTime="1439912593114" />
-      <project id="android-tablet" values="Groovy,PLAIN_TEXT,IDEA_MODULE,HTML,JAVA,XML,JSON,UNKNOWN,CSS,JavaScript,Images,ARCHIVE,Properties" collectionTime="1439910247477" />
+      <project id="tablet" values="AIDL,PLAIN_TEXT,ARCHIVE,IDEA_MODULE,Markdown,Groovy,XML,UNKNOWN,ProGuard File,Properties,JAVA,Images" collectionTime="1440991277120" />
+      <project id="tablet-cordova" values="PLAIN_TEXT,Groovy,JSON,Images,JavaScript,ARCHIVE,IDEA_MODULE,XML,HTML,JAVA,UNKNOWN,CSS,Properties" collectionTime="1439912593114" />
+      <project id="tablet2" values="AIDL,Markdown,Groovy,XML,Images,ARCHIVE,Properties,PLAIN_TEXT,JAVA,ProGuard File,UNKNOWN,IDEA_MODULE" collectionTime="1441218894784" />
+      <project id="android-tablet" values="PLAIN_TEXT,UNKNOWN,HTML,Images,Groovy,CSS,ARCHIVE,IDEA_MODULE,JavaScript,XML,JSON,JAVA,Properties" collectionTime="1439910247477" />
     </group>
     <group name="run-configuration-type">
-      <project id="tablet" values="AndroidRunConfigurationType" collectionTime="1440215909021" />
+      <project id="tablet" values="AndroidRunConfigurationType" collectionTime="1440991276960" />
       <project id="tablet-cordova" values="AndroidRunConfigurationType" collectionTime="1439912593073" />
+      <project id="tablet2" values="AndroidRunConfigurationType" collectionTime="1441218894612" />
       <project id="android-tablet" values="AndroidRunConfigurationType" collectionTime="1439910247416" />
     </group>
     <group name="language-level">
-      <project id="tablet" values="JDK_1_7" collectionTime="1440215909194" />
+      <project id="tablet" values="JDK_1_7" collectionTime="1440991277146" />
       <project id="tablet-cordova" values="JDK_1_6" collectionTime="1439912593123" />
+      <project id="tablet2" values="JDK_1_7" collectionTime="1441218894815" />
       <project id="android-tablet" values="JDK_1_6" collectionTime="1439910247479" />
     </group>
     <group name="frameworks">
-      <project id="tablet" values="java-gradle,android-gradle,android" collectionTime="1440215909019" />
-      <project id="tablet-cordova" values="android,android-gradle" collectionTime="1439912593071" />
-      <project id="android-tablet" values="android,android-gradle" collectionTime="1439910247416" />
+      <project id="tablet" values="android-gradle,java-gradle,android" collectionTime="1440991276954" />
+      <project id="tablet-cordova" values="android-gradle,android" collectionTime="1439912593071" />
+      <project id="tablet2" values="android,android-gradle,java-gradle" collectionTime="1441218894611" />
+      <project id="android-tablet" values="android-gradle,android" collectionTime="1439910247416" />
     </group>
     <group name="module type">
-      <project id="tablet" values="JAVA_MODULE" collectionTime="1440215909020" />
+      <project id="tablet" values="JAVA_MODULE" collectionTime="1440991276955" />
       <project id="tablet-cordova" values="JAVA_MODULE" collectionTime="1439912593071" />
+      <project id="tablet2" values="JAVA_MODULE" collectionTime="1441218894611" />
       <project id="android-tablet" values="JAVA_MODULE" collectionTime="1439910247416" />
     </group>
   </component>
@@ -34,14 +40,16 @@
     <counts>
       <entry feature="CreateFile.CreateFileAction" count="1" />
       <entry feature="execute.AndroidRunConfigurationType.Debug" count="1" />
-      <entry feature="execute.AndroidRunConfigurationType.Run" count="132" />
+      <entry feature="execute.AndroidRunConfigurationType.Run" count="417" />
       <entry feature="ide.settings.Android_SDK" count="2" />
       <entry feature="ide.settings.Appearance" count="6" />
       <entry feature="ide.settings.Colors_&amp;_Fonts" count="4" />
+      <entry feature="ide.settings.Console_Font" count="3" />
       <entry feature="ide.settings.Font" count="2" />
-      <entry feature="ide.settings.Keymap" count="5" />
+      <entry feature="ide.settings.Keymap" count="8" />
       <entry feature="ide.settings.Project_Structure" count="1" />
-      <entry feature="ideaapp.started" count="14" />
+      <entry feature="ide.settings.System_Settings" count="2" />
+      <entry feature="ideaapp.started" count="29" />
     </counts>
   </component>
 </application>
