@@ -193,7 +193,6 @@ nmap <F6> :Msrun<CR>
 
 " tabs
 nmap <C-T> :tabe<CR>
-nmap <C-W> :q<CR>
 
 " paste / nopaste
 nmap <Leader>[ :set paste<CR>
