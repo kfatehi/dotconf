@@ -19,4 +19,4 @@ export PATH="$PATH:$GOPATH/bin"
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 export PATH="$ANDROID_HOME/platform-tools:$PATH"
 export PATH="$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin"
-source ~/.private_env
+if [[ -f ~/.private_env ]]; then source ~/.private_env; fi
