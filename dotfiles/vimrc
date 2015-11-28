@@ -70,6 +70,8 @@ Bundle 'Slava/vim-spacebars'
 
 Bundle 'hdima/python-syntax'
 
+Bundle 'elixir-lang/vim-elixir'
+
 call vundle#end()
 filetype plugin indent on     " required
 "
