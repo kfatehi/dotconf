@@ -35,10 +35,11 @@ if [[ -f /bin/zsh ]]; then
       local prompt_conf="$HOME/.zprezto/modules/prompt/functions/prompt_sorin_setup"
       rm -f $prompt_conf
       ln -s $MY_DOTFILES/prompt_sorin_setup $prompt_conf
-      DotconfSymlink "zpreztorc"
-      DotconfSymlink "zshenv"
     }
   fi
 else
   echo "zshell not found, skipping zprezto install" >&2
 fi
+
+DotconfSymlink "zpreztorc"
+DotconfSymlink "zshenv"
