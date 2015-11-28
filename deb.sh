@@ -1,7 +1,9 @@
 function AptUpdatedToday() {
+  # won't work on darwin due to `stat` differences
+  # but i guess you could use ruby there
   local stampFile=/var/lib/apt/periodic/update-success-stamp
   if [[ -f $stampFile ]]; then
-    local stampstring=$(stat -c %y /var/lib/apt/periodic/update-success-stamp)
+    local stampstring=$(stat -c %y $stampFile)
     local stamp=$(date --date="$stampstring" +"%s")
     local now=$(date --date="$(date)" +"%s")
     local diff=$(echo "$now - $stamp" | bc)
