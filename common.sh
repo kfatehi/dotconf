@@ -20,7 +20,6 @@ else
 fi
 
 if [[ -f /bin/zsh ]]; then
-  DotconfSymlink "zshenv"
 
   test -f /bin/zsh && test "$SHELL" = "/bin/zsh" || {
     YesOrNo "Change shell to zsh?" || {
@@ -37,6 +36,7 @@ if [[ -f /bin/zsh ]]; then
       rm -f $prompt_conf
       ln -s $MY_DOTFILES/prompt_sorin_setup $prompt_conf
       DotconfSymlink "zpreztorc"
+      DotconfSymlink "zshenv"
     }
   fi
 else
