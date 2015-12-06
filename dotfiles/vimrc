@@ -1,88 +1,35 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
-
-" set the runtime path to include Vundle and initialize
-if has("win32")
-  set rtp+=$USERPROFILE/.conf/dotfiles/vim/bundle/Vundle.vim/
-  let path='$USERPROFILE/.conf/dotfiles/vim/bundle'
-  call vundle#begin(path)
-else
-  set rtp+=~/.vim/bundle/Vundle.vim
-  call vundle#begin()
-endif
-
-" let Vundle manage Vundle, required
-Bundle 'gmarik/vundle'
-
+call plug#begin()
 Bundle 'pbrisbin/vim-mkdir'
-
 Bundle 'kien/ctrlp.vim'
 
-Bundle 'scrooloose/nerdtree'
-
-Bundle 'pangloss/vim-javascript'
-
-Bundle 'mxw/vim-jsx'
-
-Bundle 'Shutnik/jshint2.vim'
-
-Bundle "MarcWeber/vim-addon-mw-utils"
-
-Bundle "tomtom/tlib_vim"
-
+Bundle "MarcWeber/vim-addon-mw-utils" "snipmate dep
+Bundle "tomtom/tlib_vim" "snipmate dep
 Bundle "garbas/vim-snipmate"
 
-Bundle 'ciaranm/detectindent'
-
-Bundle 'tpope/vim-markdown'
-
-Bundle 'jtratner/vim-flavored-markdown'
-
 Bundle 'nathanaelkane/vim-indent-guides'
-
 Bundle 'mileszs/ack.vim'
 
-Bundle 'tpope/vim-eunuch'
+Bundle 'tpope/vim-eunuch' " Vim sugar for the UNIX shell commands that need it the most. Features include:
+":Remove: Delete a buffer and the file on disk simultaneously.
+":Unlink: Like :Remove, but keeps the now empty buffer.
+":Move: Rename a buffer and the file on disk simultaneously.
+":Rename: Like :Move, but relative to the current file's containing directory.
+":Chmod: Change the permissions of the current file.
+":Mkdir: Create a directory, defaulting to the parent of the current file.
+":Find: Run find and load the results into the quickfix list.
+":Locate: Run locate and load the results into the quickfix list.
+":Wall: Write every open window. Handy for kicking off tools like guard.
+":SudoWrite: Write a privileged file with sudo.
+":SudoEdit: Edit a privileged file with sudo.
 
 Bundle 'vim-ruby/vim-ruby'
-
-Bundle 'danro/rename.vim'
-
-Bundle 'jnwhiteh/vim-golang'
-
 Bundle "ervandew/supertab"
-
-Bundle 'kchmck/vim-coffee-script'
-
 Bundle 'airblade/vim-gitgutter'
-
 Bundle 'tpope/vim-fugitive'
 
-Bundle 'hail2u/vim-css3-syntax'
-
-Bundle 'chrisgillis/vim-bootstrap3-snippets'
-
-Bundle 'groenewege/vim-less'
-
-Bundle 'fatih/vim-go'
-
-Bundle 'Slava/vim-spacebars'
-
-Bundle 'hdima/python-syntax'
-
-Bundle 'elixir-lang/vim-elixir'
-
-call vundle#end()
-filetype plugin indent on     " required
-"
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install (update) bundles
-" :BundleSearch(!) foo - search (or refresh cache first) for foo
-" :BundleClean(!)      - confirm (or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle commands are not allowed.
+Bundle 'pangloss/vim-javascript', { 'for': 'javascript' }
+Bundle 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+call plug()
 
 " Disable swap files, they suck
 set nobackup      
@@ -165,13 +112,10 @@ nnoremap <silent> <C-Left> <c-w>h
 nnoremap <silent> <C-Up> <c-w>k
 nnoremap <silent> <C-Down> <c-w>j
 
-" Fix weird arrows in some terminals
-let g:NERDTreeDirArrows=0
-
 " Change dir to file dir on each file loaded
 " autocmd BufEnter * silent! lcd %:p:h
 
-" Set tab styles
+" Set default tab style
 set tabstop=2
 set shiftwidth=2
 set expandtab
@@ -184,30 +128,17 @@ syntax enable
 set backspace=indent,eol,start " enable backspace
 set hlsearch " highlight searches
 
-""
-" Visual Studio stuff..
-" still need to figure out how to make the QTKit part 
-" dynamically set (e.g. File.basename(Dir.pwd))
-command! Msbuild execute "!msbuild"
-command! Msrun execute "!msbuild && cls && .\\Debug\\QTKit.exe"
-nmap <F5> :Msbuild<CR>
-nmap <F6> :Msrun<CR>
+" double-tab leader to clear search highlight
+nmap <Leader>\ :nohlsearch<CR>
 
 " tabs
 nmap <C-T> :tabe<CR>
 
-" paste / nopaste
-nmap <Leader>[ :set paste<CR>
-nmap <Leader>] :set nopaste<CR>
-
 " edit my tmux config
-nmap <Leader>t :e ~/.tmux.conf
+nmap <Leader>t :e ~/.tmux.conf<CR>
 
 " find in project
 nmap <Leader>f :vimgrep /
-
-" jshint
-nmap <Leader>jsh :JSHint<cr>
 
 " find next in project
 nmap <Leader>n :cnext<CR>
@@ -218,34 +149,9 @@ nmap <Leader>s :source $MYVIMRC<CR>
 " opens $MYVIMRC for editing, or use :tabedit $MYVIMRC
 nmap <Leader>e :e $MYVIMRC<CR>
 
-"colorscheme monokai
-"colorscheme Tomorrow-Night-Bright
+colorscheme Tomorrow-Night-Bright
 
 set t_Co=256 " Make sure your terminal is 256 colors too!
-
-"" On a white terminal
-" set background=light
-" highlight LineNr ctermfg=darkblue
-
-"" On a black terminal
-" set background=dark
-
-"" Font
-" Platform dependent, see .gvimrc
-
-"" Folding
-" set nofoldenable " not by default please
-" set foldmethod=syntax
-" highlight Folded guibg=black guifg=white
-
-"" Toggle fold with Spacebar
-" nnoremap <Space> za
-
-" can you tell i really dislike folding ?
-let g:vim_markdown_folding_disabled=1
-
-"" NERDTree toggle to CTRL-D
-nmap <C-D> :NERDTreeToggle<CR>
 
 map <C-U> :CtrlPClearAllCaches<cr>
 

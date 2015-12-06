@@ -17,18 +17,25 @@ function YesOrNo() {
 }
 
 function DropboxDotfileSymlink() {
-  local src=$HOME/Dropbox/dotfiles_private/$1
-  local target=$HOME/.$1
-  rm -f $target
-  ln -s $src $target
-  echo "link: $target -> $src"
+  local priv="$HOME/Dropbox/dotfiles_private"
+  if [[ -d $priv ]]; then
+    local src=$priv/$1
+    local target=$HOME/.$1
+    rm -rf $target
+    ln -sf $src $target
+    echo "link: $target -> $src"
+    return 0
+  else
+    echo "warning: did not create $target (enoent $priv)"
+    return 1
+  fi
 }
 
 function DotconfSymlink() {
   local src=$MY_DOTFILES/$1
   local target=$HOME/.$1
-  rm -f $target
-  ln -s $src $target
+  rm -rf $target
+  ln -sf $src $target
   echo "link: $target -> $src"
 }
 
