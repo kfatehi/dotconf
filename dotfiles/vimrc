@@ -1,15 +1,15 @@
-call plug#begin()
-Bundle 'pbrisbin/vim-mkdir'
-Bundle 'kien/ctrlp.vim'
+call plug#begin('~/.vim-plugs')
+Plug 'pbrisbin/vim-mkdir'
+Plug 'kien/ctrlp.vim'
 
-Bundle "MarcWeber/vim-addon-mw-utils" "snipmate dep
-Bundle "tomtom/tlib_vim" "snipmate dep
-Bundle "garbas/vim-snipmate"
+Plug 'MarcWeber/vim-addon-mw-utils' "snipmate dep
+Plug 'tomtom/tlib_vim' "snipmate dep
+Plug 'garbas/vim-snipmate'
 
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'mileszs/ack.vim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'mileszs/ack.vim'
 
-Bundle 'tpope/vim-eunuch' " Vim sugar for the UNIX shell commands that need it the most. Features include:
+Plug 'tpope/vim-eunuch' " Vim sugar for the UNIX shell commands that need it the most. Features include:
 ":Remove: Delete a buffer and the file on disk simultaneously.
 ":Unlink: Like :Remove, but keeps the now empty buffer.
 ":Move: Rename a buffer and the file on disk simultaneously.
@@ -22,14 +22,15 @@ Bundle 'tpope/vim-eunuch' " Vim sugar for the UNIX shell commands that need it t
 ":SudoWrite: Write a privileged file with sudo.
 ":SudoEdit: Edit a privileged file with sudo.
 
-Bundle 'vim-ruby/vim-ruby'
-Bundle "ervandew/supertab"
-Bundle 'airblade/vim-gitgutter'
-Bundle 'tpope/vim-fugitive'
+Plug 'ervandew/supertab'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-vinegar'
 
-Bundle 'pangloss/vim-javascript', { 'for': 'javascript' }
-Bundle 'elixir-lang/vim-elixir', { 'for': 'elixir' }
-call plug()
+Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+call plug#end()
 
 " Disable swap files, they suck
 set nobackup      
@@ -200,3 +201,13 @@ set secure
 "  \ 'file': '\v\.(exe|so|dll|pyc)$',
 "  \ 'link': 'some_bad_symbolic_links',
 "  \ }
+
+
+" Quick quit
+nmap <Leader>q :q<CR>
+
+" Replace NERDTree with split and search style.
+" Uses tmux keys for vertical and horizontal.
+nmap <Leader>" :Sex<CR>
+nmap <Leader>% :Vex<CR>
+
