@@ -4,6 +4,6 @@ case `uname` in
     gitg $@ > /dev/null 2>&1  &
     ;;
   Darwin)
-    gitx $@
+    /usr/local/bin/gitx $@
     ;;
 esac
