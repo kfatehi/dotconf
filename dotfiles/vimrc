@@ -22,11 +22,15 @@ Plug 'tpope/vim-eunuch' " Vim sugar for the UNIX shell commands that need it the
 ":SudoWrite: Write a privileged file with sudo.
 ":SudoEdit: Edit a privileged file with sudo.
 
+Plug 'scrooloose/nerdtree' " I need my nerdtree!
+
 Plug 'ervandew/supertab'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-vinegar'
 
+
+Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 
 " vim-javascript is a dependency of vim-jsx, so load first
@@ -34,6 +38,8 @@ Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 
 Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+
+"Plug 'briancollins/vim-jst', { 'for': 'ejs' }
 call plug#end()
 
 " Disable swap files, they suck
@@ -42,6 +48,11 @@ set nowritebackup
 set noswapfile   
 
 set grepprg=ack
+
+""Nerdtree stuff
+" Fix weird arrows in some terminals
+let g:NERDTreeDirArrows=0
+nmap <C-D> :NERDTreeToggle<CR>
 
 " Resize vim splits with alt keys
 " map <silent> <A-h> <C-w>< 
@@ -59,12 +70,6 @@ set grepprg=ack
 
 " Enable golang support
 au BufRead,BufNewFile *.go set filetype=go 
-
-" Enable github flavored markdown
-augroup markdown
-    au!
-    au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
-augroup END
 
 " fugitive shortcuts
 nmap <leader>g :Gcommit %<cr>   
@@ -207,11 +212,6 @@ set secure
 
 " Quick quit
 nmap <Leader>q :q<CR>
-
-" Replace NERDTree with split and search style.
-" Uses tmux keys for vertical and horizontal.
-nmap <Leader>" :Sex<CR>
-nmap <Leader>% :Vex<CR>
 
 " Enable ReactJS/JSX in .js files
 let g:jsx_ext_required = 0

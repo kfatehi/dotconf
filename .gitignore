@@ -5,3 +5,4 @@
 /dotfiles/AndroidStudio1.3/tasks/*.zip
 *.swp
 ~*
+dotfiles/vim/autoload/plug.vim.old
