@@ -1,6 +1,6 @@
 call plug#begin('~/.vim-plugs')
 Plug 'pbrisbin/vim-mkdir'
-Plug 'kien/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'MarcWeber/vim-addon-mw-utils' "snipmate dep
 Plug 'tomtom/tlib_vim' "snipmate dep
@@ -166,15 +166,6 @@ map <C-U> :CtrlPClearAllCaches<cr>
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip     " MacOSX/Linux
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe  " Windows
 
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn)|coverage|bower_components|dist|node_modules)$',
-  \ 'file': '\v\.(exe|so|dll|pyc)$',
-  \ 'link': 'some_bad_symbolic_links',
-  \ }
-
 "" For all methods, see :help fold-methods
 " zi - toggle folding feature
 " zM - close all folds
@@ -202,12 +193,11 @@ nnoremap Q <nop>
 set exrc
 set secure
 
-" e.g. for cordova
-"let g:ctrlp_custom_ignore = {
-"  \ 'dir':  '\v[\/](\.(git|hg|svn)|lib|node_modules|platforms|plugins|resources)$',
-"  \ 'file': '\v\.(exe|so|dll|pyc)$',
-"  \ 'link': 'some_bad_symbolic_links',
-"  \ }
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" ignore files in .gitignore
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
 
 " Quick quit
