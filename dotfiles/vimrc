@@ -37,7 +37,7 @@ Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 
-Plug 'elixir-lang/vim-elixir', { 'for': 'elixir' }
+Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
 
 "Plug 'briancollins/vim-jst', { 'for': 'ejs' }
 call plug#end()
