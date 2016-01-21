@@ -39,7 +39,7 @@ Plug 'mxw/vim-jsx', { 'for': 'javascript' }
 
 Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
 
-"Plug 'briancollins/vim-jst', { 'for': 'ejs' }
+Plug 'briancollins/vim-jst', { 'for': 'jst' }
 call plug#end()
 
 " Disable swap files, they suck
