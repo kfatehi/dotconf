@@ -19,9 +19,10 @@ function UpdateAptRepositories() {
   sudo apt-get update -qq
 }
 
-AptUpdatedToday || UpdateAptRepositories
-
-sudo apt-get install -y git curl zsh vim python-software-properties ack-grep
+hash apt-get > /dev/null 2>&1 && {
+  AptUpdatedToday || UpdateAptRepositories
+  sudo apt-get install -y git curl zsh vim python-software-properties ack-grep
+}
 
 source $DOTCONF/common.sh
 
