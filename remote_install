@@ -15,10 +15,10 @@ DeterminePlatform() {
       ;;
   esac
   if [ "$PLATFORM" = "unknown" ]; then
-    echo "failed to determine platform"
+    echo "Unknown platform!"
     return -1
   else
-    echo "you are on $PLATFORM"
+    echo "Platform: $PLATFORM"
   fi
 }
 
