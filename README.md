@@ -8,4 +8,6 @@ bootstrap my dev environment and related tools. Supported on:
 
 ## Install
 
-`\curl -fsSL http://bit.ly/1RTlWqS | bash -e`
+```bash
+curl -fsSL bit.ly/1RkeDLT | bash -e
+```
