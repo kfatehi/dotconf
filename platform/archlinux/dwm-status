@@ -1,0 +1,5 @@
+DATE=$(date +"%a %b %d %Y %r")
+
+BAT="$(cat /sys/class/power_supply/BAT0/capacity)%"
+
+echo "$DATE $BAT"
