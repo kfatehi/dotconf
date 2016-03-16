@@ -1,4 +1,7 @@
+sudo pacman --needed -S ack tmux vim mosh
+
 source $DOTCONF/common/all.sh
+
 DotconfSymlink "Xresources"
 DotconfSymlink "Xresources.d"
 
@@ -13,3 +16,4 @@ XDG_MUSIC_DIR="/home/$USER/media/music"
 XDG_PICTURES_DIR="/home/$USER/media/pictures"
 XDG_VIDEOS_DIR="/home/$USER/media/movies"
 EOF
+

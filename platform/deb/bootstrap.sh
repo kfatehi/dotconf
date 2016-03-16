@@ -1,4 +1,4 @@
-sudo apt-get install -y git curl vim python-software-properties ack-grep
+sudo apt-get install -y python-software-properties ack-grep vim
 
 source $DOTCONF/common/all.sh
 
