@@ -2,7 +2,7 @@
 #set x
 set -e
 
-function manifest() {
+BootstrapPlatform() {
   pushd $DOTCONF > /dev/null
   git remote set-url origin git@github.com:kfatehi/.conf.git
   popd > /dev/null
@@ -11,7 +11,7 @@ function manifest() {
   source $DOTCONF/$1.sh
 }
 
-function SetDotconfPath() {
+SetDotconfPath() {
   # http://stackoverflow.com/questions/1055671/how-can-i-get-the-behavior-of-gnus-readlink-f-on-a-mac
   TARGET_FILE=$0
 
@@ -33,22 +33,24 @@ function SetDotconfPath() {
   DOTCONF=$(dirname $RESULT)
 }
 
-PLATFORM=`uname`
-
-case $PLATFORM in
+case `uname` in
   Linux)
     DOTCONF=$(dirname $(readlink -f $0))
-    manifest "deb"
+    if [ -f /etc/arch-release ] ; then
+      BootstrapPlatform "archlinux"
+    elif [ -f /etc/lsb-release ]; then
+      BootstrapPlatform "deb"
+    fi
     ;;
   Darwin)
     SetDotconfPath
-    manifest "osx"
+    BootstrapPlatform "osx"
     ;;
   MINGW32*)
     SetDotconfPath
-    manifest "win32"
+    BootstrapPlatform "win32"
     ;;
   *)
-    echo "Unsupported platform: $PLATFORM"
+    echo "Unsupported platform!"
     ;;
 esac
