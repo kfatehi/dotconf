@@ -1,13 +1,3 @@
-function AfterInstall() {
-  local script=$DOTCONF/after/$1
-  if [[ -f $script ]]; then
-    pushd $DOTCONF > /dev/null
-    echo "executing post-install script $script"
-    source $script
-    popd > /dev/null
-  fi
-}
-
 function YesOrNo() {
   read -p "$1 (y/N)? " choice
   case "$choice" in 
@@ -16,7 +6,7 @@ function YesOrNo() {
   esac
 }
 
-function DropboxDotfileSymlink() {
+function CloudDotfileSymlink() {
   local priv="$HOME/Dropbox/dotfiles_private"
   if [[ -d $priv ]]; then
     local src=$priv/$1
@@ -26,7 +16,7 @@ function DropboxDotfileSymlink() {
     echo "link: $target -> $src"
     return 0
   else
-    echo "warning: did not create $target (enoent $priv)"
+    echo "nolink: missing cloud path $priv"
     return 1
   fi
 }
