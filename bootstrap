@@ -83,7 +83,7 @@ RequirePackage() {
 }
 
 GetRequirements() {
-  RequirePackage "git" && test -d $HOME/.conf || git clone https://github.com/kfatehi/.conf $HOME/.conf
+  RequirePackage "git" && test -d $DOTCONF || git clone https://github.com/kfatehi/.conf $DOTCONF
 }
 
 AptUpdatedToday() {
