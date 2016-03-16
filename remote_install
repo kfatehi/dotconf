@@ -1,13 +1,40 @@
 #!/bin/bash
 
-UpdatePackageManagers() {
+DeterminePlatform() {
+  PLATFORM="unknown"
   case `uname` in
     Linux)
-      echo "Updating apt packages ..."
-      DEBIAN_FRONTEND=noninteractive sudo apt-get -qq update
-      return $?
+      if [ -f /etc/arch-release ] ; then
+        PLATFORM="archlinux"
+      elif [ -f /etc/lsb-release ]; then
+        PLATFORM="ubuntu"
+      fi
       ;;
     Darwin)
+      PLATFORM="darwin"
+      ;;
+  esac
+  if [ "$PLATFORM" = "unknown" ]; then
+    echo "failed to determine platform"
+    return -1
+  else
+    echo "you are on $PLATFORM"
+  fi
+}
+
+UpdatePackageManagers() {
+  case $PLATFORM in 
+    archlinux)
+      echo "Invoking pacman to synchronize package list"
+      sudo pacman -Sy
+      return $?
+      ;;
+    ubuntu)
+      echo "Updating apt packages ..."
+      DEBIAN_FRONTEND=noninteractive sudo apt-get update
+      return $?
+      ;;
+    darwin)
       if hash brew > /dev/null 2>&1; then
         echo "Updating brew packages ..."
         brew update
@@ -20,14 +47,18 @@ UpdatePackageManagers() {
   esac
 }
 
-function RequirePackage() {
+RequirePackage() {
   hash $1 >/dev/null 2>&1 || {
-    case `uname` in
-      Linux)
+    case $PLATFORM in 
+      archlinux)
+        sudo pacman -S $1
+        return $?
+        ;;
+      ubuntu)
         DEBIAN_FRONTEND=noninteractive sudo apt-get install -y $1
         return $?
         ;;
-      Darwin)
+      darwin)
         brew install -y $1
         return $?
         ;;
@@ -35,9 +66,8 @@ function RequirePackage() {
   }
 }
 
-function GetRequirements() {
-  RequirePackage "git" && RequirePackage "zsh" && test -d .conf || git clone https://github.com/keyvanfatehi/.conf
+GetRequirements() {
+  RequirePackage "git" && test -d $HOME/.conf || git clone https://github.com/kfatehi/.conf $HOME/.conf
 }
 
-cd $HOME
-UpdatePackageManagers && GetRequirements && echo $'  Ready! Run this:\n\tbash .conf/bootstrap'
+DeterminePlatform && UpdatePackageManagers && GetRequirements && echo $'  Ready! Run this:\n\tbash .conf/bootstrap'

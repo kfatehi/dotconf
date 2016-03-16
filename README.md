@@ -2,7 +2,8 @@
 
 bootstrap my dev environment and related tools. Supported on:
 
-* Debian-based Linux
+* ArchLinux
+* Debian & Ubuntu
 * Mac OS X
 
 ## Install
