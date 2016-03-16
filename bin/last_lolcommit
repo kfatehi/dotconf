@@ -1,2 +1,0 @@
-#!/bin/bash
-open $(latest_modified_in ~/.lolcommits)

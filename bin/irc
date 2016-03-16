@@ -1,2 +1,0 @@
-#!/bin/bash
-mosh znc.keyvan.pw -- tmux attach

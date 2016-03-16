@@ -1,7 +1,0 @@
-#!/bin/sh
-hash lolcommits && {
-  if [[ -f .git/hooks/post-commit ]]; then
-    rm .git/hooks/post-commit
-  fi
-  lolcommits --enable --delay=5 --fork
-}
