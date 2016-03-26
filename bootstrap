@@ -21,6 +21,8 @@ DeterminePlatform() {
         PLATFORM="archlinux"
       elif [ -f /etc/lsb-release ]; then
         PLATFORM="ubuntu"
+      elif grep "Raspbian" /etc/issue; then
+        PLATFORM="raspbian"
       fi
       ;;
     Darwin)
@@ -45,7 +47,7 @@ UpdatePackageManagers() {
       sudo pacman -Sy
       return $?
       ;;
-    ubuntu)
+    ubuntu|raspbian)
       echo "Updating apt packages ..."
       AptUpdatedToday || UpdateAptRepositories
       return $?
@@ -70,7 +72,7 @@ RequirePackage() {
         sudo pacman -S $1
         return $?
         ;;
-      ubuntu)
+      ubuntu|raspbian)
         DEBIAN_FRONTEND=noninteractive sudo apt-get install -y $1
         return $?
         ;;
@@ -111,7 +113,7 @@ DeterminePlatform && UpdatePackageManagers && GetRequirements && case $PLATFORM 
   archlinux)
     BootstrapPlatform "archlinux"
     ;;
-  ubuntu)
+  ubuntu|raspbian)
     BootstrapPlatform "deb"
     ;;
   darwin)

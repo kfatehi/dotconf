@@ -7,7 +7,7 @@
 
 case `uname` in
   Darwin)
-    export PATH="$HOME/.conf/bin:$PATH"
+    #export PATH="$HOME/.conf/bin:$PATH"
     alias ls="ls -G"
     alias lsblk="diskutil list"
     ;;

@@ -1,4 +1,5 @@
 call plug#begin('~/.vim-plugs')
+Plug 'editorconfig/editorconfig-vim'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'ctrlpvim/ctrlp.vim'
 
