@@ -3,3 +3,5 @@
 #
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
+[[ -f ~/.private_env ]] && . ~/.private_env
+[[ -d ~/.conf/bin ]] && export PATH="~/.conf/bin:$PATH"

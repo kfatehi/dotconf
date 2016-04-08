@@ -10,11 +10,22 @@ case `uname` in
     #export PATH="$HOME/.conf/bin:$PATH"
     alias ls="ls -G"
     alias lsblk="diskutil list"
+    alias gitk="gitx"
+    alias gitg="gitx"
     ;;
   Linux)
     alias ls='ls --color=auto'
+    alias pbcopy="xclip -selection PRIMARY"
+    alias pbpaste="xclip -o -selection PRIMARY"
+    alias gitk="gitg &"
+    alias gitx="gitg &"
     ;;
 esac
+
+export GOPATH=$HOME/Workspace
+
+transfer() { if [ $# -eq 0 ]; then echo "No arguments specified. Usage:\necho transfer /tmp/test.md\ncat /tmp/test.md | transfer test.md"; return 1; fi 
+  tmpfile=$( mktemp -t transferXXX ); if tty -s; then basefile=$(basename "$1" | sed -e 's/[^a-zA-Z0-9._-]/-/g'); curl --progress-bar --upload-file "$1" "https://transfer.sh/$basefile" >> $tmpfile; else curl --progress-bar --upload-file "-" "https://transfer.sh/$1" >> $tmpfile ; fi; cat $tmpfile; rm -f $tmpfile; } 
 
 
 PS1='[\u@\h \W]\$ '
