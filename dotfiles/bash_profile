@@ -5,3 +5,4 @@
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 [[ -f ~/.private_env ]] && . ~/.private_env
 [[ -d ~/.conf/bin ]] && export PATH="~/.conf/bin:$PATH"
+export PATH="node_modules/.bin:$PATH"
