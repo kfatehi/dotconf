@@ -1,9 +1,9 @@
 snippet be
-	beforeEach(function() {
+	beforeEach(() => {
 	  ${1}
 	});
 snippet ae
-	afterEach(function() {
+	afterEach(() => {
 	  ${1}
 	});
 snippet f fn function
@@ -11,11 +11,11 @@ snippet f fn function
 	  ${2}
 	}
 snippet it
-	it("${1}", function() {
+	it("${1}", () => {
 	  ${2}
 	});
 snippet desc describe
-	describe("${1}", function() {
+	describe("${1}", () => {
 	  ${2}
 	});
 snippet expect
@@ -36,7 +36,7 @@ snippet throw
 snippet bluebird
 	var Promise = require('bluebird')
 snippet promise
-	return new Promise(function(resolve, reject) {
+	return new Promise((resolve, reject) => {
 	  ${2}
 	});
 snippet 501

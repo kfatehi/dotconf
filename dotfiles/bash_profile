@@ -6,3 +6,16 @@
 [[ -f ~/.private_env ]] && . ~/.private_env
 [[ -d ~/.conf/bin ]] && export PATH="~/.conf/bin:$PATH"
 export PATH="node_modules/.bin:$PATH"
+
+alias showworknodes="ps aux | grep Workspace | grep [n]ode"
+alias killworknodes="showworknodes | awk '{print \$2}' | xargs kill -9 ; showworknodes"
+
+function print-tmux-colors() {
+  for i in {0..255} ; do
+    printf "\x1b[38;5;${i}mcolour${i}\n"
+  done
+}
+
+function tmux-colors() {
+  print-tmux-colors | less -R
+}

@@ -38,8 +38,8 @@ Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 
 " vim-javascript is a dependency of vim-jsx, so load first
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'mxw/vim-jsx', { 'for': 'javascript' }
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'mxw/vim-jsx', { 'for': 'javascript.jsx' }
 
 Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
 
@@ -79,6 +79,16 @@ au BufRead,BufNewFile *.go set filetype=go
 nmap <leader>g :Gcommit %<cr>   
 nmap <leader>gs :Gstatus<cr>    
 nmap <leader>gp :Git push origin HEAD<cr>
+
+
+function InlineCommand()
+    let l:cmd = 'uuid'
+    let l:output = system(l:cmd)
+    let l:output = substitute(l:output, '[\r\n]*$', '', '')
+    execute 'normal i' . l:output
+endfunction
+
+nmap <leader>i :call InlineCommand()<cr>
 
 """
 " Copy Paste Powers
@@ -201,7 +211,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " ignore files in .gitignore
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 
 
 " Quick quit
