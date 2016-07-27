@@ -1,7 +1,8 @@
 call plug#begin('~/.vim-plugs')
 Plug 'KabbAmine/vCoolor.vim'
 Plug 'scrooloose/syntastic'
-Plug 'editorconfig/editorconfig-vim'
+" Plug 'editorconfig/editorconfig-vim' " throws some error when the core isnt
+" installed every time i open vim, so fuck it
 Plug 'pbrisbin/vim-mkdir'
 Plug 'ctrlpvim/ctrlp.vim'
 

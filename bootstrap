@@ -31,6 +31,9 @@ DeterminePlatform() {
     MINGW*)
       PLATFORM="win"
       ;;
+    CYGWIN*)
+      PLATFORM="win"
+      ;;
   esac
   if [ "$PLATFORM" = "unknown" ]; then
     echo "Unknown platform!"
