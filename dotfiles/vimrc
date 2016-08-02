@@ -44,6 +44,7 @@ Plug 'mxw/vim-jsx', { 'for': 'javascript.jsx' }
 Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
 
 Plug 'briancollins/vim-jst', { 'for': 'jst' }
+Plug 'tomlion/vim-solidity', { 'for': 'solidity' }
 call plug#end()
 
 " Disable swap files, they suck

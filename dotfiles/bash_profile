@@ -19,3 +19,6 @@ function print-tmux-colors() {
 function tmux-colors() {
   print-tmux-colors | less -R
 }
+
+# OPAM configuration
+. /Users/keyvan/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
