@@ -28,8 +28,11 @@ DeterminePlatform() {
     Darwin)
       PLATFORM="darwin"
       ;;
-    MINGW32*)
-      PLATFORM="win32"
+    MINGW*)
+      PLATFORM="win"
+      ;;
+    CYGWIN*)
+      PLATFORM="win"
       ;;
   esac
   if [ "$PLATFORM" = "unknown" ]; then
@@ -119,8 +122,8 @@ DeterminePlatform && UpdatePackageManagers && GetRequirements && case $PLATFORM 
   darwin)
     BootstrapPlatform "osx"
     ;;
-  win32)
-    BootstrapPlatform "win32"
+  win)
+    BootstrapPlatform "win"
     ;;
   *)
     echo "Unsupported platform!"
