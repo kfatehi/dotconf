@@ -1,7 +1,8 @@
 call plug#begin('~/.vim-plugs')
 Plug 'KabbAmine/vCoolor.vim'
 Plug 'scrooloose/syntastic'
-Plug 'editorconfig/editorconfig-vim'
+" Plug 'editorconfig/editorconfig-vim' " throws some error when the core isnt
+" installed every time i open vim, so fuck it
 Plug 'pbrisbin/vim-mkdir'
 Plug 'ctrlpvim/ctrlp.vim'
 
@@ -44,6 +45,8 @@ Plug 'mxw/vim-jsx', { 'for': 'javascript.jsx' }
 Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
 
 Plug 'briancollins/vim-jst', { 'for': 'jst' }
+Plug 'tomlion/vim-solidity', { 'for': 'solidity' }
+Plug 'ryym/vim-riot'
 call plug#end()
 
 " Disable swap files, they suck
@@ -211,8 +214,7 @@ let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " ignore files in .gitignore
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
-
+let g:ctrlp_user_command = ['.git', "cd %s && git ls-files . -co --exclude-standard | awk '!/^node_modules/'", 'find %s -type f']
 
 " Quick quit
 nmap <Leader>q :q<CR>
