@@ -8,6 +8,7 @@ CloudDotfileSymlink "ssh" && chmod 400 ~/.ssh/id_rsa
 # links these
 DotconfSymlink "bash_profile"
 DotconfSymlink "bashrc"
+DotconfSymlink "bash_aliases"
 DotconfSymlink "tmux.conf"
 DotconfSymlink "tmux-osx.conf"
 DotconfSymlink "tmux-linux.conf"
