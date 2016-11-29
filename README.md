@@ -6,6 +6,7 @@ bootstrap my dev environment and related tools. Supported on:
 * Debian & Ubuntu
 * Mac OS X
 * Windows (MinGW or "Git Bash", and Cygwin)
+* Raspbian
 
 ## Install
 
