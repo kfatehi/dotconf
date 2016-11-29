@@ -4,6 +4,7 @@ source $DOTCONF/common/vim-setup.sh
 
 # tries to link if it finds a cloud storage path
 CloudDotfileSymlink "ssh" && chmod 400 ~/.ssh/id_rsa
+CloudDotfileSymlink "modmail.config.js"
 
 # links these
 DotconfSymlink "bash_profile"
