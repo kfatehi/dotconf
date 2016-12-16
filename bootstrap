@@ -20,7 +20,11 @@ DeterminePlatform() {
       if [ -f /etc/arch-release ] ; then
         PLATFORM="archlinux"
       elif [ -f /etc/lsb-release ]; then
-        PLATFORM="ubuntu"
+        if grep "Microsoft" /proc/sys/kernel/osrelease; then
+          PLATFORM="wsl"
+        else
+          PLATFORM="ubuntu"
+        fi
       elif grep "Raspbian" /etc/issue; then
         PLATFORM="raspbian"
       fi
@@ -50,7 +54,7 @@ UpdatePackageManagers() {
       sudo pacman -Sy
       return $?
       ;;
-    ubuntu|raspbian)
+    ubuntu|wsl|raspbian)
       echo "Updating apt packages ..."
       AptUpdatedToday || UpdateAptRepositories
       return $?
@@ -124,6 +128,9 @@ DeterminePlatform && UpdatePackageManagers && GetRequirements && case $PLATFORM 
     ;;
   win)
     BootstrapPlatform "win"
+    ;;
+  wsl)
+    BootstrapPlatform "deb"
     ;;
   *)
     echo "Unsupported platform!"
