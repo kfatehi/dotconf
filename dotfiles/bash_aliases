@@ -1,0 +1,10 @@
+alias tts="node /Users/keyvan/Workspace/ttshack/get.js"
+alias t="todo.sh"
+alias vt="vim ~/todo.txt"
+# https://docs.unity3d.com/Manual/SmartMerge.html
+alias UnityYAMLMerge="/Applications/Unity/Unity.app/Contents/Tools/UnityYAMLMerge"
+alias uber="cd /Users/keyvan/Library/Application\ Support/Übersicht/widgets/"
+alias widgets="uber"
+alias instapaper="node /Users/keyvan/Workspace/instapaper-api/index.js"
+
+alias scan-ssh="nmap -p 22 --open -sV 192.168.1.0/24"

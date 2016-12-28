@@ -7,7 +7,7 @@ function YesOrNo() {
 }
 
 function CloudDotfileSymlink() {
-  local priv="$HOME/Dropbox/dotfiles_private"
+  local priv="$HOME/ownCloud/dotfiles_private"
   if [[ -d $priv ]]; then
     local src=$priv/$1
     local target=$HOME/.$1
