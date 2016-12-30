@@ -33,7 +33,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-vinegar'
 
-
 Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
@@ -46,7 +45,11 @@ Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
 
 Plug 'briancollins/vim-jst', { 'for': 'jst' }
 Plug 'tomlion/vim-solidity', { 'for': 'solidity' }
-Plug 'ryym/vim-riot'
+
+"""
+" nice place to look for color schemes
+" http://vimcolors.com/?utf8=%E2%9C%93&bg=dark&colors=term&order=newest
+Plug 'davb5/wombat256dave'
 call plug#end()
 
 " Disable swap files, they suck
@@ -83,8 +86,7 @@ nmap <leader>g :Gcommit %<cr>
 nmap <leader>gs :Gstatus<cr>    
 nmap <leader>gp :Git push origin HEAD<cr>
 
-
-function InlineCommand()
+function! InlineCommand()
     let l:cmd = 'uuid'
     let l:output = system(l:cmd)
     let l:output = substitute(l:output, '[\r\n]*$', '', '')
@@ -102,8 +104,7 @@ nmap <leader>i :call InlineCommand()<cr>
 vmap <leader>y y:new<CR>:call setline(1,getregtype())<CR>o<Esc>P:wq! ~/vim-clipboard.txt<CR>
 " Leader-key (Backslash) p in normal mode (ESC to get out of visual mode)
 map <leader>p :sview ~/vim-clipboard.txt<CR>"zdddG:q!<CR>:call setreg('"', @", @z)<CR>p
-"
-"
+
 " Detect platform and provide os-level copy paste too ;)
 if has("unix")
   let s:uname = substitute(system("uname -s"), '\n', '', '')
@@ -231,4 +232,4 @@ imap ç <M-c>
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
 
-colorscheme Tomorrow-Night-Bright
+colorscheme wombat256dave
