@@ -8,3 +8,9 @@ alias widgets="uber"
 alias instapaper="node /Users/keyvan/Workspace/instapaper-api/index.js"
 
 alias scan-ssh="nmap -p 22 --open -sV 192.168.1.0/24"
+
+alias gs="git status"
+alias gc="git commit"
+alias gca="git commit --amend"
+alias gd="git diff"
+alias gpom="git push origin master"
