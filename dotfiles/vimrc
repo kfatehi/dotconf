@@ -40,6 +40,7 @@ Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 " vim-javascript is a dependency of vim-jsx, so load first
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mxw/vim-jsx', { 'for': 'javascript.jsx' }
+Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript', 'javascript.jsx'] }
 
 Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
 
@@ -236,3 +237,9 @@ nmap <leader>[ :set paste<CR>
 nmap <leader>] :set nopaste<CR>
 
 colorscheme wombat256dave
+
+""" JSDoc stuff
+let g:jsdoc_enable_es6 = 1
+let g:jsdoc_allow_input_prompt = 1
+let g:jsdoc_input_description = 1
+nmap <leader>d ::JsDoc<CR>
