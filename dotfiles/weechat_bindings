@@ -1,0 +1,5 @@
+ctrl-arrow keys for buffer navigation
+/key bind meta2-1;5A /buffer -1
+/key bind meta2-1;5B /buffer +1
+/key bind meta2-1;5C /buffer +1
+/key bind meta2-1;5D /buffer -1
