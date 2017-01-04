@@ -1,4 +1,4 @@
-sudo pacman --needed -S ack tmux vim mosh
+sudo pacman --noconfirm --needed -S ack tmux vim mosh
 
 source $DOTCONF/common/all.sh
 

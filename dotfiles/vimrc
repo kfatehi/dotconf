@@ -236,7 +236,7 @@ cmap w!! w !sudo tee > /dev/null %
 nmap <leader>[ :set paste<CR>
 nmap <leader>] :set nopaste<CR>
 
-colorscheme wombat256dave
+"colorscheme wombat256dave
 
 """ JSDoc stuff
 let g:jsdoc_enable_es6 = 1
