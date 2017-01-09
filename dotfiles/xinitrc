@@ -1,0 +1,25 @@
+# load X settings
+[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
+
+# keyboard repeat rate
+xset r rate 200 25
+
+# wallpaper
+feh --bg-fill --no-fehbg /usr/local/share/backgrounds/think_correctly.jpeg
+
+# tray
+# https://github.com/sargon/trayer-srg
+# trayer --height 16 --edge top --expand true --width 1 --align right --distancefrom right --distance 60 &
+
+# keybinds
+# xbindkeys
+
+redshift -m randr -l 33:-117 -t 5000:2600 -r &
+
+unclutter -idle 2 &
+
+statusbar &
+
+xmodmap ~/.Xmodmap
+
+exec dwm > $HOME/.dwm.log 2>&1

@@ -4,6 +4,8 @@ source $DOTCONF/common/all.sh
 
 DotconfSymlink "Xresources"
 DotconfSymlink "Xresources.d"
+DotconfSymlink "Xmodmap"
+DotconfSymlink "xinitrc"
 
 #mkdir -p $HOME/.config
 #cat <<EOF > $HOME/.config/user-dirs.dirs
