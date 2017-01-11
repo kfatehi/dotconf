@@ -32,3 +32,6 @@ transfer() { if [ $# -eq 0 ]; then echo "No arguments specified. Usage:\necho tr
 PS1='[\u@\h \W]\$ '
 
 source ~/.bash_aliases
+
+export EDITOR="vim"
+export VISUAL="vim"

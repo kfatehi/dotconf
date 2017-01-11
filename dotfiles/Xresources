@@ -1,2 +1,33 @@
-#include ".Xresources.d/tomorrow-night"
-#include ".Xresources.d/fonts"
+URxvt.font: xft:Liberation Mono:size=12:antialias=true:autohint=true
+URxvt.scrollBar: false
+URxvt.urlLauncher: /usr/bin/w3m
+URxvt.background: #000000
+URxvt.foreground: #cccccc
+URxvt.iso14755: false
+!URxvt.background: #102720
+!URxvt.foreground: #b2b2b2
+! black + red
+!URxvt*color0: #3f3f3f
+URxvt*color0: #000000
+URxvt*color1: #bb2520
+! green + yellow
+URxvt*color2: #00bb00
+URxvt*color3: #bbbb00
+! blue + purple
+URxvt*color4: #0000bb
+URxvt*color5: #bb00bb
+! cyan + white
+URxvt*color6: #00bbbb
+URxvt*color7: #b2b2b2
+! bright-black + bright-red
+URxvt*color8: #555555
+URxvt*color9: #ff5555
+! bright-green + bright-yellow
+URxvt*color10: #55ff55
+URxvt*color11: #ffff55
+! bright-blue + bright-purple
+URxvt*color12: #5555ff
+URxvt*color13: #ff55ff
+! bright-cyan + bright-white
+URxvt*color14: #55ffff
+URxvt*color15: #d1d1d1
