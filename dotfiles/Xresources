@@ -1,6 +1,5 @@
 URxvt.font: xft:Liberation Mono:size=12:antialias=true:autohint=true
 URxvt.scrollBar: false
-URxvt.urlLauncher: /usr/bin/w3m
 URxvt.background: #000000
 URxvt.foreground: #cccccc
 URxvt.iso14755: false
@@ -31,3 +30,7 @@ URxvt*color13: #ff55ff
 ! bright-cyan + bright-white
 URxvt*color14: #55ffff
 URxvt*color15: #d1d1d1
+
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1

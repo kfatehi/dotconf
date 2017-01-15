@@ -1,10 +1,30 @@
+case `uname` in
+  Darwin)
+    #export PATH="$HOME/.conf/bin:$PATH"
+    alias ls="ls -G"
+    alias lsblk="diskutil list"
+    alias gitk="gitx"
+    alias gitg="gitx"
+    ;;
+  Linux)
+    alias ls='ls --color=auto'
+    alias pbcopy="xclip -selection PRIMARY"
+    alias pbpaste="xclip -o -selection PRIMARY"
+    alias gitk="gitg &"
+    alias gitx="gitg &"
+    ;;
+esac
+
+# Node BS
+# alias showworknodes="ps aux | grep Workspace | grep [n]ode"
+# alias killworknodes="showworknodes | awk '{print \$2}' | xargs kill -9 ; showworknodes"
+
+
 alias tts="node /Users/keyvan/Workspace/ttshack/get.js"
 alias t="todo.sh"
 alias vt="vim ~/todo.txt"
 # https://docs.unity3d.com/Manual/SmartMerge.html
 alias UnityYAMLMerge="/Applications/Unity/Unity.app/Contents/Tools/UnityYAMLMerge"
-alias uber="cd /Users/keyvan/Library/Application\ Support/Übersicht/widgets/"
-alias widgets="uber"
 alias instapaper="node /Users/keyvan/Workspace/instapaper-api/index.js"
 
 alias scan-ssh="nmap -p 22 --open -sV 192.168.1.0/24"
@@ -13,9 +33,13 @@ alias gs="git status"
 alias gc="git commit"
 alias gca="git commit --amend"
 alias gd="git diff"
-alias gpom="git push origin master"
+alias gpom="git pull origin master && git push origin master"
 
-alias netctl="sudo netctl"
-alias wifi-menu="sudo wifi-menu"
+# in network group, dont need sudo
+#alias netctl="sudo netctl"
+#alias wifi-menu="sudo wifi-menu"
 alias synergy-start="synergys --no-tray --enable-crypto -f"
 alias uci-vpn="pass uci/kfatehi | sudo openconnect --authgroup=UCI --user=kfatehi vpn.uci.edu"
+
+# TODO find the proper way to do this
+alias wifi-powersave-off="sudo iw dev wlp3s0 set power_save off"
