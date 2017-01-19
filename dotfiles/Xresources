@@ -34,3 +34,23 @@ URxvt*color15: #d1d1d1
 URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
+URxvt.letterSpace: -1
+
+
+URxvt.dynamicColors: on
+! change to light background w ctrl-8
+URxvt.keysym.C-8: command:\033]11;#ffffff\007
+
+! change to dark background w ctrl-9
+URxvt.keysym.C-9: command:\033]11;#000000\007
+
+! fix arrow key behavior
+! URxvt.keysym.M-Down:        \033[1;3B
+! URxvt.keysym.M-Up:          \033[1;3A
+! URxvt.keysym.M-Left:        \033[1;3D
+! URxvt.keysym.M-Right:       \033[1;3C
+
+URxvt.keysym.Control-Up:      \033[1;5A
+URxvt.keysym.Control-Down:    \033[1;5B
+URxvt.keysym.Control-Left:    \033[1;5D
+URxvt.keysym.Control-Right:   \033[1;5C
