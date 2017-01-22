@@ -52,6 +52,7 @@ Plug 'tomlion/vim-solidity', { 'for': 'solidity' }
 " http://vimcolors.com/?utf8=%E2%9C%93&bg=dark&colors=term&order=newest
 Plug 'davb5/wombat256dave'
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+Plug 'cespare/vim-toml', { 'for': 'toml' }
 call plug#end()
 
 " Disable swap files, they suck
