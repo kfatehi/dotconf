@@ -43,3 +43,7 @@ alias uci-vpn="pass uci/kfatehi | sudo openconnect --authgroup=UCI --user=kfateh
 
 # TODO find the proper way to do this
 alias wifi-powersave-off="sudo iw dev wlp3s0 set power_save off"
+
+alias uber="node ~/code/ubersicht-mini/index.js -w ~/code/uci-week.widget -e ~/todo.txt -e ~/uci-widget-config.json -p 9999 -s"
+
+alias featherduster="python2 ~/code/featherduster/featherduster.py"
