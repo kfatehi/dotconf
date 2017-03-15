@@ -33,11 +33,6 @@ alias instapaper="node /Users/keyvan/Workspace/instapaper-api/index.js"
 
 alias scan-ssh="nmap -p 22 --open -sV 192.168.1.0/24"
 
-alias gs="git status"
-alias gc="git commit"
-alias gca="git commit --amend"
-alias gd="git diff"
-
 # in network group, dont need sudo
 #alias netctl="sudo netctl"
 #alias wifi-menu="sudo wifi-menu"
@@ -45,3 +40,7 @@ alias synergy-start="synergys --no-tray --enable-crypto -f"
 
 # TODO find the proper way to do this
 alias wifi-powersave-off="sudo iw dev wlp3s0 set power_save off"
+
+alias uber="node ~/code/ubersicht-mini/index.js -w ~/code/uci-week.widget -e ~/todo.txt -e ~/uci-widget-config.json -p 9999 -s"
+
+alias featherduster="python2 ~/code/featherduster/featherduster.py"

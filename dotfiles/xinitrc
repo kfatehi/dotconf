@@ -5,26 +5,15 @@
 xset r rate 200 25
 
 # wallpaper
-feh --bg-fill --no-fehbg /usr/local/share/backgrounds/think_correctly.jpeg
-
-# keybinds
-# xbindkeys
+feh --bg-fill ~/Pictures/04103_misslibertyii_2560x1440.jpg &
 
 redshift -m randr -l 33:-117 -t 5000:2600 -r &
 
-unclutter -idle 2 &
-
-statusbar &
-
-xmodmap ~/.Xmodmap
-
-trayer --height 16 --edge bottom --align right --widthtype request --transparent true --alpha 255 &
-
 # start sessions in reverse order, first is in front
-tmux new-session -s "main" -n "todo" -d "vim ~/todo.txt"
-tmux new-window -t "main" -n "uber" -d 'node ~/code/ubersicht-mini/index.js -w ~/code/uci-week.widget -e ~/todo.txt -e ~/uci-widget-config.json -p 9999 -s'
+#tmux new-session -s "main" -n "todo" -d "vim ~/todo.txt"
+#tmux new-window -t "main" -n "uber" -d 'node ~/code/ubersicht-mini/index.js -w ~/code/uci-week.widget -e ~/todo.txt -e ~/uci-widget-config.json -p 9999 -s'
 
 # attach to that tmux session
-urxvt -e bash -c "tmux attach -t main" &
+#urxvt -e bash -c "tmux attach -t main" &
 
-exec dwm > $HOME/.dwm.log 2>&1
+exec i3

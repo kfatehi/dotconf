@@ -1,4 +1,10 @@
-URxvt.font: xft:Liberation Mono:size=10:antialias=true:autohint=true
+xterm*faceName: Liberation Mono:size=11:antialias=true:autohint=true
+xterm*background: black
+xterm*foreground: white
+XTerm.VT100.color4: CornflowerBlue
+
+
+URxvt.font: xft:Liberation Mono:size=11:antialias=true:autohint=true
 URxvt.scrollBar: false
 URxvt.background: #000000
 URxvt.foreground: #cccccc
