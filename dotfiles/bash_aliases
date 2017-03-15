@@ -5,6 +5,9 @@ case `uname` in
     alias lsblk="diskutil list"
     alias gitk="gitx"
     alias gitg="gitx"
+    alias uci-vpn="sudo openconnect --authgroup=UCI --user=kfatehi vpn.uci.edu"
+    alias xpra="/Applications/Xpra.app/Contents/MacOS/Xpra"
+    alias vnc-share="echo \"open vnc://$(hostname)\" | pbcopy"
     ;;
   Linux)
     alias ls='ls --color=auto'
@@ -12,6 +15,7 @@ case `uname` in
     alias pbpaste="xclip -o -selection PRIMARY"
     alias gitk="gitg &"
     alias gitx="gitg &"
+    alias uci-vpn="pass uci/kfatehi | sudo openconnect --authgroup=UCI --user=kfatehi vpn.uci.edu"
     ;;
 esac
 
@@ -33,13 +37,11 @@ alias gs="git status"
 alias gc="git commit"
 alias gca="git commit --amend"
 alias gd="git diff"
-alias gpom="git pull origin master && git push origin master"
 
 # in network group, dont need sudo
 #alias netctl="sudo netctl"
 #alias wifi-menu="sudo wifi-menu"
 alias synergy-start="synergys --no-tray --enable-crypto -f"
-alias uci-vpn="pass uci/kfatehi | sudo openconnect --authgroup=UCI --user=kfatehi vpn.uci.edu"
 
 # TODO find the proper way to do this
 alias wifi-powersave-off="sudo iw dev wlp3s0 set power_save off"
