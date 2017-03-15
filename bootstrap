@@ -136,3 +136,7 @@ DeterminePlatform && UpdatePackageManagers && GetRequirements && case $PLATFORM 
     echo "Unsupported platform!"
     ;;
 esac
+
+echo "done"
+
+stty sane
