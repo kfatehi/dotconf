@@ -53,6 +53,8 @@ Plug 'tomlion/vim-solidity', { 'for': 'solidity' }
 Plug 'davb5/wombat256dave'
 Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'cespare/vim-toml', { 'for': 'toml' }
+Plug 'markcornick/vim-bats', { 'for': 'bats' }
+Plug 'andreshazard/vim-freemarker', { 'for': 'freemarker' }
 call plug#end()
 
 " Disable swap files, they suck
