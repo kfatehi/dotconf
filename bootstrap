@@ -139,4 +139,4 @@ esac
 
 echo "done"
 
-stty sane
+reset
