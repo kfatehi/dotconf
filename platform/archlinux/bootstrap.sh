@@ -6,7 +6,6 @@ DotconfSymlink "Xresources"
 DotconfSymlink "Xresources.d"
 DotconfSymlink "Xmodmap"
 DotconfSymlink "xinitrc"
-DotconfSymlink "xinitrc"
 
 CloudDotfileSymlink "surf/bookmarks"
 
@@ -22,3 +21,6 @@ XDG_PICTURES_DIR="/home/$USER/multimedia/pictures"
 XDG_VIDEOS_DIR="/home/$USER/multimedia/movies"
 EOF
 
+ARCHCONF=$DOTCONF/archlinux
+
+CheckInstall "yaourt" || $ARCHCONF/get-yaourt.sh

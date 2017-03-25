@@ -5,15 +5,13 @@
 xset r rate 200 25
 
 # wallpaper
-feh --bg-fill ~/Pictures/04103_misslibertyii_2560x1440.jpg &
+IMG=~/Pictures/04103_misslibertyii_2560x1440.jpg
+[[ -f $IMG ]] && feh --bg-fill $IMG &
 
-redshift -m randr -l 33:-117 -t 5000:2600 -r &
+# flux/redshift
+[[ -x $(which redshift) ]] && redshift -m randr -l 33:-117 -t 5000:2600 -r &
 
-# start sessions in reverse order, first is in front
-#tmux new-session -s "main" -n "todo" -d "vim ~/todo.txt"
-#tmux new-window -t "main" -n "uber" -d 'node ~/code/ubersicht-mini/index.js -w ~/code/uci-week.widget -e ~/todo.txt -e ~/uci-widget-config.json -p 9999 -s'
-
-# attach to that tmux session
-#urxvt -e bash -c "tmux attach -t main" &
+# sync the clipboard
+[[ -x $(clipit) ]] && clipit &
 
 exec i3
