@@ -21,3 +21,4 @@ BoldAsFont=-1
 Transparency=low
 Font=Monaco
 FontHeight=12
+Term=xterm-256color
