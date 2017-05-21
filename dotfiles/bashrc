@@ -1,8 +1,13 @@
 # ~/.bashrc
-#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+[[ $DISPLAY ]] && shopt -s checkwinsize
+
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 export PROMPT_COMMAND="echo -ne '\033]0;${USER}@${HOSTNAME}:$(dirs)\007';$PROMPT_COMMAND"
+
 export PATH="$HOME/Apps/bin:$PATH"
 export PATH="node_modules/.bin:$PATH"
 export PATH="$HOME/.conf/bin:$PATH"
@@ -28,11 +33,6 @@ export PATH="/usr/local/opt/qt5/bin:$PATH"
 # export PATH="/Users/keyvan/Library/Android/sdk/platform-tools:$PATH"
 # export PATH="/Users/keyvan/Library/Android/sdk/tools:$PATH"
 
-
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
-
 # go...
 # export GOPATH=$HOME/Workspace
 
@@ -49,6 +49,6 @@ export VISUAL="vim"
 
 export TERM=xterm-256color
 
-  [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 
 export PATH="$HOME/.yarn/bin:$PATH"

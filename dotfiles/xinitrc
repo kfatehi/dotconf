@@ -1,6 +1,15 @@
 # load X settings
 [[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
+# enables systemd user and dbus stuff? needed for creating keyrings in seahorse
+source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
+
+# start the keyring daemon
+if [[ -x $(gnome-keyring-daemon) ]];then
+  eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs10,secrets,ssh)
+  export SSH_AUTH_SOCK
+fi
+
 # keyboard repeat rate
 xset r rate 200 25
 
@@ -13,5 +22,8 @@ IMG=~/Pictures/04103_misslibertyii_2560x1440.jpg
 
 # sync the clipboard
 [[ -x $(clipit) ]] && clipit &
+
+# owncloud
+[[ -x $(owncloud) ]] && owncloud &
 
 exec i3
