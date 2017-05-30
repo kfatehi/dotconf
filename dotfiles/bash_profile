@@ -2,3 +2,8 @@
 # ~/.bash_profile
 #
 . "$HOME/.bashrc"
+
+#https://unix.stackexchange.com/questions/42359/how-can-i-autologin-to-desktop-with-systemd
+if `hash startx > /dev/null 2>&1` && [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+  exec startx
+fi

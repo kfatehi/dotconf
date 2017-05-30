@@ -13,17 +13,4 @@ fi
 # keyboard repeat rate
 xset r rate 200 25
 
-# wallpaper
-IMG=~/Pictures/04103_misslibertyii_2560x1440.jpg
-[[ -f $IMG ]] && feh --bg-fill $IMG &
-
-# flux/redshift
-[[ -x $(which redshift) ]] && redshift -m randr -l 33:-117 -t 5000:2600 -r &
-
-# sync the clipboard
-[[ -x $(clipit) ]] && clipit &
-
-# owncloud
-[[ -x $(owncloud) ]] && owncloud &
-
 exec i3
