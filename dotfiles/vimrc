@@ -252,4 +252,7 @@ let g:jsdoc_input_description = 1
 nmap <leader>d ::JsDoc<CR>
 
 """ Typescript
-
+" double-leader to get completion menu
+inoremap <leader>\ <C-x><C-o>
+let g:tsuquyomi_completion_detail = 1
+autocmd FileType typescript setlocal completeopt+=menu,preview
