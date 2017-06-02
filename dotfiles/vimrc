@@ -256,3 +256,5 @@ nmap <leader>d ::JsDoc<CR>
 inoremap <leader>\ <C-x><C-o>
 let g:tsuquyomi_completion_detail = 1
 autocmd FileType typescript setlocal completeopt+=menu,preview
+" merge javascript snippets
+autocmd FileType typescript SnipMateLoadScope javascript
