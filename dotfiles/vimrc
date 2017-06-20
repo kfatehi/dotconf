@@ -41,6 +41,9 @@ Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mxw/vim-jsx', { 'for': 'javascript.jsx' }
 Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'maksimr/vim-jsbeautify'
+Plug 'leafgarland/typescript-vim'
+Plug 'Quramy/tsuquyomi'
 
 Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
 
@@ -247,3 +250,11 @@ let g:jsdoc_enable_es6 = 1
 let g:jsdoc_allow_input_prompt = 1
 let g:jsdoc_input_description = 1
 nmap <leader>d ::JsDoc<CR>
+
+""" Typescript
+" double-leader to get completion menu
+inoremap <leader>\ <C-x><C-o>
+let g:tsuquyomi_completion_detail = 1
+autocmd FileType typescript setlocal completeopt+=menu,preview
+" merge javascript snippets
+autocmd FileType typescript SnipMateLoadScope javascript
