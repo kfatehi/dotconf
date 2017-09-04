@@ -49,5 +49,3 @@ export VISUAL="vim"
 export TERM=xterm-256color
 
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
-
-export PATH="$HOME/.yarn/bin:$PATH"

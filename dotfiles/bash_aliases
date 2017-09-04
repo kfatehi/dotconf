@@ -45,3 +45,5 @@ alias uber="node ~/code/ubersicht-mini/index.js -w ~/code/uci-week.widget -e ~/t
 
 alias featherduster="python2 ~/code/featherduster/featherduster.py"
 alias inf124="ssh andromeda -t '~/gsu.sh'"
+
+alias anaconda-activate="source /opt/anaconda/bin/activate root"
