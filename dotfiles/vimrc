@@ -1,8 +1,7 @@
 call plug#begin('~/.vim-plugs')
-Plug 'KabbAmine/vCoolor.vim'
+Plug 'KabbAmine/vCoolor.vim', { 'for':['css','scss','sass'] }
 Plug 'scrooloose/syntastic'
-" Plug 'editorconfig/editorconfig-vim' " throws some error when the core isnt
-" installed every time i open vim, so fuck it
+" Plug 'editorconfig/editorconfig-vim' " throws some error when the core isnt installed every time i open vim, so fuck it
 Plug 'pbrisbin/vim-mkdir'
 Plug 'ctrlpvim/ctrlp.vim'
 
@@ -10,7 +9,7 @@ Plug 'MarcWeber/vim-addon-mw-utils' "snipmate dep
 Plug 'tomtom/tlib_vim' "snipmate dep
 Plug 'garbas/vim-snipmate'
 
-Plug 'nathanaelkane/vim-indent-guides'
+"Plug 'nathanaelkane/vim-indent-guides'
 Plug 'mileszs/ack.vim'
 
 Plug 'tpope/vim-eunuch' " Vim sugar for the UNIX shell commands that need it the most. Features include:
@@ -30,8 +29,8 @@ Plug 'scrooloose/nerdtree' " I need my nerdtree!
 
 Plug 'ervandew/supertab'
 Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-vinegar'
+"Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-vinegar'
 
 Plug 'tpope/vim-markdown', { 'for': 'markdown' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
@@ -41,9 +40,10 @@ Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
 Plug 'mxw/vim-jsx', { 'for': 'javascript.jsx' }
 Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'maksimr/vim-jsbeautify'
-Plug 'leafgarland/typescript-vim'
-Plug 'Quramy/tsuquyomi'
+"Plug 'maksimr/vim-jsbeautify'
+Plug 'leafgarland/typescript-vim', { 'for': ['typescript', 'typescript.tsx'] }
+Plug 'Quramy/tsuquyomi', { 'for': ['typescript', 'typescript.tsx'] }
+Plug 'ianks/vim-tsx', { 'for': ['typescript.tsx'] }
 
 Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
 
@@ -54,7 +54,7 @@ Plug 'rust-lang/rust.vim', { 'for': 'rust' }
 Plug 'cespare/vim-toml', { 'for': 'toml' }
 Plug 'markcornick/vim-bats', { 'for': 'bats' }
 Plug 'andreshazard/vim-freemarker', { 'for': 'freemarker' }
-Plug 'Glench/Vim-Jinja2-Syntax'
+Plug 'Glench/Vim-Jinja2-Syntax', { 'for': 'jinja2' }
 
 """
 " COLOR SCHEMES
@@ -62,6 +62,8 @@ Plug 'Glench/Vim-Jinja2-Syntax'
 " http://vimcolors.com/?utf8=%E2%9C%93&bg=dark&colors=term&order=newest
 Plug 'davb5/wombat256dave'
 Plug 'NLKNguyen/papercolor-theme'
+
+
 
 call plug#end()
 
@@ -176,7 +178,8 @@ nmap <Leader>\ :nohlsearch<CR>
 nmap <C-T> :tabe<CR>
 
 " edit my tmux config
-nmap <Leader>t :e ~/.tmux.conf<CR>
+"nmap <Leader>t :e ~/.tmux.conf<CR>
+nmap <Leader>t :TsuquyomiReloadProject<CR>
 
 " find in project
 nmap <Leader>f :vimgrep /
@@ -239,6 +242,9 @@ let g:jsx_ext_required = 0
 " JSHint
 let g:syntastic_javascript_checkers = ['eslint', 'jshint']
 
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi']
+
 " map color
 imap ç <M-c>
 
@@ -252,14 +258,6 @@ set background=light
 colorscheme PaperColor
 "set background=dark
 "colorscheme wombat256dave
-
-
-
-""" JSDoc stuff
-let g:jsdoc_enable_es6 = 1
-let g:jsdoc_allow_input_prompt = 1
-let g:jsdoc_input_description = 1
-nmap <leader>d ::JsDoc<CR>
 
 """ Typescript
 " double-leader to get completion menu
