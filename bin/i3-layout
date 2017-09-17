@@ -1,0 +1,22 @@
+#!/bin/bash
+cmd=$1
+target_workspace=$2
+if [[ $target_workspace =~ ^[1-9]$ ]]; then
+  target_layout=~/.config/i3/$target_workspace.json
+  if [[ $cmd == "load" ]]; then
+    if [[ -f $target_layout ]]; then
+      current_workspace=$(i3-msg -t get_workspaces | jq '.[]|select(.focused).num')
+      i3-msg "workspace $target_workspace; append_layout $target_layout; workspace $current_workspace";
+    else
+      echo "file not found: $target_layout, create it with"
+      echo "$(basename $0) save $target_workspace"
+    fi
+  elif [[ $cmd == "edit" ]]; then
+    vim $target_layout
+  elif [[ $cmd == "save" ]]; then
+    i3-save-tree --workspace $target_workspace > $target_layout
+    $0 edit $target_workspace
+  fi
+else
+  echo "Usage: $(basename $0) load|save|edit [0-9]"
+fi
