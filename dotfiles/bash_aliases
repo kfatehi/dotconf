@@ -1,13 +1,10 @@
 case `uname` in
   Darwin)
-    #export PATH="$HOME/.conf/bin:$PATH"
     alias ls="ls -G"
     alias lsblk="diskutil list"
     alias gitk="gitx"
     alias gitg="gitx"
-    alias uci-vpn="sudo openconnect --authgroup=UCI --user=kfatehi vpn.uci.edu"
     alias xpra="/Applications/Xpra.app/Contents/MacOS/Xpra"
-    alias vnc-share="echo \"open vnc://$(hostname)\" | pbcopy"
     ;;
   Linux)
     alias ls='ls --color=auto'
@@ -15,33 +12,11 @@ case `uname` in
     alias pbpaste="xclip -o -selection PRIMARY"
     alias gitk="gitg &"
     alias gitx="gitg &"
-    alias uci-vpn="pass uci/kfatehi | sudo openconnect --authgroup=UCI --user=kfatehi vpn.uci.edu"
     ;;
 esac
 
-# Node BS
-# alias showworknodes="ps aux | grep Workspace | grep [n]ode"
-# alias killworknodes="showworknodes | awk '{print \$2}' | xargs kill -9 ; showworknodes"
-
-
-alias tts="node /Users/keyvan/Workspace/ttshack/get.js"
-alias t="todo.sh"
-alias vt="vim ~/todo.txt"
-# https://docs.unity3d.com/Manual/SmartMerge.html
-alias UnityYAMLMerge="/Applications/Unity/Unity.app/Contents/Tools/UnityYAMLMerge"
-alias instapaper="node /Users/keyvan/Workspace/instapaper-api/index.js"
-
 alias scan-ssh="nmap -p 22 --open -sV 192.168.1.0/24"
-
 # in network group, dont need sudo
 #alias netctl="sudo netctl"
 #alias wifi-menu="sudo wifi-menu"
 alias synergy-start="synergys --no-tray --enable-crypto -f"
-
-# TODO find the proper way to do this
-alias wifi-powersave-off="sudo iw dev wlp3s0 set power_save off"
-
-alias uber="node ~/code/ubersicht-mini/index.js -w ~/code/uci-week.widget -e ~/todo.txt -e ~/uci-widget-config.json -p 9999 -s"
-
-alias featherduster="python2 ~/code/featherduster/featherduster.py"
-alias inf124="ssh andromeda -t '~/gsu.sh'"

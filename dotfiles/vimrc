@@ -9,6 +9,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'MarcWeber/vim-addon-mw-utils' "snipmate dep
 Plug 'tomtom/tlib_vim' "snipmate dep
 Plug 'garbas/vim-snipmate'
+Plug 'ervandew/supertab'
 
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'mileszs/ack.vim'
@@ -28,8 +29,7 @@ Plug 'tpope/vim-eunuch' " Vim sugar for the UNIX shell commands that need it the
 
 Plug 'scrooloose/nerdtree' " I need my nerdtree!
 
-Plug 'ervandew/supertab'
-Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-vinegar'
 
