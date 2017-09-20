@@ -10,7 +10,4 @@ if [[ -x $(gnome-keyring-daemon) ]];then
   export SSH_AUTH_SOCK
 fi
 
-# keyboard repeat rate
-xset r rate 200 25
-
 exec i3

@@ -1,62 +1,8 @@
 xterm*faceName: Liberation Mono:size=11:antialias=true:autohint=true
-xterm*background: black
-xterm*foreground: white
+xterm*background: #eeeeee
+xterm*foreground: black
+
+!xterm*background: black
+!xterm*foreground: white
 XTerm.VT100.color4: CornflowerBlue
-
-
-URxvt.font: xft:Liberation Mono:size=11:antialias=true:autohint=true
-URxvt.scrollBar: false
-URxvt.background: #000000
-URxvt.foreground: #cccccc
-URxvt.iso14755: false
-!URxvt.background: #102720
-!URxvt.foreground: #b2b2b2
-! black + red
-!URxvt*color0: #3f3f3f
-URxvt*color0: #000000
-URxvt*color1: #bb2520
-! green + yellow
-URxvt*color2: #00bb00
-URxvt*color3: #bbbb00
-! blue + purple
-URxvt*color4: #0000bb
-URxvt*color5: #bb00bb
-! cyan + white
-URxvt*color6: #00bbbb
-URxvt*color7: #b2b2b2
-! bright-black + bright-red
-URxvt*color8: #555555
-URxvt*color9: #ff5555
-! bright-green + bright-yellow
-URxvt*color10: #55ff55
-URxvt*color11: #ffff55
-! bright-blue + bright-purple
-URxvt*color12: #5555ff
-URxvt*color13: #ff55ff
-! bright-cyan + bright-white
-URxvt*color14: #55ffff
-URxvt*color15: #d1d1d1
-
-URxvt.perl-ext-common: default,matcher
-URxvt.url-launcher: /usr/bin/xdg-open
-URxvt.matcher.button: 1
-URxvt.letterSpace: -1
-
-
-URxvt.dynamicColors: on
-! change to light background w ctrl-8
-URxvt.keysym.C-8: command:\033]11;#ffffff\007
-
-! change to dark background w ctrl-9
-URxvt.keysym.C-9: command:\033]11;#000000\007
-
-! fix arrow key behavior
-! URxvt.keysym.M-Down:        \033[1;3B
-! URxvt.keysym.M-Up:          \033[1;3A
-! URxvt.keysym.M-Left:        \033[1;3D
-! URxvt.keysym.M-Right:       \033[1;3C
-
-URxvt.keysym.Control-Up:      \033[1;5A
-URxvt.keysym.Control-Down:    \033[1;5B
-URxvt.keysym.Control-Left:    \033[1;5D
-URxvt.keysym.Control-Right:   \033[1;5C
+XTerm*fullscreen: never

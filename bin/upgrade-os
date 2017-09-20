@@ -1,0 +1,48 @@
+#!/bin/bash
+
+DeterminePlatform() {
+  PLATFORM="unknown"
+  case `uname` in
+    Linux)
+      if [ -f /etc/arch-release ] ; then
+        PLATFORM="archlinux"
+      elif [ -f /etc/lsb-release ]; then
+        if grep "Microsoft" /proc/sys/kernel/osrelease; then
+          PLATFORM="wsl"
+        else
+          PLATFORM="ubuntu"
+        fi
+      elif grep "Raspbian" /etc/issue; then
+        PLATFORM="raspbian"
+      fi
+      ;;
+    Darwin)
+      PLATFORM="darwin"
+      ;;
+    MINGW*)
+      PLATFORM="win"
+      ;;
+    CYGWIN*)
+      PLATFORM="win"
+      ;;
+  esac
+  if [ "$PLATFORM" = "unknown" ]; then
+    echo "Unknown platform!"
+    return -1
+  else
+    return 0
+  fi
+}
+
+DeterminePlatform && case $PLATFORM in
+  archlinux)
+    hash yaourt >/dev/null 2>&1 && cmd="yaourt" || cmd="sudo pacman"
+    # https://bbs.archlinux.org/viewtopic.php?id=191279
+    set -x
+    $cmd -Sy --needed archlinux-keyring
+    $cmd -Su
+    ;;
+  *)
+    echo "Implement how to upgrade $PLATFORM in $0"
+    ;;
+esac

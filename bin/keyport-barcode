@@ -1,0 +1,22 @@
+#!/bin/bash
+# Generates a PDF from a barcode string
+# in the dimensions expected for a Keyport Barcode Insert
+# https://www.mykeyport.com/barcode-insert
+# You may need to set SYMBOLOGY and/or remove -c (checksum)
+# depending on which barcode you're creating
+SIZE="1.3x0.35"
+UNITS="in"
+SYMBOLOGY=${SYMBOLOGY:-"39"}
+CODE="$1"
+if [[ "$CODE" == "" ]]; then
+  echo "Usage: $(basename $0) '12345'"
+  exit -1
+else
+  rm /tmp/barcode.*
+  set -e
+  set -x
+  barcode -n -u $UNITS -o /tmp/barcode.ps -g $SIZE -e $SYMBOLOGY -b $CODE -c
+  ps2pdf /tmp/barcode.ps /tmp/barcode.pdf
+  rm /tmp/barcode.ps
+  echo "Generated /tmp/barcode.pdf"
+fi
