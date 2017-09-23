@@ -1,0 +1,16 @@
+#!/bin/bash
+# %a : Abbreviated weekday name (Sun..Sat)
+# %b : Abbreviated month name (Jan..Dec)
+# %B : Full month name, variable length (January..December)
+# %d : Day of month (01..31)
+# %e : Day of month, blank padded ( 1..31)
+# %m : Month (01..12)
+# %Y : Year
+# %d : Day of month (e.g, 01)
+# %H : 24 hour format (00..23)
+# %I : 12 hour format (01..12)
+# %j : day of year (001..366)
+# %D : date; same as %m/%d/%y
+# %F : full date; same as %Y-%m-%d (a good format for sorting filename)
+# http://www.cyberciti.biz/tips/shell-scripting-creating-reportlog-file-names-with-date-in-filename.html
+date +"%m-%d-%Y"

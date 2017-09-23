@@ -3,7 +3,7 @@ TOK="$RANDOM"
 TARGET=$(basename $1)
 if [[ -f $1 ]]; then
   ssh -t gateway "mkdir -p public/$TOK"
-  gateway_ip=$(ssh gateway curl -s ipv4.icanhazip.com)
+  gateway_ip=synapse.keyvan.pw #$(ssh gateway curl -s ipv4.icanhazip.com)
   echo "https://$gateway_ip:8099/$TOK/$TARGET"
   rsync -av --progress $1 gateway:~/public/$TOK/$TARGET
   ssh -t gateway "bash https.sh && shred -vu public/$TOK/$TARGET && rmdir public/$TOK"

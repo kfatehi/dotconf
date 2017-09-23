@@ -1,2 +1,7 @@
 #!/bin/bash
-xdg-open ~/Documents/timesheet.ods
+SPREADSHEET=~/Documents/timesheet.ods
+if [[ -f $SPREADSHEET ]]; then
+  xdg-open $SPREADSHEET
+else
+  vim ~/ownCloud/Documents/timesheet.txt
+fi
