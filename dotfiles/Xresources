@@ -1,8 +1,10 @@
 xterm*faceName: Liberation Mono:size=11:antialias=true:autohint=true
-xterm*background: #eeeeee
-xterm*foreground: black
-
-!xterm*background: black
-!xterm*foreground: white
 XTerm.VT100.color4: CornflowerBlue
 XTerm*fullscreen: never
+
+
+!xterm*background: #eeeeee
+!xterm*foreground: black
+
+xterm*background: black
+xterm*foreground: white

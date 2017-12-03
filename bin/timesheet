@@ -1,2 +1,2 @@
 #!/bin/bash
-xdg-open ~/Documents/timesheet.ods
+xdg-open "https://docs.google.com/spreadsheets/d/1rLiR8_tGPXNE0dct5jhTLwzo677abfhwkuA5oogBZt0/edit#gid=827391661"

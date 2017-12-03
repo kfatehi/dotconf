@@ -18,3 +18,10 @@ esac
 alias scan-ssh="nmap -p 22 --open -sV 192.168.1.0/24"
 # in network group, dont need sudo
 alias synergy-start="synergys --no-tray --enable-crypto -f"
+
+alias mount-usbstick="sudo mount -o uid=keyvan /dev/sdh1 /mnt/usbstick/"
+
+alias copykey="cat ~/.ssh/id_rsa.pub | pbcopy && echo public key is in the pasteboard"
+
+alias pat="pushd $HOME/ownCloud/Work/Contracting-2018/DFT/PAT"
+alias qng="pushd $HOME/code/qngweb"

@@ -1,0 +1,2 @@
+#!/bin/bash
+dmenu-tool xdg-open ~/Documents/{**/*,/*}.ods

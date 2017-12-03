@@ -5,9 +5,11 @@ Plug 'scrooloose/syntastic'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'ctrlpvim/ctrlp.vim'
 
-Plug 'MarcWeber/vim-addon-mw-utils' "snipmate dep
-Plug 'tomtom/tlib_vim' "snipmate dep
-Plug 'garbas/vim-snipmate'
+"Plug 'MarcWeber/vim-addon-mw-utils' "snipmate dep
+"Plug 'tomtom/tlib_vim' "snipmate dep
+"Plug 'garbas/vim-snipmate'
+Plug 'SirVer/ultisnips'
+
 Plug 'ervandew/supertab'
 
 "Plug 'nathanaelkane/vim-indent-guides'
@@ -62,8 +64,16 @@ Plug 'davb5/wombat256dave'
 Plug 'NLKNguyen/papercolor-theme'
 
 
+Plug 'zchee/vim-flatbuffers', { 'for': 'fbs' }
 
 call plug#end()
+
+"let g:tsuquyomi_disable_default_mappings = 1
+"" really weird behavior triyng to do this
+"autocmd FileType typescript nmap <buffer> <C-]> :TsuDefinition<CR>
+"autocmd FileType typescript nmap <buffer> <C-S-]> :TsuTypeDefinition<CR>
+"autocmd FileType typescript nmap <buffer> <C-[> :TsuGoBack<CR>
+
 
 " Disable swap files, they suck
 set nobackup      
@@ -172,13 +182,9 @@ set hlsearch " highlight searches
 " double-tab leader to clear search highlight
 nmap <Leader>\ :nohlsearch<CR>
 
-" tabs
 nmap <C-T> :tabe<CR>
-
-" edit my tmux config
-"nmap <Leader>t :e ~/.tmux.conf<CR>
-nmap <Leader>t :TsuquyomiReloadProject<CR>
-
+nmap <C-S> :w<CR>
+imap <C-S> <ESC>:w<CR>
 " find in project
 nmap <Leader>f :vimgrep /
 
@@ -252,10 +258,10 @@ cmap w!! w !sudo tee > /dev/null %
 nmap <leader>[ :set paste<CR>
 nmap <leader>] :set nopaste<CR>
 
-set background=light
-colorscheme PaperColor
-"set background=dark
-"colorscheme wombat256dave
+" set background=light
+" colorscheme PaperColor
+set background=dark
+colorscheme wombat256dave
 
 """ Typescript
 " double-leader to get completion menu
@@ -263,6 +269,14 @@ inoremap <leader>\ <C-x><C-o>
 let g:tsuquyomi_completion_detail = 1
 autocmd FileType typescript setlocal completeopt+=menu,preview
 " merge javascript snippets
-autocmd FileType typescript SnipMateLoadScope javascript
+" autocmd FileType typescript SnipMateLoadScope javascript
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<C-z>"
 
 set wrap
+
+let g:syntastic_always_populate_loc_list = 1
+nmap <C-S-Down> :lnext<CR>
+nmap <C-S-Up> :lprev<CR>
