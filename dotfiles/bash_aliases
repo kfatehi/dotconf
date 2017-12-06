@@ -18,3 +18,4 @@ esac
 alias scan-ssh="nmap -p 22 --open -sV 192.168.1.0/24"
 # in network group, dont need sudo
 alias synergy-start="synergys --no-tray --enable-crypto -f"
+alias i2prouter="/Applications/i2p/i2prouter"
