@@ -1,7 +1,8 @@
 #!/bin/bash
-SPREADSHEET=~/Documents/timesheet.ods
-if [[ -f $SPREADSHEET ]]; then
-  xdg-open $SPREADSHEET
-else
-  vim ~/ownCloud/Documents/timesheet.txt
-fi
+xdg-open "https://docs.google.com/spreadsheets/d/1rLiR8_tGPXNE0dct5jhTLwzo677abfhwkuA5oogBZt0/edit#gid=827391661"
+# SPREADSHEET=~/Documents/timesheet.ods
+# if [[ -f $SPREADSHEET ]]; then
+#   xdg-open $SPREADSHEET
+# else
+#   vim ~/ownCloud/Documents/timesheet.txt
+# fi

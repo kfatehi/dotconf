@@ -5,9 +5,11 @@ Plug 'scrooloose/syntastic'
 Plug 'pbrisbin/vim-mkdir'
 Plug 'ctrlpvim/ctrlp.vim'
 
-Plug 'MarcWeber/vim-addon-mw-utils' "snipmate dep
-Plug 'tomtom/tlib_vim' "snipmate dep
-Plug 'garbas/vim-snipmate'
+"Plug 'MarcWeber/vim-addon-mw-utils' "snipmate dep
+"Plug 'tomtom/tlib_vim' "snipmate dep
+"Plug 'garbas/vim-snipmate'
+Plug 'SirVer/ultisnips'
+
 Plug 'ervandew/supertab'
 
 "Plug 'nathanaelkane/vim-indent-guides'
@@ -61,7 +63,17 @@ Plug 'Glench/Vim-Jinja2-Syntax', { 'for': 'jinja2' }
 Plug 'davb5/wombat256dave'
 Plug 'NLKNguyen/papercolor-theme'
 
+
+Plug 'zchee/vim-flatbuffers', { 'for': 'fbs' }
+
 call plug#end()
+
+"let g:tsuquyomi_disable_default_mappings = 1
+"" really weird behavior triyng to do this
+"autocmd FileType typescript nmap <buffer> <C-]> :TsuDefinition<CR>
+"autocmd FileType typescript nmap <buffer> <C-S-]> :TsuTypeDefinition<CR>
+"autocmd FileType typescript nmap <buffer> <C-[> :TsuGoBack<CR>
+
 
 " Disable swap files, they suck
 set nobackup      
@@ -170,7 +182,6 @@ set hlsearch " highlight searches
 " double-tab leader to clear search highlight
 nmap <Leader>\ :nohlsearch<CR>
 
-" tabs
 nmap <C-T> :tabe<CR>
 
 " insert the date
@@ -265,6 +276,14 @@ inoremap <leader>\ <C-x><C-o>
 let g:tsuquyomi_completion_detail = 1
 autocmd FileType typescript setlocal completeopt+=menu,preview
 " merge javascript snippets
-autocmd FileType typescript SnipMateLoadScope javascript
+" autocmd FileType typescript SnipMateLoadScope javascript
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<C-z>"
 
 set wrap
+
+let g:syntastic_always_populate_loc_list = 1
+nmap <C-S-Down> :lnext<CR>
+nmap <C-S-Up> :lprev<CR>

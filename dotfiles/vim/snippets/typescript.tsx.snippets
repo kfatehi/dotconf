@@ -1,0 +1,19 @@
+snippet preact
+	import {h, Component} from 'preact';
+
+snippet compo
+	interface ${1}Props {}
+
+	interface ${1}State {}
+
+	export default class ${1} extends Component<${1}Props, ${1}State> {
+		constructor(props) {
+			super(props)
+			this.state = {};
+		}
+		render () {
+			return <div>
+				${2}
+			</div>;
+		}
+	}

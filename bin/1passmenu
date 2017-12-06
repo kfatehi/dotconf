@@ -1,0 +1,6 @@
+#!/bin/bash
+cd /home/keyvan/code/1password2pass/
+if [[ "$1" = "reset" ]]; then
+  rm opvault.db && echo "deleted opvault.db\nrebuilding..."
+fi
+/usr/bin/node /home/keyvan/code/1password2pass/build/cli.js
