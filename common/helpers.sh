@@ -11,7 +11,9 @@ function CloudDotfileSymlink() {
   if [[ -d $priv ]]; then
     local src=$priv/$1
     local target=$HOME/.$1
-    rm -rf $target
+    if [[ -f $target ]]; then
+      mv $target $target.backup
+    fi
     ln -sf $src $target
     echo "link: $target -> $src"
     return 0
@@ -24,7 +26,9 @@ function CloudDotfileSymlink() {
 function DotconfSymlink() {
   local src=$MY_DOTFILES/$1
   local target=$HOME/.$1
-  rm -rf $target
+  if [[ -f $target ]]; then
+    mv $target $target.backup
+  fi
   ln -sf $src $target
   echo "link: $target -> $src"
 }
