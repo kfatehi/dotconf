@@ -11,5 +11,5 @@ bootstrap my dev environment and related tools. Supported on:
 ## Install
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/kfatehi/.conf/master/bootstrap | bash -e
+curl -fsSL https://raw.githubusercontent.com/kfatehi/dotconf/master/bootstrap | bash -e
 ```

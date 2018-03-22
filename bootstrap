@@ -2,11 +2,13 @@
 #set -x
 #set -e
 
-DOTCONF=$HOME/.conf
+REPO_SSH=git@github.com:kfatehi/dotconf.git
+REPO_HTTP=https://github.com/kfatehi/dotconf
+DOTCONF=$HOME/dotconf
 
 BootstrapPlatform() {
   pushd $DOTCONF > /dev/null
-  git remote set-url origin git@github.com:kfatehi/.conf.git
+  git remote set-url origin $REPO_SSH
   popd > /dev/null
   MY_DOTFILES=$DOTCONF/dotfiles
   MY_BINS=$DOTCONF/bin
@@ -92,7 +94,7 @@ RequirePackage() {
 }
 
 GetRequirements() {
-  RequirePackage "git" && test -d $DOTCONF || git clone https://github.com/kfatehi/.conf $DOTCONF
+  RequirePackage "git" && test -d $DOTCONF || git clone $REPO_HTTP $DOTCONF
 }
 
 AptUpdatedToday() {
@@ -136,7 +138,3 @@ DeterminePlatform && UpdatePackageManagers && GetRequirements && case $PLATFORM 
     echo "Unsupported platform!"
     ;;
 esac
-
-echo "done"
-
-reset
