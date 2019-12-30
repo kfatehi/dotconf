@@ -10,6 +10,8 @@ bootstrap my dev environment and related tools. Supported on:
 
 ## Install
 
+dont use, this is broken now
+
 ```bash
 curl -fsSL https://raw.githubusercontent.com/kfatehi/dotconf/master/bootstrap | bash -e
 ```
@@ -19,7 +21,7 @@ curl -fsSL https://raw.githubusercontent.com/kfatehi/dotconf/master/bootstrap | 
 ```bash
 #!/bin/bash
 pushd ~                                                                                                                                                                                                      
-for f in vimrc tmux.conf tmux-linux.conf; do
+for f in vimrc tmux.conf; do
   echo ".$f"
   curl -o .$f https://raw.githubusercontent.com/kfatehi/dotconf/master/dotfiles/$f
 done

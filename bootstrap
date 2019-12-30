@@ -4,7 +4,10 @@
 
 REPO_SSH=git@github.com:kfatehi/dotconf.git
 REPO_HTTP=https://github.com/kfatehi/dotconf
+
+## i think this method breaks the curl install
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
 DOTCONF=$DIR
 
 
@@ -100,8 +103,6 @@ GetRequirements() {
 }
 
 AptUpdatedToday() {
-  # won't work on darwin due to `stat` differences
-  # but i guess you could use ruby there
   local stampFile=/var/cache/apt/pkgcache.bin
   if [[ -f $stampFile ]]; then
     local stampstring=$(stat -c %y $stampFile)
