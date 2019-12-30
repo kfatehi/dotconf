@@ -1,10 +1,12 @@
 #!/bin/bash
-#set -x
+set -x
 #set -e
 
 REPO_SSH=git@github.com:kfatehi/dotconf.git
 REPO_HTTP=https://github.com/kfatehi/dotconf
-DOTCONF=$HOME/dotconf
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+DOTCONF=$DIR
+
 
 BootstrapPlatform() {
   pushd $DOTCONF > /dev/null
@@ -100,7 +102,7 @@ GetRequirements() {
 AptUpdatedToday() {
   # won't work on darwin due to `stat` differences
   # but i guess you could use ruby there
-  local stampFile=/var/lib/apt/periodic/update-success-stamp
+  local stampFile=/var/cache/apt/pkgcache.bin
   if [[ -f $stampFile ]]; then
     local stampstring=$(stat -c %y $stampFile)
     local stamp=$(date --date="$stampstring" +"%s")

@@ -7,8 +7,8 @@ source $DOTCONF/common/vim-setup.sh
 # DotconfSymlink "bashrc"
 # DotconfSymlink "bash_aliases"
 DotconfSymlink "tmux.conf"
-DotconfSymlink "tmux-osx.conf"
-DotconfSymlink "tmux-linux.conf"
+#DotconfSymlink "tmux-osx.conf"
+#DotconfSymlink "tmux-linux.conf"
 DotconfSymlink "ackrc"
 
 # tries to link if it finds a cloud storage path
