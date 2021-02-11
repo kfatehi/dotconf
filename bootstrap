@@ -1,15 +1,10 @@
 #!/bin/bash
-#set -x
-#set -e
+set -euo pipefail
 
 REPO_SSH=git@github.com:kfatehi/dotconf.git
 REPO_HTTP=https://github.com/kfatehi/dotconf
 
-## i think this method breaks the curl install
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-
-DOTCONF=$DIR
-
+DOTCONF=~/.kfc
 
 BootstrapPlatform() {
   pushd $DOTCONF > /dev/null
@@ -37,7 +32,11 @@ DeterminePlatform() {
       fi
       ;;
     Darwin)
-      PLATFORM="darwin"
+      if [[ -d /System/Library/CoreServices/SpringBoard.app ]]; then
+        PLATFORM="iphone"
+      else
+        PLATFORM="darwin"
+      fi
       ;;
     MINGW*)
       PLATFORM="win"
@@ -71,6 +70,8 @@ UpdatePackageManagers() {
         echo "Updating brew packages ..."
         brew update
       else
+	      # we could be on iOS...
+
         echo "Installing brew"
         ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
       fi
@@ -86,7 +87,7 @@ RequirePackage() {
         sudo pacman -S $1
         return $?
         ;;
-      ubuntu|raspbian)
+      iphone|ubuntu|raspbian)
         DEBIAN_FRONTEND=noninteractive sudo apt-get install -y $1
         return $?
         ;;
@@ -127,6 +128,9 @@ DeterminePlatform && UpdatePackageManagers && GetRequirements && case $PLATFORM 
     ;;
   ubuntu|raspbian)
     BootstrapPlatform "deb"
+    ;;
+  iphone)
+    BootstrapPlatform "iphone"
     ;;
   darwin)
     BootstrapPlatform "osx"
