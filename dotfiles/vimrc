@@ -1,8 +1,8 @@
 call plug#begin('~/.vim-plugs')
-Plug 'KabbAmine/vCoolor.vim', { 'for':['css','scss','sass'] }
-Plug 'scrooloose/syntastic'
+" Plug 'KabbAmine/vCoolor.vim', { 'for':['css','scss','sass'] }
+" Plug 'scrooloose/syntastic'
 " Plug 'editorconfig/editorconfig-vim' " throws some error when the core isnt installed every time i open vim, so fuck it
-Plug 'pbrisbin/vim-mkdir'
+" Plug 'pbrisbin/vim-mkdir'
 Plug 'ctrlpvim/ctrlp.vim'
 
 "Plug 'MarcWeber/vim-addon-mw-utils' "snipmate dep
@@ -10,7 +10,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 "Plug 'garbas/vim-snipmate'
 "Plug 'SirVer/ultisnips'
 
-Plug 'ervandew/supertab'
+" Plug 'ervandew/supertab'
 
 "Plug 'nathanaelkane/vim-indent-guides'
 Plug 'mileszs/ack.vim'
@@ -30,31 +30,31 @@ Plug 'tpope/vim-eunuch' " Vim sugar for the UNIX shell commands that need it the
 
 Plug 'scrooloose/nerdtree' " I need my nerdtree!
 
-Plug 'mhinz/vim-signify'
+" Plug 'mhinz/vim-signify'
 
-Plug 'tpope/vim-markdown', { 'for': 'markdown' }
-Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
-Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
+" Plug 'tpope/vim-markdown', { 'for': 'markdown' }
+" Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
+" Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 
 " vim-javascript is a dependency of vim-jsx, so load first
-Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'mxw/vim-jsx', { 'for': 'javascript.jsx' }
-Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript', 'javascript.jsx'] }
+" Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
+" Plug 'mxw/vim-jsx', { 'for': 'javascript.jsx' }
+" Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript', 'javascript.jsx'] }
 "Plug 'maksimr/vim-jsbeautify'
-Plug 'leafgarland/typescript-vim', { 'for': ['typescript', 'typescript.tsx'] }
-Plug 'Quramy/tsuquyomi', { 'for': ['typescript', 'typescript.tsx'] }
-Plug 'ianks/vim-tsx', { 'for': ['typescript.tsx'] }
+" Plug 'leafgarland/typescript-vim', { 'for': ['typescript', 'typescript.tsx'] }
+" Plug 'Quramy/tsuquyomi', { 'for': ['typescript', 'typescript.tsx'] }
+" Plug 'ianks/vim-tsx', { 'for': ['typescript.tsx'] }
 
-Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
+" Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
 
-Plug 'briancollins/vim-jst', { 'for': 'jst' }
-Plug 'tomlion/vim-solidity', { 'for': 'solidity' }
+" Plug 'briancollins/vim-jst', { 'for': 'jst' }
+" Plug 'tomlion/vim-solidity', { 'for': 'solidity' }
 
-Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-Plug 'cespare/vim-toml', { 'for': 'toml' }
-Plug 'markcornick/vim-bats', { 'for': 'bats' }
-Plug 'andreshazard/vim-freemarker', { 'for': 'freemarker' }
-Plug 'Glench/Vim-Jinja2-Syntax', { 'for': 'jinja2' }
+" Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+" Plug 'cespare/vim-toml', { 'for': 'toml' }
+" Plug 'markcornick/vim-bats', { 'for': 'bats' }
+" Plug 'andreshazard/vim-freemarker', { 'for': 'freemarker' }
+" Plug 'Glench/Vim-Jinja2-Syntax', { 'for': 'jinja2' }
 
 """
 " COLOR SCHEMES
@@ -64,7 +64,7 @@ Plug 'davb5/wombat256dave'
 Plug 'NLKNguyen/papercolor-theme'
 
 
-Plug 'zchee/vim-flatbuffers', { 'for': 'fbs' }
+" Plug 'zchee/vim-flatbuffers', { 'for': 'fbs' }
 
 call plug#end()
 
