@@ -5,12 +5,11 @@ call plug#begin('~/.vim-plugs')
 " Plug 'pbrisbin/vim-mkdir'
 Plug 'ctrlpvim/ctrlp.vim'
 
-"Plug 'MarcWeber/vim-addon-mw-utils' "snipmate dep
-"Plug 'tomtom/tlib_vim' "snipmate dep
-"Plug 'garbas/vim-snipmate'
-"Plug 'SirVer/ultisnips'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
-" Plug 'ervandew/supertab'
+
+Plug 'ervandew/supertab'
 
 "Plug 'nathanaelkane/vim-indent-guides'
 Plug 'mileszs/ack.vim'
@@ -47,7 +46,7 @@ Plug 'scrooloose/nerdtree' " I need my nerdtree!
 
 " Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
 
-" Plug 'briancollins/vim-jst', { 'for': 'jst' }
+Plug 'briancollins/vim-jst', { 'for': 'jst' }
 " Plug 'tomlion/vim-solidity', { 'for': 'solidity' }
 
 " Plug 'rust-lang/rust.vim', { 'for': 'rust' }
@@ -62,6 +61,7 @@ Plug 'scrooloose/nerdtree' " I need my nerdtree!
 " http://vimcolors.com/?utf8=%E2%9C%93&bg=dark&colors=term&order=newest
 Plug 'davb5/wombat256dave'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'gruvbox-community/gruvbox'
 
 
 " Plug 'zchee/vim-flatbuffers', { 'for': 'fbs' }
@@ -267,8 +267,12 @@ nmap <leader>] :set nopaste<CR>
 
 "set background=light
 "colorscheme PaperColor
-set background=dark
-colorscheme wombat256dave
+
+"set background=dark
+"colorscheme wombat256dave
+
+set background=light
+colorscheme gruvbox
 
 """ Typescript
 " double-leader to get completion menu
