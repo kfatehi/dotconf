@@ -10,10 +10,16 @@ bootstrap my dev environment and related tools. Supported on:
 
 ## Install
 
-dont use, this is broken now
+here's your one-liner
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/kfatehi/dotconf/master/bootstrap | bash -e
+```
+
+or something more memory-committable, if my infrastructure is still up:
+
+```
+curl -sSL conf.keyvan.cloud | bash -e
 ```
 
 ## Minimal (just tmux and vim)
