@@ -21,6 +21,8 @@ DeterminePlatform() {
     Linux)
       if [ -f /etc/arch-release ] ; then
         PLATFORM="archlinux"
+      elif [ -f /etc/fedora-release ]; then
+        PLATFORM="fedora"
       elif [ -f /etc/lsb-release ]; then
         if grep "Microsoft" /proc/sys/kernel/osrelease; then
           PLATFORM="wsl"
@@ -65,6 +67,10 @@ UpdatePackageManagers() {
       AptUpdatedToday || UpdateAptRepositories
       return $?
       ;;
+    fedora)
+      sudo dnf update --refresh
+      return $?
+      ;;
     darwin)
       if hash brew > /dev/null 2>&1; then
         echo "Updating brew packages ..."
@@ -89,6 +95,10 @@ RequirePackage() {
         ;;
       iphone|ubuntu|raspbian)
         DEBIAN_FRONTEND=noninteractive sudo apt-get install -y $1
+        return $?
+        ;;
+      fedora)
+        sudo dnf install -y $1
         return $?
         ;;
       darwin)
@@ -128,6 +138,9 @@ DeterminePlatform && UpdatePackageManagers && GetRequirements && case $PLATFORM 
     ;;
   ubuntu|raspbian)
     BootstrapPlatform "deb"
+    ;;
+  fedora)
+    BootstrapPlatform "fedora"
     ;;
   iphone)
     BootstrapPlatform "iphone"

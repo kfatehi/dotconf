@@ -1,0 +1,1 @@
+source $DOTCONF/common/all.sh
