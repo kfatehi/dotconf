@@ -68,6 +68,7 @@ Plug 'earthly/earthly.vim'
 
 Plug 'vmchale/just-vim'
 " Plug 'zchee/vim-flatbuffers', { 'for': 'fbs' }
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -111,6 +112,7 @@ au BufRead,BufNewFile *.go set filetype=go
 nmap <leader>g :Gcommit %<cr>   
 nmap <leader>gs :Gstatus<cr>    
 nmap <leader>gp :Git push origin HEAD<cr>
+autocmd QuickFixCmdPost *grep* cwindow
 
 function! InlineCommand()
     let l:cmd = 'uuid'
@@ -269,7 +271,8 @@ cmap w!! w !sudo tee > /dev/null %
 nmap <leader>[ :set paste<CR>
 nmap <leader>] :set nopaste<CR>
 
-set background=dark
+set background=light
+"set background=dark
 colorscheme PaperColor
 
 "set background=dark
