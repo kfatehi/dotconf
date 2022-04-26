@@ -108,6 +108,14 @@ nmap <C-D> :NERDTreeToggle<CR>
 " Enable golang support
 au BufRead,BufNewFile *.go set filetype=go 
 
+" Set the filetype based on the file's extension, but only if
+" " 'filetype' has not already been set
+au BufRead,BufNewFile *.exs setfiletype elixir " .exs defaults to nothing, so this form works
+
+" Set the filetype based on the file's extension, overriding any
+" 'filetype' that has already been set
+au BufRead,BufNewFile *.ex set filetype=elixir " for some reason .ex is being set to euphoria3 whatever that is.. so use the form that forces it
+
 " fugitive shortcuts
 nmap <leader>g :Gcommit %<cr>   
 nmap <leader>gs :Gstatus<cr>    
