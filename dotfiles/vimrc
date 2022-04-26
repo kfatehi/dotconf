@@ -36,15 +36,15 @@ Plug 'scrooloose/nerdtree' " I need my nerdtree!
 " Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 
 " vim-javascript is a dependency of vim-jsx, so load first
-" Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
-" Plug 'mxw/vim-jsx', { 'for': 'javascript.jsx' }
+Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
+Plug 'mxw/vim-jsx', { 'for': 'javascript.jsx' }
 " Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript', 'javascript.jsx'] }
 "Plug 'maksimr/vim-jsbeautify'
 " Plug 'leafgarland/typescript-vim', { 'for': ['typescript', 'typescript.tsx'] }
 " Plug 'Quramy/tsuquyomi', { 'for': ['typescript', 'typescript.tsx'] }
 " Plug 'ianks/vim-tsx', { 'for': ['typescript.tsx'] }
 
-" Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
+Plug 'elixir-lang/vim-elixir', { 'for': ['elixir', 'eelixir'] }
 
 Plug 'briancollins/vim-jst', { 'for': 'jst' }
 " Plug 'tomlion/vim-solidity', { 'for': 'solidity' }
@@ -63,7 +63,10 @@ Plug 'davb5/wombat256dave'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'gruvbox-community/gruvbox'
 
+Plug 'leafOfTree/vim-vue-plugin', { 'for': 'vue' }
+Plug 'earthly/earthly.vim'
 
+Plug 'vmchale/just-vim'
 " Plug 'zchee/vim-flatbuffers', { 'for': 'fbs' }
 
 call plug#end()
@@ -185,8 +188,9 @@ nmap <Leader>\ :nohlsearch<CR>
 nmap <C-T> :tabe<CR>
 
 " insert the date
-imap <C-l> <ESC>:read !date<CR>A
-nmap <C-l> :read !date<CR>$
+"
+"imap <C-l> <ESC>:read !date<CR>A
+"nmap <C-l> :read !date<CR>$
 
 " edit my tmux config
 "nmap <Leader>t :e ~/.tmux.conf<CR>
