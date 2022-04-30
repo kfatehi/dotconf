@@ -279,8 +279,8 @@ cmap w!! w !sudo tee > /dev/null %
 nmap <leader>[ :set paste<CR>
 nmap <leader>] :set nopaste<CR>
 
-set background=light
-"set background=dark
+"set background=light
+set background=dark
 colorscheme PaperColor
 
 "set background=dark
