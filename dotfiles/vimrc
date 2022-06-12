@@ -69,6 +69,8 @@ Plug 'vmchale/just-vim'
 " Plug 'zchee/vim-flatbuffers', { 'for': 'fbs' }
 Plug 'tpope/vim-fugitive'
 
+Plug 'rhysd/git-messenger.vim'
+
 call plug#end()
 
 "let g:tsuquyomi_disable_default_mappings = 1
