@@ -35,9 +35,8 @@ Plug 'scrooloose/nerdtree' " I need my nerdtree!
 " Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 " Plug 'kchmck/vim-coffee-script', { 'for': 'coffee' }
 
-" vim-javascript is a dependency of vim-jsx, so load first
-Plug 'pangloss/vim-javascript', { 'for': ['javascript', 'javascript.jsx'] }
-Plug 'mxw/vim-jsx', { 'for': 'javascript.jsx' }
+Plug 'yuezk/vim-js' ", { 'for': 'javascript' }
+Plug 'MaxMEllon/vim-jsx-pretty' ", { 'for': 'javascript.jsx' }
 " Plug 'heavenshell/vim-jsdoc', { 'for': ['javascript', 'javascript.jsx'] }
 "Plug 'maksimr/vim-jsbeautify'
 " Plug 'leafgarland/typescript-vim', { 'for': ['typescript', 'typescript.tsx'] }
@@ -262,7 +261,7 @@ let g:ctrlp_user_command = ['.git', "cd %s && git ls-files . -co --exclude-stand
 nmap <Leader>q :q<CR>
 
 " Enable ReactJS/JSX in .js files
-let g:jsx_ext_required = 0
+" let g:jsx_ext_required = 0
 
 " JSHint
 let g:syntastic_javascript_checkers = ['eslint', 'jshint']
