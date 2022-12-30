@@ -1,0 +1,63 @@
+#!/usr/bin/env ruby
+# Noticed my old "workflow" post and realized it's relevant 10 years later
+# https://www.keyvanfatehi.com/2013/08/05/issue-branching-workflow/
+module GhiBrancher
+  class << self
+    def run
+      if (input = ARGV[1].to_i) == 0
+        puts "Expected an issue #" 
+        print_issues
+        exit(1)
+      end
+
+      issues.each do |number, description|
+        if input == number.to_i
+          create_branch number, description
+          exit(0)
+        end
+      end
+
+      # Still here? I guess I didn't find that issue
+
+      puts "Issue #{input} not found!"
+      print_issues
+      exit(2)
+    end
+
+    def print_issues
+      issues.each do |n,d|
+        puts " #{n} #{d}"
+      end
+    end
+
+    def sanitize text
+      text.gsub(" ", "_").downcase
+    end
+
+    def create_branch issue_no, description
+      name = "#{issue_no}_#{sanitize(description)}"
+      cmd = "git checkout -b #{name}"
+      puts "Press any key to #{cmd}"
+      STDIN.gets
+      puts `#{cmd}`
+    rescue Interrupt
+      puts "Cancelled"
+    end
+
+    def issues
+      @issues ||= begin
+                    since = since_one_year
+                    puts "Fetching open issues since #{since}"
+                    ghi = `ghi list -P -s 'open' --since '#{since}'`.strip
+                    Hash[ghi.scan(/  (\d+)  ([\w|\ ]+) /)]
+                  end
+    end
+
+    def since_one_year
+      one_year_ago = Time.now - 365 * 24 * 60 * 60
+      one_year_ago.strftime("%Y-%m-%d")
+    end
+  end
+end
+
+GhiBrancher.run

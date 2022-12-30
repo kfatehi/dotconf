@@ -22,6 +22,15 @@ or something more memory-committable, if my infrastructure is still up:
 curl -sSL conf.keyvan.cloud | bash -e
 ```
 
+## Bins
+
+Access to these is not auto-installed.
+
+```
+# Want to access the bins?
+export PATH="$PATH:$HOME/.kfc/bin"
+```
+
 ## Minimal (just tmux and vim)
 
 ```bash
