@@ -5,8 +5,8 @@ bootstrap my dev environment and related tools. Supported on:
 * ArchLinux
 * Debian & Ubuntu
 * Mac OS X
-* Windows (MinGW or "Git Bash", and Cygwin)
-* Raspbian
+* Windows (MinGW or "Git Bash", and Cygwin, or WSL1)
+* Raspberry Pi OS (Formerly known as Raspbian)
 
 ## Install
 

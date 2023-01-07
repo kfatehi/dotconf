@@ -33,6 +33,8 @@ DeterminePlatform() {
         fi
       elif grep "Raspbian" /etc/issue; then
         PLATFORM="raspbian"
+      elif grep -q 'Raspberry Pi' /proc/cpuinfo && grep -q 'Debian' /etc/issue; then
+        PLATFORM="raspbian"
       fi
       ;;
     Darwin)
