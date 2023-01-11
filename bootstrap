@@ -31,10 +31,12 @@ DeterminePlatform() {
         else
           PLATFORM="ubuntu"
         fi
-      elif grep "Raspbian" /etc/issue; then
+      elif [ -f /etc/issue ] && grep "Raspbian" /etc/issue; then
         PLATFORM="raspbian"
       elif grep -q 'Raspberry Pi' /proc/cpuinfo && grep -q 'Debian' /etc/issue; then
         PLATFORM="raspbian"
+      elif [[ $HOME == *"com.termux"* ]]; then
+	PLATFORM="termux"
       fi
       ;;
     Darwin)
@@ -71,8 +73,8 @@ UpdatePackageManagers() {
       AptUpdatedToday || UpdateAptRepositories
       return $?
       ;;
-    tici)
-      echo "Skipping package management on tici platform"
+    tici|termux)
+      echo "Skipping package management on platform $PLATFORM"
       ;;
     fedora)
       sudo dnf update --refresh
@@ -143,10 +145,7 @@ DeterminePlatform && UpdatePackageManagers && GetRequirements && case $PLATFORM 
   archlinux)
     BootstrapPlatform "archlinux"
     ;;
-  ubuntu|raspbian)
-    BootstrapPlatform "deb"
-    ;;
-  tici)
+  ubuntu|raspbian|termux|wsl|tici)
     BootstrapPlatform "deb"
     ;;
   fedora)
@@ -160,9 +159,6 @@ DeterminePlatform && UpdatePackageManagers && GetRequirements && case $PLATFORM 
     ;;
   win)
     BootstrapPlatform "win"
-    ;;
-  wsl)
-    BootstrapPlatform "deb"
     ;;
   *)
     echo "Unsupported platform!"
