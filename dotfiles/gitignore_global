@@ -6,3 +6,5 @@ npm-debug.log
 *.o
 .clock/*
 node_modules
+*.pyc
+__pycache__
